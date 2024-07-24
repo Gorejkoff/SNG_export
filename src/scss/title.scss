@@ -1,0 +1,12 @@
+.title {
+   margin-bottom: 65px;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   background-color: var(--color-gray-3);
+
+   &__container {}
+
+   .block-title {
+      margin-bottom: 20px;
+   }
+}

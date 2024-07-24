@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/1_head.html',{"title":"Documents"})
+</head>
+
+
+<body>
+
+   <div class="wrapper">
+
+      @@include('html/2_header.html',{})
+
+      @@include('html/2.1_header-scroll.html',{})
+
+      <main class="main">
+
+         <div class="title">
+            <div class="title__container">
+               <h1 class="block-title">Документы</h1>
+               @@include('html/bread_crumbs/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Документы", "link": "documents.html"}]})
+            </div>
+         </div>
+
+         <div class="about">
+            <div class="about__container">
+               <div class="about__body">
+                  <div class="about__links">
+                     @@include('html/about_links.html',{"active" : "11"})
+                  </div>
+                  <div class="about__content">
+                     <div class="about__documents">
+                        <div class="about__documents-icon">
+                           <img src="@img/png/word.png" alt="img">
+                        </div>
+                        <div class="about__documents-name">Договор поставки</div>
+                        <a href="#0" class="about__documents-arrow">
+                           <img src="@img/svg/arrow-4.svg" alt="img">
+                        </a>
+                     </div>
+                     <div class="about__documents">
+                        <div class="about__documents-icon">
+                           <img src="@img/png/pdf.png" alt="img">
+                        </div>
+                        <div class="about__documents-name">Образец заполнения договора</div>
+                        <a href="#0" class="about__documents-arrow">
+                           <img src="@img/svg/arrow-4.svg" alt="img">
+                        </a>
+                     </div>
+                     <div class="about__documents">
+                        <div class="about__documents-icon">
+                           <img src="@img/png/word.png" alt="img">
+                        </div>
+                        <div class="about__documents-name">Письмо на возрат</div>
+                        <a href="#0" class="about__documents-arrow">
+                           <img src="@img/svg/arrow-4.svg" alt="img">
+                        </a>
+                     </div>
+                     <div class="about__documents">
+                        <div class="about__documents-icon">
+                           <img src="@img/png/exel.png" alt="img">
+                        </div>
+                        <div class="about__documents-name">Спецификация</div>
+                        <a href="#0" class="about__documents-arrow">
+                           <img src="@img/svg/arrow-4.svg" alt="img">
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+   </div>
+
+   </main>
+
+   @@include('html/4_footer.html',{})
+
+   </div>
+
+   @@include('html/header_menu.html',{})
+   @@include('html/search.html',{})
+
+   @@include('html/3_scripts.html',{})
+
+
+</body>
+
+</html>

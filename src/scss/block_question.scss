@@ -1,0 +1,145 @@
+.block-question {
+   margin-top: -40px;
+   padding-top: 40px;
+   padding-bottom: 40px;
+   background-color: var(--color-gray-3);
+
+   &__shell {
+      position: relative;
+      /* overflow: hidden; */
+      background: url('../img/jpg/img-14.jpg')no-repeat center / cover;
+      ;
+   }
+
+   &__container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      gap: 40px;
+
+      @media (max-width:1023.98px) {
+         display: block;
+      }
+   }
+
+   &__form {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      flex: 1 1 auto;
+
+   }
+
+   &__title {
+      color: var(--color-white);
+   }
+
+   &__text {
+      margin-bottom: 25px;
+      color: var(--color-white);
+   }
+
+   &__inputs {
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 70px;
+
+      @media (max-width:1600px) {
+         @include size_1600_1100 (gap, 70, 20)
+      }
+
+      @media (max-width:1200px) {
+         flex-direction: column;
+         gap: 20px;
+      }
+
+      input {
+         flex: 1 1 1%;
+         padding: 20px 12px;
+         min-height: 68px;
+         background-color: var(--color-white);
+         font-size: 20px;
+
+         @media (max-width:1200px) {
+            width: 100%;
+         }
+      }
+
+   }
+
+   &__checkbox {
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--color-white);
+      font-size: 20px;
+
+      @media (max-width:991.98px) {
+         font-size: 18px;
+      }
+
+      @media (max-width:767.98px) {
+         font-size: 16px;
+      }
+
+      a {
+         font-size: inherit;
+         color: inherit;
+         text-decoration: underline;
+      }
+
+      .check {
+         position: relative;
+         min-width: 34px;
+         width: 34px;
+         height: 34px;
+         background-color: var(--color-white);
+
+         &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            background-color: var(--color-blue);
+            display: none;
+         }
+      }
+
+      input {
+         display: none;
+      }
+
+      input:checked+.check::after {
+         display: block;
+      }
+
+   }
+
+   &__button {
+      --button-bg: var(--color-blue-text);
+      --button-gr: var(--color-cyanide);
+   }
+
+   &__man {
+      position: relative;
+      flex: 0 0 450px;
+
+      @media (max-width:1023.98px) {
+         display: none;
+      }
+
+      img {
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+}

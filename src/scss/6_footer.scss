@@ -1,0 +1,134 @@
+.footer {
+   padding-top: 20px;
+   padding-bottom: 40px;
+   border-top: 1px solid var(--color-gray-3);
+
+   &__container {
+      display: flex;
+      gap: 40px;
+
+      @media (max-width:1200px) {
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+
+      @media (max-width:767.98px) {
+         justify-content: center;
+      }
+   }
+
+   &__block {
+      flex: 0 0 250px;
+
+      @media (max-width:1200px) {
+         order: 2;
+      }
+
+      @media (max-width:767.98px) {
+         text-align: center;
+      }
+
+      a {
+         color: var(--color-black);
+      }
+   }
+
+   &__logo {
+      margin-bottom: 15px;
+
+      a {
+         display: inline-block;
+         width: 130px;
+      }
+
+      img {
+         width: 100%;
+      }
+   }
+
+   &__politics {
+      margin-bottom: 30px;
+      line-height: 140%;
+   }
+
+   &__offer {}
+
+   &__links {
+      flex: 1 1 auto;
+
+      @media (max-width:1200px) {
+         order: 1;
+         flex: 0 0 100%;
+      }
+
+      ol {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr 1fr;
+         column-gap: 20px;
+         row-gap: 10px;
+         list-style: none;
+
+         @media (max-width:1400px) {
+            grid-template-columns: 1fr 1fr 1fr;
+         }
+
+         @media (max-width:1200px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+         }
+
+         @media (max-width:991.98px) {
+            grid-template-columns: 1fr 1fr 1fr;
+         }
+
+         @media (max-width:767.98px) {
+            grid-template-columns: 1fr 1fr;
+         }
+      }
+
+      a {
+         padding-bottom: 10px;
+         font-size: 14px;
+         color: var(--color-black);
+      }
+   }
+
+   &__contacts {
+      flex: 0 0 250px;
+      text-align: right;
+
+      @media (max-width:1200px) {
+         order: 3;
+      }
+
+      @media (max-width:767.98px) {
+         text-align: center;
+      }
+
+      &>* {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__contacts-title {
+      font-size: 14px;
+   }
+
+   &__contacts-number {
+      font-size: 24px;
+      font-weight: 700;
+   }
+
+   &__contacts-mail {
+      font-size: 18px;
+      font-weight: 300;
+   }
+
+   &__addres {
+      font-weight: 300;
+
+      &>* {
+         display: block;
+         margin-bottom: 15px;
+      }
+   }
+}

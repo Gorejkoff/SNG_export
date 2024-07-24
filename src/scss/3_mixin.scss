@@ -1,0 +1,34 @@
+@mixin size_1920_1670 ($prop, $max, $min) {
+   $minpx : $min + px;
+   #{$prop}: calc($minpx + (100vw - 1670px)/(1920 - 1670)*($max - $min));
+}
+
+@mixin size_1600_1100 ($prop, $max, $min) {
+   $minpx : $min + px;
+   #{$prop}: calc($minpx + (100vw - 1100px)/(1600 - 1100)*($max - $min));
+}
+
+@mixin size_1670_1100 ($prop, $max, $min) {
+   $minpx : $min + px;
+   #{$prop}: calc($minpx + (100vw - 1100px)/(1670 - 1100)*($max - $min));
+}
+
+@mixin size_1100_768 ($prop, $max, $min) {
+   $minpx : $min + px;
+   #{$prop}: calc($minpx + (100vw - 768px)/(1100 - 768)*($max - $min));
+}
+
+@mixin size_768_1366 ($prop, $max, $min) {
+   $minpx : $min + px;
+   #{$prop}: calc($minpx + (100vw - 768px)/(1366 - 768)*($max - $min));
+}
+
+@mixin size_1670_1100_flex ($grow, $shrink, $max, $min) {
+   $minpx : $min + px;
+   flex: $grow $shrink calc($minpx + (100vw - 1100px)/(1670 - 1100)*($max - $min));
+}
+
+// @mixin size_768_1366_flex ($grow, $shrink, $max, $min) {
+//    $minpx : $min + px;
+//    flex: $grow $shrink calc($minpx + (100vw - 768px)/(1366 - 768)*($max - $min));
+// }

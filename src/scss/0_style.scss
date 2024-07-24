@@ -1,0 +1,44 @@
+@import "1_fonts";
+@import "2_normalize";
+@import "3_mixin";
+@import "7_colors";
+@import "4_rules";
+
+body {
+   font-family: "Gotham";
+   background-color: var(--color-white);
+   color: var(--color-black);
+   max-width: 1920px;
+   margin: 0 auto;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+.main {
+   flex: 1 1 auto;
+}
+
+@import "5_header";
+@import "5.1_header-scroll";
+@import "header_menu";
+@import "bread-crumbs";
+@import "search";
+@import "title";
+@import "block_baner";
+@import "block_catalog";
+@import "block_company";
+@import "block_services";
+@import "baner_calculator";
+@import "block_events";
+@import "block_question";
+@import "about";
+@import "contacts";
+
+
+
+
+@import "6_footer";

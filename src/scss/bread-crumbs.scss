@@ -1,0 +1,32 @@
+.bread-crumbs {
+   &__body {
+      display: flex;
+      gap: 5px;
+
+      li {
+         list-style: none;
+
+         &:not(:first-child) {
+            a {
+
+               &::before {
+                  content: '>';
+                  margin-right: 5px;
+               }
+            }
+         }
+
+         &:last-child {
+            a {
+               pointer-events: none;
+            }
+         }
+      }
+
+      a {
+         font-size: 14px;
+         line-height: 140%;
+         color: var(--color-black);
+      }
+   }
+}

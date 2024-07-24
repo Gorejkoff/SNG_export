@@ -1,0 +1,77 @@
+.block-catalog {
+   padding-top: 35px;
+   padding-bottom: 35px;
+
+   &__container {}
+
+   &__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      column-gap: 25px;
+      row-gap: 60px;
+
+      @media (max-width:1250px) {
+         grid-template-columns: 1fr 1fr;
+         column-gap: 15px;
+         row-gap: 40px;
+      }
+
+      @media (max-width:991.98px) {
+         grid-template-columns: 1fr;
+         row-gap: 20px;
+      }
+   }
+
+   &__card {
+      padding: 2px;
+      display: flex;
+      box-shadow: 0px 7px 16px 0px rgba(170, 170, 170, 1);
+   }
+
+   &__card-image {
+      flex: 0 0 48%;
+      padding-top: 34.6%;
+      position: relative;
+      overflow: hidden;
+
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__card-content {
+      flex: 1 1 auto;
+      padding: 20px 15px;
+
+      @media (max-width:767.98px) {
+         padding: 10px;
+      }
+   }
+
+   &__card-title {
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: 700;
+
+      @media (max-width:767.98px) {
+         margin-bottom: 10px;
+         font-size: 16px;
+      }
+   }
+
+   &__card-text {
+      font-size: 15px;
+      line-height: 160%;
+      color: var(--color-blue-text);
+
+      @media (max-width:767.98px) {
+         font-size: 12px;
+      }
+   }
+}

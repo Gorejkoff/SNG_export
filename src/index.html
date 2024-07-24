@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/1_head.html',{"title":"Export"})
+</head>
+
+
+<body>
+
+   <div class="wrapper">
+
+      @@include('html/2_header.html',{})
+
+      @@include('html/2.1_header-scroll.html',{})
+
+      <main class="main">
+
+         @@include('html/block_baner/block_baner.html',{})
+         @@include('html/block_catalog/block_catalog.html',{})
+         @@include('html/block_company/block_company.html',{})
+         @@include('html/block_services/block_services.html',{})
+         @@include('html/baner_calculator/baner_calculator.html',{})
+         @@include('html/block_events/block_events.html',{})
+         @@include('html/block_question/block_question.html',{})
+
+      </main>
+
+      @@include('html/4_footer.html',{})
+
+   </div>
+
+   @@include('html/header_menu.html',{})
+   @@include('html/search.html',{})
+
+   @@include('html/3_scripts.html',{})
+
+</body>
+
+</html>

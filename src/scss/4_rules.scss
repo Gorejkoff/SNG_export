@@ -1,0 +1,152 @@
+[class*="__container"] {
+   padding-left: 145px;
+   padding-right: 145px;
+   margin: 0 auto;
+   width: 100%;
+   max-width: 1920px;
+
+   @media (min-width: 1670px) and (max-width:1919.98px) {
+      @include size_1920_1670 (padding-left, 145, 20);
+      @include size_1920_1670 (padding-right, 145, 20);
+   }
+
+   @media (max-width:1669.98px) {
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+}
+
+.body-overflow {
+   overflow: hidden;
+}
+
+.swiper {
+   max-width: 100%;
+}
+
+.swiper-wrapper {
+   position: relative;
+   z-index: 1;
+   display: flex;
+   transition-property: transform;
+
+   .swiper-slide {
+      flex-shrink: 0;
+      height: 100%;
+      position: relative;
+      transition-property: transform;
+      touch-action: pan-y;
+   }
+}
+
+.block-title {
+   margin-bottom: 30px;
+   font-size: 44px;
+   font-weight: 700;
+   color: var(--color-blue-3);
+   text-transform: uppercase;
+
+   @media (max-width:991.98px) {
+      margin-bottom: 20px;
+      font-size: 36px;
+   }
+
+   @media (max-width:767.98px) {
+      font-size: 30px;
+   }
+}
+
+.block-text {
+   margin-bottom: 20px;
+   font-size: 20px;
+   line-height: 180%;
+
+   @media (max-width:991.98px) {
+      margin-bottom: 10px;
+      font-size: 18px;
+   }
+
+   @media (max-width:767.98px) {
+      font-size: 16px;
+   }
+}
+
+.scroll::-webkit-scrollbar {
+   width: 5px;
+   height: 10px;
+}
+
+.scroll::-webkit-scrollbar-track {
+   border-radius: 5px;
+   background-color: var(--color-gray);
+}
+
+.scroll::-webkit-scrollbar-thumb {
+   background-color: var(--color-gray-2);
+   background-clip: content-box;
+   border-radius: 5px;
+}
+
+.button-blue {
+   padding: 10px 15px;
+   color: var(--color-white);
+   min-height: 48px;
+   text-transform: uppercase;
+   font-size: 14px;
+   box-shadow: 0px 16px 16px 0px rgba(0, 0, 2, 0.21);
+   background: var(--color-blue) linear-gradient(90deg, var(--color-blue-2), transparent);
+}
+
+.button-radial-gradient {
+   padding: 5px 80px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 60px;
+   color: var(--color-white);
+   background: var(--button-bg, #898989) radial-gradient(circle at 23% -100%, var(--button-gr, #ffffff) 0%, transparent 50%);
+   text-transform: uppercase;
+   font-size: 22px;
+}
+
+.hover-gradient {
+   position: relative;
+
+   &>* {
+      position: relative;
+      z-index: 2;
+   }
+
+   &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--color-blue-2), var(--color-blue));
+      opacity: 0;
+      transition: opacity 0.2s;
+   }
+
+   ._pc &:hover {
+      color: var(--color-white);
+
+      &::after {
+         opacity: 1;
+      }
+
+      path {
+         stroke: var(--color-white);
+      }
+
+   }
+}
+
+.js-modal-hidden {
+   display: none;
+
+   &.js-modal-visible {
+      display: block;
+   }
+}
