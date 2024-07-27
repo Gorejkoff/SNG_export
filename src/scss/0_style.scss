@@ -18,6 +18,12 @@ body {
    min-height: 100vh;
 }
 
+@supports(min-height: 100dvh) {
+   .wrapper {
+      min-height: 100dvh;
+   }
+}
+
 .main {
    flex: 1 1 auto;
 }
@@ -37,6 +43,7 @@ body {
 @import "block_question";
 @import "about";
 @import "contacts";
+@import "projects";
 
 
 

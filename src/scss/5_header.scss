@@ -343,11 +343,12 @@
          }
       }
 
-      &__pages-mail-phone {
-         display: none;
-      }
+
    }
 
+   .header__pages .header__pages-mail-phone {
+      display: none;
+   }
 
 
 
@@ -356,6 +357,7 @@
       top: 0;
       border-bottom: 1px solid var(--color-pacific-blue);
       box-shadow: 0px 16px 16px 0px rgba(0, 0, 2, 0.21);
+      animation: scroll_header 0.3s forwards;
 
       .header__body {
          display: grid;
@@ -395,23 +397,17 @@
       .header__pages-mail-phone {
          display: block;
       }
-
-
-
    }
 
 
+}
 
+@keyframes scroll_header {
+   0% {
+      transform: translateY(-110%);
+   }
 
-
-
-
-
-
-
-
-
-
-
-
+   100% {
+      transform: translateY(0);
+   }
 }

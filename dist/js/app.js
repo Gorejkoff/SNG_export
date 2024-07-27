@@ -15,6 +15,7 @@ if (isPC) { document.body.classList.add('_pc') } else { document.body.classList.
 
 // медиазапрос
 const MAX1024 = window.matchMedia('(max-width: 1023.98px)');
+const MIN1100 = window.matchMedia('(min-width: 1100px)');
 
 function throttle(callee, timeout) {
    let timer = null;
@@ -37,14 +38,26 @@ document.addEventListener('click', (event) => {
    };
    if (event.target.closest('.contacts__region-button')) {
       CONTACTS_REGION.classList.toggle('open');
-   } else if (!event.target.closest('.contacts__region')) {
+   } else if (CONTACTS_REGION && !event.target.closest('.contacts__region')) {
       CONTACTS_REGION.classList.remove('open');
    }
 })
 
 document.addEventListener('scroll', () => {
-   HEADER.classList.toggle('scroll-header', window.scrollY > 500);
+   scrollHeaderThrottle();
 })
+
+const scrollHeaderThrottle = throttle(scrollHeader, 17);
+function scrollHeader() {
+   if (MIN1100.matches && window.scrollY > 500) {
+      HEADER.classList.add('scroll-header');
+   } else if (MIN1100.matches && window.scrollY < 300) {
+      HEADER.classList.remove('scroll-header');
+   }
+   if (!MIN1100.matches) {
+      HEADER.classList.remove('scroll-header');
+   }
+}
 // перемещение блоков при адаптиве по данным атрибута 
 // data-da=".class,3,768" 
 // класс родителя куда перемещать

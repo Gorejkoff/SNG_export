@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/1_head.html',{"title":"Project Item"})
+</head>
+
+
+<body>
+
+   <div class="wrapper">
+
+      @@include('html/2_header.html',{})
+
+      @@include('html/2.1_header-scroll.html',{})
+
+      <main class="main">
+
+         <div class="title">
+            <div class="title__container">
+               <h1 class="block-title">Проект</h1>
+               @@include('html/bread_crumbs/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Проект", "link": "projects_item.htmll"}]})
+            </div>
+         </div>
+
+         <div class="projects">
+            <div class="projects__container">
+               <div class="block-text">
+                  Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.
+               </div>
+               <div class="projects__list">
+                  <div>
+                     <div class="projects__list-item projects-img">
+                        <img src="@img/jpg/img-21.jpg" alt="img">
+                     </div>
+                  </div>
+                  <div>
+                     <div class="projects__list-item projects-video">
+                        <img src="@img/jpg/img-21.jpg" alt="img">
+                     </div>
+                  </div>
+                  <div>
+                     <div class="projects__list-item  projects-img">
+                        <img src="@img/jpg/img-21.jpg" alt="img">
+                     </div>
+                  </div>
+                  <div>
+                     <div class="projects__list-item  projects-img">
+                        <img src="@img/jpg/img-21.jpg" alt="img">
+                     </div>
+                  </div>
+               </div>
+               <div class="projects__links">
+                  <a class="projects__links-back" href="projects.html">
+                     <img src="@img/svg/arrow-7.svg" alt="img">
+                     <span>Назад к списку продуктов</span>
+                  </a>
+                  <div class="projects__links-networks">
+                     <a href="#0">
+                        <img src="@img/svg/share.svg" alt="img">
+                     </a>
+                     <a href="#0">
+                        <img src="@img/svg/whatsapp.svg" alt="img">
+                     </a>
+                     <a href="#0">
+                        <img src="@img/svg/telegram.svg" alt="img">
+                     </a>
+                     <a href="#0">
+                        <img src="@img/svg/viber-2.svg" alt="img">
+                     </a>
+                     <a href="#0">
+                        <img src="@img/svg/ok.svg" alt="img">
+                     </a>
+                     <a href="#0">
+                        <img src="@img/svg/vk.svg" alt="img">
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </main>
+
+      @@include('html/4_footer.html',{})
+
+   </div>
+
+   @@include('html/header_menu.html',{})
+   @@include('html/search.html',{})
+
+   @@include('html/3_scripts.html',{})
+
+</body>
+
+</html>
