@@ -28,54 +28,29 @@
                <div class="block-text">
                   Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.
                </div>
-               <div class="projects__list">
+               <di class="projects__list">
                   <div>
-                     <div class="projects__list-item projects-img">
+                     <div class="projects__list-item projects-img js-modal-open" data-modal_open="project-swiper">
                         <img src="@img/jpg/img-21.jpg" alt="img">
                      </div>
                   </div>
                   <div>
-                     <div class="projects__list-item projects-video">
+                     <div class="projects__list-item projects-video js-modal-open" data-modal_open="project-swiper">
                         <img src="@img/jpg/img-21.jpg" alt="img">
                      </div>
                   </div>
                   <div>
-                     <div class="projects__list-item  projects-img">
+                     <div class="projects__list-item  projects-img js-modal-open" data-modal_open="project-swiper">
                         <img src="@img/jpg/img-21.jpg" alt="img">
                      </div>
                   </div>
                   <div>
-                     <div class="projects__list-item  projects-img">
+                     <div class="projects__list-item  projects-img js-modal-open" data-modal_open="project-swiper">
                         <img src="@img/jpg/img-21.jpg" alt="img">
                      </div>
                   </div>
-               </div>
-               <div class="projects__links">
-                  <a class="projects__links-back" href="projects.html">
-                     <img src="@img/svg/arrow-7.svg" alt="img">
-                     <span>Назад к списку продуктов</span>
-                  </a>
-                  <div class="projects__links-networks">
-                     <a href="#0">
-                        <img src="@img/svg/share.svg" alt="img">
-                     </a>
-                     <a href="#0">
-                        <img src="@img/svg/whatsapp.svg" alt="img">
-                     </a>
-                     <a href="#0">
-                        <img src="@img/svg/telegram.svg" alt="img">
-                     </a>
-                     <a href="#0">
-                        <img src="@img/svg/viber-2.svg" alt="img">
-                     </a>
-                     <a href="#0">
-                        <img src="@img/svg/ok.svg" alt="img">
-                     </a>
-                     <a href="#0">
-                        <img src="@img/svg/vk.svg" alt="img">
-                     </a>
-                  </div>
-               </div>
+               </di>
+               @@include('html/back.html',{})
             </div>
          </div>
 
@@ -85,11 +60,13 @@
 
    </div>
 
+   @@include('html/project_swiper.html',{})
+
    @@include('html/header_menu.html',{})
    @@include('html/search.html',{})
 
    @@include('html/3_scripts.html',{})
-
+   <script defer src='./js/swiper.min.js'></script>
 </body>
 
 </html>

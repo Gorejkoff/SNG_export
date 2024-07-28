@@ -5,7 +5,7 @@
    <title>"Project Item"</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <meta name="viewport" content="width=device-width initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css?_v=20240727135141">
+<link rel="stylesheet" href="css/style.css?_v=20240728231128">
 </head>
 
 
@@ -31,7 +31,7 @@
                <li class="header__menu-list-item"><a href="#0">Стандарты</a></li>
                <li class="header__menu-list-item"><a href="#0">Марочник</a></li>
                <li class="header__menu-list-item"><a href="#0">Сертификаты</a></li>
-               <li class="header__menu-list-item"><a href="#0">Новости</a></li>
+               <li class="header__menu-list-item"><a href="news.html">Новости</a></li>
                <li class="header__menu-list-item"><a href="projects.html">Проекты</a></li>
             </ol>
          </nav>
@@ -156,54 +156,54 @@
                <div class="block-text">
                   Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.
                </div>
-               <div class="projects__list">
+               <di class="projects__list">
                   <div>
-                     <div class="projects__list-item projects-img">
+                     <div class="projects__list-item projects-img js-modal-open" data-modal_open="project-swiper">
                         <img src="./img/jpg/img-21.jpg" alt="img">
                      </div>
                   </div>
                   <div>
-                     <div class="projects__list-item projects-video">
+                     <div class="projects__list-item projects-video js-modal-open" data-modal_open="project-swiper">
                         <img src="./img/jpg/img-21.jpg" alt="img">
                      </div>
                   </div>
                   <div>
-                     <div class="projects__list-item  projects-img">
+                     <div class="projects__list-item  projects-img js-modal-open" data-modal_open="project-swiper">
                         <img src="./img/jpg/img-21.jpg" alt="img">
                      </div>
                   </div>
                   <div>
-                     <div class="projects__list-item  projects-img">
+                     <div class="projects__list-item  projects-img js-modal-open" data-modal_open="project-swiper">
                         <img src="./img/jpg/img-21.jpg" alt="img">
                      </div>
                   </div>
-               </div>
-               <div class="projects__links">
-                  <a class="projects__links-back" href="projects.html">
-                     <img src="./img/svg/arrow-7.svg" alt="img">
-                     <span>Назад к списку продуктов</span>
-                  </a>
-                  <div class="projects__links-networks">
-                     <a href="#0">
-                        <img src="./img/svg/share.svg" alt="img">
-                     </a>
-                     <a href="#0">
-                        <img src="./img/svg/whatsapp.svg" alt="img">
-                     </a>
-                     <a href="#0">
-                        <img src="./img/svg/telegram.svg" alt="img">
-                     </a>
-                     <a href="#0">
-                        <img src="./img/svg/viber-2.svg" alt="img">
-                     </a>
-                     <a href="#0">
-                        <img src="./img/svg/ok.svg" alt="img">
-                     </a>
-                     <a href="#0">
-                        <img src="./img/svg/vk.svg" alt="img">
-                     </a>
-                  </div>
-               </div>
+               </di>
+               <div class="back">
+   <a class="back__links" href="back.html">
+      <img src="./img/svg/arrow-7.svg" alt="img">
+      <span>Назад к списку продуктов</span>
+   </a>
+   <div class="back__links-networks">
+      <a href="#0">
+         <img src="./img/svg/share.svg" alt="img">
+      </a>
+      <a href="#0">
+         <img src="./img/svg/whatsapp.svg" alt="img">
+      </a>
+      <a href="#0">
+         <img src="./img/svg/telegram.svg" alt="img">
+      </a>
+      <a href="#0">
+         <img src="./img/svg/viber-2.svg" alt="img">
+      </a>
+      <a href="#0">
+         <img src="./img/svg/ok.svg" alt="img">
+      </a>
+      <a href="#0">
+         <img src="./img/svg/vk.svg" alt="img">
+      </a>
+   </div>
+</div>
             </div>
          </div>
 
@@ -273,6 +273,84 @@
 </footer>
 
    </div>
+
+   <div id="project-swiper" class="project-swiper js-modal-hidden">
+   <div class="project-swiper__body">
+      <div class="project-swiper__container">
+         <div class="project-swiper__buttons">
+            <button class="project-swiper__play" type="button">
+               <img class="play" src="./img/svg/play-2.svg" alt="img">
+               <img class="pause" src="./img/svg/pause.svg" alt="img">
+            </button>
+            <button class="project-swiper__increase" type="button">
+               <img src="./img/svg/increase.svg" alt="img">
+            </button>
+            <button class="project-swiper__reduce" type="button">
+               <img src="./img/svg/reduce.svg" alt="img">
+            </button>
+            <button class="js-modal-close" type="button">
+               <img src="./img/svg/close-2.svg" alt="img">
+            </button>
+         </div>
+         <div class="project-swiper__content">
+            <button class="project-swiper__button-prev" type="button">
+               <img src="./img/svg/arrow-left.svg" alt="img">
+            </button>
+            <div class="project-swiper__swiper swiper">
+               <div class="project-swiper__swiper-wrapper swiper-wrapper">
+                  <div class="project-swiper__swiper-slide swiper-slide">
+                     <div class="project-swiper__swiper-slide-body">
+                        <div class="project-swiper__swiper-slide-img swiper-zoom-container">
+                           <img src="./img/jpg/img-21.jpg" alt="img">
+                        </div>
+                     </div>
+                     <div class="project-swiper__description">
+                        <div class="project-swiper__title">Название фото или видео </div>
+                        <div class="project-swiper__text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.цирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.</div>
+                     </div>
+                  </div>
+                  <div class="project-swiper__swiper-slide swiper-slide">
+                     <div class="project-swiper__swiper-slide-body">
+                        <div class="project-swiper__swiper-slide-img swiper-zoom-container">
+                           <img src="./img/jpg/img-21.jpg" alt="img">
+                        </div>
+                     </div>
+                     <div class="project-swiper__description">
+                        <div class="project-swiper__title">Название фото или видео </div>
+                        <div class="project-swiper__text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.цирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.</div>
+                     </div>
+                  </div>
+                  <div class="project-swiper__swiper-slide swiper-slide">
+                     <div class="project-swiper__swiper-slide-body">
+                        <div class="project-swiper__swiper-slide-img swiper-zoom-container">
+                           <img src="./img/jpg/img-21.jpg" alt="img">
+                        </div>
+                     </div>
+                     <div class="project-swiper__description">
+                        <div class="project-swiper__title">Название фото или видео </div>
+                        <div class="project-swiper__text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.цирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.</div>
+                     </div>
+                  </div>
+                  <div class="project-swiper__swiper-slide swiper-slide">
+                     <div class="project-swiper__swiper-slide-body">
+                        <div class="project-swiper__swiper-slide-img swiper-zoom-container">
+                           <img src="./img/jpg/img-21.jpg" alt="img">
+                        </div>
+                     </div>
+                     <div class="project-swiper__description">
+                        <div class="project-swiper__title">Название фото или видео </div>
+                        <div class="project-swiper__text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.цирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <button class="project-swiper__button-next" type="button">
+               <img src="./img/svg/arrow-right.svg" alt="img">
+            </button>
+         </div>
+      </div>
+   </div>
+</div>
 
    <div id="header-menu" class="header-menu js-modal-hidden">
    <div class="header-menu__container">
@@ -1608,8 +1686,8 @@
    </div>
 </div>
 
-   <script defer src='./js/app.js?_v=20240727135141'></script>
-
+   <script defer src='./js/app.js?_v=20240728231128'></script>
+   <script defer src='./js/swiper.min.js?_v=20240728231128'></script>
 </body>
 
 </html>

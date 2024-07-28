@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/1_head.html',{"title":"News"})
+</head>
+
+
+<body>
+
+   <div class="wrapper">
+
+      @@include('html/2_header.html',{})
+
+      @@include('html/2.1_header-scroll.html',{})
+
+      <main class="main">
+
+         <div class="title">
+            <div class="title__container">
+               <h1 class="block-title">Новости</h1>
+               @@include('html/bread_crumbs/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Новости", "link": "news.htmll"}]})
+            </div>
+         </div>
+
+         <div class="news">
+            <div class="news__container">
+               <div class="block-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.</div>
+               <div class="news__grid">
+                  <a href="news_item.html" class="news__grid-main">
+                     <img src="@img/jpg/img-21.jpg" alt="img">
+                     <div class="news__grid-main-date">1 сентября 2023</div>
+                     <div class="news__grid-main-text">Новостной заголовок, примерный текс</div>
+                  </a>
+                  <a href="news_item.html" class="news__grid-cell">
+                     <div class="news__grid-img">
+                        <img src="@img/jpg/img-22.jpg" alt="img">
+                     </div>
+                     <div class="news__grid-text">Новостной заголовок, примерный текс, примерный текст, Новостной заголовок, примерный текс</div>
+                     <div class="news__grid-date">1 сентября 2023</div>
+                  </a>
+                  <a href="news_item.html" class="news__grid-cell">
+                     <div class="news__grid-img">
+                        <img src="@img/jpg/img-23.jpg" alt="img">
+                     </div>
+                     <div class="news__grid-text">Новостной заголовок, примерный текс, примерный текст, Новостной заголовок, примерный текс</div>
+                     <div class="news__grid-date">1 сентября 2023</div>
+                  </a>
+                  <a href="news_item.html" class="news__grid-cell">
+                     <div class="news__grid-img">
+                        <img src="@img/jpg/img-24.jpg" alt="img">
+                     </div>
+                     <div class="news__grid-text">Новостной заголовок, примерный текс, примерный текст, Новостной заголовок, примерный текс</div>
+                     <div class="news__grid-date">1 сентября 2023</div>
+                  </a>
+                  <a href="news_item.html" class="news__grid-cell">
+                     <div class="news__grid-img">
+                        <img src="@img/jpg/img-25.jpg" alt="img">
+                     </div>
+                     <div class="news__grid-text">Новостной заголовок, примерный текс, примерный текст, Новостной заголовок, примерный текс</div>
+                     <div class="news__grid-date">1 сентября 2023</div>
+                  </a>
+                  <a href="news_item.html" class="news__grid-cell">
+                     <div class="news__grid-img">
+                        <img src="@img/jpg/img-26.jpg" alt="img">
+                     </div>
+                     <div class="news__grid-text">Новостной заголовок, примерный текс, примерный текст, Новостной заголовок, примерный текс</div>
+                     <div class="news__grid-date">1 сентября 2023</div>
+                  </a>
+                  <a href="news_item.html" class="news__grid-cell">
+                     <div class="news__grid-img">
+                        <img src="@img/jpg/img-27.jpg" alt="img">
+                     </div>
+                     <div class="news__grid-text">Новостной заголовок, примерный текс, примерный текст, Новостной заголовок, примерный текс</div>
+                     <div class="news__grid-date">1 сентября 2023</div>
+                  </a>
+               </div>
+            </div>
+         </div>
+
+      </main>
+
+      @@include('html/4_footer.html',{})
+
+   </div>
+
+   @@include('html/header_menu.html',{})
+   @@include('html/search.html',{})
+
+   @@include('html/3_scripts.html',{})
+
+</body>
+
+</html>
