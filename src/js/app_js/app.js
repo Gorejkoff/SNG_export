@@ -31,6 +31,7 @@ function throttle(callee, timeout) {
 
 const CONTACTS_REGION = document.querySelector('.contacts__region');
 const HEADER = document.querySelector('.header');
+const MARKING_ITEM = document.querySelectorAll('.marking__item');
 
 document.addEventListener('click', (event) => {
    if (event.target.closest('.about__contact-item-button')) {
@@ -40,6 +41,12 @@ document.addEventListener('click', (event) => {
       CONTACTS_REGION.classList.toggle('open');
    } else if (CONTACTS_REGION && !event.target.closest('.contacts__region')) {
       CONTACTS_REGION.classList.remove('open');
+   }
+   if (event.target.closest('.marking__item-button')) {
+      let parent = event.target.closest('.marking__item');
+      MARKING_ITEM.forEach((e) => { e.classList.toggle('list-open', e == parent) })
+   } else if (!event.target.closest('.marking__item-list')) {
+      MARKING_ITEM.forEach((e) => { e.classList.remove('list-open') })
    }
 })
 

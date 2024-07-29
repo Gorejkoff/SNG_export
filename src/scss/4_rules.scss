@@ -87,6 +87,33 @@
    border-radius: 5px;
 }
 
+.scroll-big::-webkit-scrollbar {
+   width: 35px;
+
+   @media (max-width:767.98px) {
+      width: 15px;
+   }
+}
+
+.scroll-big::-webkit-scrollbar-track {
+   background-color: var(--color-gray-3);
+   border-left: 10px solid var(--color-white);
+   border-right: 10px solid var(--color-white);
+
+   @media (max-width:767.98px) {
+      border-left: 5px solid var(--color-white);
+      border-right: 5px solid var(--color-white);
+   }
+}
+
+.scroll-big::-webkit-scrollbar-thumb {
+   position: relative;
+   background: var(--color-blue) linear-gradient(130deg, var(--color-blue-2) 30%, transparent 70%);
+   background-clip: content-box;
+   border-radius: 5px;
+
+}
+
 .button-blue {
    padding: 10px 15px;
    color: var(--color-white);
