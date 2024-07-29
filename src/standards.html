@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/1_head.html',{"title":"Standards"})
+</head>
+
+
+<body>
+
+   <div class="wrapper">
+
+      @@include('html/2_header.html',{})
+
+      @@include('html/2.1_header-scroll.html',{})
+
+      <main class="main">
+
+         <div class="title">
+            <div class="title__container">
+               <h1 class="block-title">Стандарты</h1>
+               @@include('html/bread_crumbs/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Стандарты", "link": "standards.html"}]})
+            </div>
+         </div>
+         <div class="marking">
+            <div class="marking__container">
+               <div class="marking__body">
+                  <div class="marking__menu">
+                     @@include('html/list_links.html',{"active": "1"})
+                  </div>
+                  <div class="marking__list">
+                     <div class="marking__filter">
+                        <div class="marking__filter-img">
+                           <img src="@img/svg/filter.svg" alt="img">
+                        </div>
+                        <button type="button">asme</button>
+                        <button type="button">en</button>
+                        <button type="button">din</button>
+                        <button type="button">api</button>
+                        <button type="button">iso</button>
+                        <button type="button">astm</button>
+                        <button type="button">aisi</button>
+                        <button type="button">uni</button>
+                     </div>
+
+                     <div class="marking__block">
+                        <div class="marking__block-title">Фитинги</div>
+                        <div class="block-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и </div>
+                        <div>
+                           @@include('html/mark_item.html'.{})
+                           @@include('html/mark_item.html'.{})
+                           @@include('html/mark_item.html'.{})
+                        </div>
+                     </div>
+                     <div class="marking__block">
+                        <div class="marking__block-title">Фитинги</div>
+                        <div class="block-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и </div>
+                        <div>
+                           @@include('html/mark_item.html'.{})
+                           @@include('html/mark_item.html'.{})
+                           @@include('html/mark_item.html'.{})
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </main>
+
+      @@include('html/4_footer.html',{})
+
+   </div>
+
+   @@include('html/header_menu.html',{})
+   @@include('html/search.html',{})
+
+   @@include('html/3_scripts.html',{})
+
+</body>
+
+</html>

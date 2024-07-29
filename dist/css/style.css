@@ -3041,6 +3041,65 @@ body {
   color: var(--color-black);
 }
 
+.marking__filter {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.marking__filter a,
+.marking__filter button {
+  padding: 10px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  min-height: 48px;
+  background-color: var(--color-white);
+  -webkit-box-shadow: 0px 8px 26.73px 0.27px rgba(19, 86, 102, 0.24);
+          box-shadow: 0px 8px 26.73px 0.27px rgba(19, 86, 102, 0.24);
+}
+
+.marking__filter-img {
+  min-height: 48px;
+  width: 48px;
+}
+
+.marking__filter-img img {
+  height: 100%;
+}
+
+.marking__block {
+  margin-bottom: 90px;
+}
+
+.marking__block-title {
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.Rectangle_599 {
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 8px 26.73px 0.27px rgba(19, 86, 102, 0.24);
+          box-shadow: 0px 8px 26.73px 0.27px rgba(19, 86, 102, 0.24);
+  position: absolute;
+  left: 1704px;
+  top: 362px;
+  width: 132px;
+  height: 48px;
+  z-index: 356;
+}
+
 .footer {
   padding-top: 20px;
   padding-bottom: 40px;
@@ -3542,6 +3601,10 @@ body {
 
   .marking__body {
     display: block;
+  }
+
+  .marking__block-title {
+    font-size: 24px;
   }
 
   .footer__links ol {
