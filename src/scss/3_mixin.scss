@@ -27,8 +27,3 @@
    $minpx : $min + px;
    flex: $grow $shrink calc($minpx + (100vw - 1100px)/(1670 - 1100)*($max - $min));
 }
-
-// @mixin size_768_1366_flex ($grow, $shrink, $max, $min) {
-//    $minpx : $min + px;
-//    flex: $grow $shrink calc($minpx + (100vw - 768px)/(1366 - 768)*($max - $min));
-// }
