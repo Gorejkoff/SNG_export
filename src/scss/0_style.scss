@@ -5,11 +5,12 @@
 @import "4_rules";
 
 body {
+   margin: 0 auto;
+   max-width: 1920px;
    font-family: "Gotham";
    background-color: var(--color-white);
    color: var(--color-black);
-   max-width: 1920px;
-   margin: 0 auto;
+   scrollbar-gutter: stable;
 }
 
 .wrapper {
@@ -49,6 +50,7 @@ body {
 @import "news";
 @import "marking";
 @import "services";
+@import "modal";
 
 
 

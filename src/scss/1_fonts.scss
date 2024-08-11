@@ -45,3 +45,27 @@
 		700;
 	font-style: normal;
 }
+
+@font-face {
+	font-family:
+		Gotham;
+	font-display: swap;
+	src:
+		url("../fonts/Gotham Pro/gothampro_black.woff2") format("woff2"),
+		url("../fonts/Gotham Pro/gothampro_black.woff") format("woff");
+	font-weight:
+		900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family:
+		Gotham;
+	font-display: swap;
+	src:
+		url("../fonts/Gotham Pro/gothampro_italic.woff2") format("woff2"),
+		url("../fonts/Gotham Pro/gothampro_italic.woff") format("woff");
+	font-weight:
+		normal;
+	font-style: italic;
+}

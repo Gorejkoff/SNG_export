@@ -1,0 +1,124 @@
+.modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 20;
+   width: 100%;
+   height: 100%;
+   background-color: var(--color-background-modal);
+
+   &__wrapper {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-gutter: stable;
+      height: 100vh;
+   }
+
+   &__shell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 0;
+      min-height: 100%;
+   }
+
+   &__body {
+      position: relative;
+      padding: 30px 25px 35px;
+      max-width: 460px;
+      background-color: var(--color-white);
+      line-height: 150%;
+
+      .size-l & {
+         max-width: 930px;
+         padding: 45px;
+      }
+   }
+
+   &__close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(50%, -50%);
+      width: 63px;
+      height: 63px;
+   }
+
+   &__header {
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--color-blue-4);
+
+      .size-l & {
+         padding-bottom: 40px;
+         margin-bottom: 50px;
+      }
+   }
+
+   &__title {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: var(--color-blue-4);
+      font-weight: 900;
+
+      .size-l & {
+         font-size: 42px;
+      }
+   }
+
+   &__header-text {
+      font-size: 18px;
+      color: var(--color-black);
+      font-weight: 700;
+
+      .size-l & {
+         font-size: 22px;
+      }
+   }
+
+   &__input {
+      position: relative;
+      height: 50px;
+      font-size: 18px;
+      border: 1px solid var(--color-gray-5);
+      margin-bottom: 15px;
+
+      input {
+         padding: 0 20px;
+         height: 100%;
+         width: 100%;
+      }
+
+      .size-l & {
+         margin-bottom: 30px;
+      }
+   }
+
+   &__button {
+      display: flex;
+      justify-content: center;
+   }
+
+   &__agreement {
+      margin-top: 30px;
+      font-size: 16px;
+      color: var(--color-gray-6);
+      font-weight: 700;
+      line-height: 200%;
+
+      a {
+         font-size: inherit;
+         color: var(--color-blue-3);
+      }
+   }
+}
+
+@supports (height: 100dvh) {
+
+   .modal,
+   .modal__container {
+      height: 100dvh;
+   }
+}

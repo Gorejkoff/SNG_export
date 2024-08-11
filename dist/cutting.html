@@ -5,7 +5,7 @@
    <title>"Cutting"</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <meta name="viewport" content="width=device-width initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css?_v=20240730231901">
+<link rel="stylesheet" href="css/style.css?_v=20240811192134">
 </head>
 
 
@@ -192,7 +192,7 @@
                         <div class="services__item-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и </div>
                         <div class="services__item-price">цена по запросу</div>
                         <div class="services__item-button">
-                           <button class="button-blue" type="button">Заказать услугу</button>
+                           <button class="button-blue js-modal-open" data-modal_open="modal-cutting" type="button">Заказать услугу</button>
                         </div>
                      </div>
                      <div class="services__item">
@@ -204,7 +204,7 @@
                         <div class="services__item-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. </div>
                         <div class="services__item-price">цена по запросу</div>
                         <div class="services__item-button">
-                           <button class="button-blue" type="button">Заказать услугу</button>
+                           <button class="button-blue js-modal-open" data-modal_open="modal-cutting" type="button">Заказать услугу</button>
                         </div>
                      </div>
                      <div class="block-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.</div>
@@ -279,6 +279,46 @@
 </footer>
 
    </div>
+
+   <div id="modal-cutting" class="modal size-l js-modal-hidden">
+   <div class="modal__wrapper">
+      <div class="modal__shell">
+         <div class="modal__body">
+
+            <button class="modal__close js-modal-close" type="button">
+               <img src="./img/svg/close-2.svg" alt="img">
+            </button>
+            <div class="modal__header">
+               <div class="modal__title">Заказ услуги</div>
+               <div class="modal__header-text">резка труб</div>
+            </div>
+
+            <form action="#" method="post" name="" id="">
+               <div class="modal__input">
+                  <input type="text" placeholder="Ваше имя">
+               </div>
+               <div class="modal__input">
+                  <input type="number" required placeholder="Номер телефона*">
+               </div>
+               <div class="modal__input">
+                  <input type="text" required placeholder="Электронный адрес*">
+               </div>
+               <div class="modal__input">
+                  <input type="text" required placeholder="ИНН организации*">
+               </div>
+               <div class="modal__button">
+                  <button class="button-blue" type="submit">Отправить</button>
+               </div>
+            </form>
+
+            <div class="modal__agreement">
+               Нажимая кнопку “Отправить” вы подтверждаете свое <a href="#0">согласие на обработку персональных данных</a>
+            </div>
+
+         </div>
+      </div>
+   </div>
+</div>
 
    <div id="header-menu" class="header-menu js-modal-hidden">
    <div class="header-menu__container">
@@ -1600,6 +1640,7 @@
       </div>
    </div>
 </div>
+
    <div id="search" class="search js-modal-hidden">
    <div class="search__container">
       <form class="search__body" action="#" method="post" name="" id="">
@@ -1614,7 +1655,7 @@
    </div>
 </div>
 
-   <script defer src='./js/app.js?_v=20240730231901'></script>
+   <script defer src='./js/app.js?_v=20240811192134'></script>
 
 </body>
 
