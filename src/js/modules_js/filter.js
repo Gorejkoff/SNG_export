@@ -194,6 +194,4 @@ if (document.querySelector('.filter')) {
          clearFilter();
       }
    })
-
-
 }    

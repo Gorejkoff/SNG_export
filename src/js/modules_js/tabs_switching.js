@@ -1,16 +1,17 @@
 class TabsSwitching {
-   constructor(body__buttons, button, tab, execute) {
-      this.name_button = button;
-      this.body__buttons = document.querySelector(body__buttons);
-      this.button = document.querySelectorAll(button);
-      this.tab = document.querySelectorAll(tab);
+   constructor(bodyTabs, bodyButtons, button, tab, execute) {
+      this.bodyTabs = typeof bodyTabs == 'object' ? bodyTabs : document.body;
+      this.bodyButtons = this.bodyTabs.querySelector(bodyButtons);
+      this.listButtons = this.bodyTabs.querySelectorAll(button);
+      this.nameButton = button;
+      this.tab = this.bodyTabs.querySelectorAll(tab);
       this.execute = execute;
    }
-   eventClick = () => {
-      this.body__buttons.addEventListener('click', (event) => {
-         if (event.target.closest(this.name_button)) {
-            let n = event.target.closest(this.name_button).dataset.button;
-            this.button.forEach((e) => { e.classList.toggle('active', e.dataset.button == n) });
+   init = () => {
+      this.bodyButtons.addEventListener('click', (event) => {
+         if (event.target.closest(this.nameButton)) {
+            let n = event.target.closest(this.nameButton).dataset.button;
+            this.listButtons.forEach((e) => { e.classList.toggle('active', e.dataset.button == n) });
             if (this.tab.length > 0) { this.tab.forEach((e) => { e.classList.toggle('active', e.dataset.tab == n) }) }
             if (this.execute) { this.execute() };
          }
@@ -18,5 +19,13 @@ class TabsSwitching {
    }
 }
 
-/* инициализация конструктора для табов */
-//new TabsSwitching('.tabs__buttons', '.tabs__button', '.tabs__page').eventClick();
+const CALCULATOR_LIST = document.querySelectorAll('.calculator__item');
+if (CALCULATOR_LIST.length > 0) {
+   CALCULATOR_LIST.forEach((e) => {
+      new TabsSwitching(e, '.calculator__item-buttons', '.calculator__item-button', '.calculator__item-data').init();
+   })
+}
+
+new TabsSwitching(false, '.calculator__buttons-profile', '.calculator__proile-button', '.calculator__type').init();
+
+

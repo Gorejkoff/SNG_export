@@ -317,8 +317,6 @@ if (document.querySelector('.filter')) {
          clearFilter();
       }
    })
-
-
 }    
 
 const HEADER_MENU_OPEN = document.querySelectorAll('.header__menu-open');
@@ -422,7 +420,7 @@ function openModal(event) {
    let modalElement = event.target.closest('.js-modal-open').dataset.modal_open;
    if (typeof modalElement !== "undefined" && document.querySelector(`#${modalElement}`)) {
       document.querySelector(`#${modalElement}`).classList.add('js-modal-visible');
-      document.body.classList.add('body-overflow')
+      document.body.classList.add('js-modal-scroll-off')
    }
 }
 function testModalStopClose(event) {
@@ -436,68 +434,107 @@ function testModalStopClose(event) {
 function closeModal(event) {
    event.target.closest('.js-modal-hidden').classList.remove('js-modal-visible');
    if (!document.querySelector('.js-modal-visible')) {
-      document.body.classList.remove('body-overflow');
+      document.body.classList.remove('js-modal-scroll-off');
    }
 }
 class TabsOpen {
-   constructor(element, hover) {
-      this.tabsButtons = document.querySelectorAll(element);
-      this.resizeHeightTab = this.throttle(this.resizeHeight, 16.7);
-      this.isPC;
-      this.hover = hover == false ? false : true;
+   constructor(options) {
+      this.pc = document.body.classList.contains('_pc'); // true если dasktop, иначе false. Работает в связке с isMobile
+      this.parentTabs = document.querySelector(options.name);
+      this.tabsList = this.parentTabs.querySelectorAll('.js-tab-body');
+      this.hover = options.hover == false ? false : true; // реакция табов на hover
+      this.closeAllTabs = options.closeAllTabs == true ? true : false; // закрывать все табы
+      this.closeClickContent = options.closeClickContent == true ? true : false; // закрыть при клике в области контента таба
+      this.externalFunction = options.externalFunction; // внешняя функция для события click
+      this.externalFunctionResize = options.externalFunctionResize; // внешняя функция для события resize
    }
-   tabsInit = () => {
-      console.log(this.hover);
-      document.body.classList.contains('_pc') ? this.isPC = true : this.isPC = false;
-      !this.isPC && window.addEventListener('resize', this.resizeHeightTab);
-      this.events();
-   }
-   open = (event) => {
-      if (event.target.closest('.js-tab-body')) {
-         this.tabsButtons.forEach(e => {
-            if (event.target.closest('.js-tab-body') == e && (!this.isPC ? !e.classList.contains('js-tab-open') : true)) {
-               e.classList.add('js-tab-open');
-               e.querySelector('.js-tab-content').style.height = `${e.querySelector('.js-tab-content-text').clientHeight}px`;
-            } else { this.close(e) }
-         })
-      } else { this.tabsButtons.forEach(e => { this.close(e) }) }
-   }
-   close = (e) => { e.classList.remove('js-tab-open'), e.querySelector('.js-tab-content').style.height = '' }
-   events = () => { (this.isPC && this.hover) ? window.addEventListener('mouseover', this.open) : window.addEventListener('click', this.open) }
-   resizeHeight = () => {
-      this.tabsButtons.forEach(e => {
-         if (e.classList.contains('js-tab-open')) {
-            e.querySelector('.js-tab-content').style.height = `${e.querySelector('.js-tab-content-text').clientHeight}px`
-         }
-      })
-   }
-   throttle = (callee, timeout) => {
-      let timer = null;
-      return function perform(...args) {
-         if (timer) return;
-         timer = setTimeout(() => {
-            callee(...args);
-            clearTimeout(timer);
-            timer = null;
-         }, timeout)
+   init = () => {
+      document.body.addEventListener('click', this.examinationClick);
+      this.hover && this.pc && document.body.addEventListener('mouseover', this.examinationHover);
+      this.resize();
+   };
+   examinationClick = (event) => {
+      this.externalFunction && this.externalFunction(event);
+      if (this.hover && this.pc) return;
+      let eventElement = this.closeClickContent ? event.target.closest('.js-tab-body') : event.target.closest('.js-tab-button');
+      if (eventElement && event.target.closest('.js-tab-body').classList.contains('active')) {
+         this.close(event.target.closest('.js-tab-body'));
+         return;
+      }
+      if (eventElement && !this.closeAllTabs) {
+         this.open(event.target.closest('.js-tab-body'));
+         return;
+      }
+      if (eventElement) {
+         this.tabsList.forEach((element) => {
+            element == event.target.closest('.js-tab-body') ? this.open(element) : this.close(element);
+         });
+         return;
+      }
+      if (!event.target.closest('.js-tab-content') && this.closeAllTabs) {
+         this.tabsList.forEach(element => this.close(element));
       }
    }
+   examinationHover = (event) => {
+      if (event.target.closest('.js-tab-body')) {
+         this.tabsList.forEach((element) => {
+            element == event.target.closest('.js-tab-body') ? this.open(element) : this.close(element);
+         });
+      } else {
+         this.tabsList.forEach(element => this.close(element));
+      }
+   }
+   open = (element) => {
+      element.querySelector('.js-tab-content').style.height = this.getSize(element) + 'px';
+      element.classList.add('active');
+   };
+   close = (element) => {
+      element.querySelector('.js-tab-content').style.height = '';
+      element.classList.remove('active');
+   };
+   adjustment = () => {
+      this.tabsList.forEach((e) => e.classList.contains('active') && this.open(e));
+      this.externalFunctionResize && this.externalFunctionResize()
+   };
+   getSize = (element) => { return element.querySelector('.js-tab-content-inner').clientHeight };
+   resize = () => window.addEventListener('resize', this.adjustment);
 }
-// new TabsOpen('.tab-item', true).tabsInit();
-// второй параметр "false" отключает hover. Отсутствие или true - hover включен.
+
+if (document.querySelector('.calculator')) {
+   new TabsOpen({
+      name: 'body',
+      hover: false,
+      closeAllTabs: true,
+      closeClickContent: false,
+      externalFunction: choise,
+      // externalFunctionResize: outResize,
+   }).init();
+}
+
+/* внешние функции */
+function choise(event) {
+   if (event.target.closest('.js-tabs-value')) {
+      let tabBbody = event.target.closest('.js-tab-body');
+      let tabSelect = tabBbody.querySelector('.js-tab-selected');
+      let valueInput = event.target.closest('.js-tabs-value').querySelector('input').value;
+      tabSelect.innerHTML = valueInput;
+   }
+}
+
 class TabsSwitching {
-   constructor(body__buttons, button, tab, execute) {
-      this.name_button = button;
-      this.body__buttons = document.querySelector(body__buttons);
-      this.button = document.querySelectorAll(button);
-      this.tab = document.querySelectorAll(tab);
+   constructor(bodyTabs, bodyButtons, button, tab, execute) {
+      this.bodyTabs = typeof bodyTabs == 'object' ? bodyTabs : document.body;
+      this.bodyButtons = this.bodyTabs.querySelector(bodyButtons);
+      this.listButtons = this.bodyTabs.querySelectorAll(button);
+      this.nameButton = button;
+      this.tab = this.bodyTabs.querySelectorAll(tab);
       this.execute = execute;
    }
-   eventClick = () => {
-      this.body__buttons.addEventListener('click', (event) => {
-         if (event.target.closest(this.name_button)) {
-            let n = event.target.closest(this.name_button).dataset.button;
-            this.button.forEach((e) => { e.classList.toggle('active', e.dataset.button == n) });
+   init = () => {
+      this.bodyButtons.addEventListener('click', (event) => {
+         if (event.target.closest(this.nameButton)) {
+            let n = event.target.closest(this.nameButton).dataset.button;
+            this.listButtons.forEach((e) => { e.classList.toggle('active', e.dataset.button == n) });
             if (this.tab.length > 0) { this.tab.forEach((e) => { e.classList.toggle('active', e.dataset.tab == n) }) }
             if (this.execute) { this.execute() };
          }
@@ -505,5 +542,13 @@ class TabsSwitching {
    }
 }
 
-/* инициализация конструктора для табов */
-//new TabsSwitching('.tabs__buttons', '.tabs__button', '.tabs__page').eventClick();
+const CALCULATOR_LIST = document.querySelectorAll('.calculator__item');
+if (CALCULATOR_LIST.length > 0) {
+   CALCULATOR_LIST.forEach((e) => {
+      new TabsSwitching(e, '.calculator__item-buttons', '.calculator__item-button', '.calculator__item-data').init();
+   })
+}
+
+new TabsSwitching(false, '.calculator__buttons-profile', '.calculator__proile-button', '.calculator__type').init();
+
+

@@ -4,6 +4,10 @@
 @import "7_colors";
 @import "4_rules";
 
+html {
+   scrollbar-gutter: stable;
+}
+
 body {
    margin: 0 auto;
    max-width: 1920px;

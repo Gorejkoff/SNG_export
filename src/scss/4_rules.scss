@@ -16,7 +16,11 @@
    }
 }
 
-.body-overflow {
+[disabled] {
+   pointer-events: none;
+}
+
+.js-modal-scroll-off {
    overflow: hidden;
 }
 
@@ -136,6 +140,23 @@
    font-size: 22px;
 }
 
+.button-blue-tabs {
+   padding: 10px 15px;
+   min-height: 48px;
+   text-transform: uppercase;
+   font-size: 14px;
+   color: var(--color-gray-7);
+   border: 1px solid var(--color-gray-7);
+
+   &.active {
+      border-color: transparent;
+      color: var(--color-white);
+      background: var(--color-blue) linear-gradient(90deg, var(--color-blue-2), transparent);
+   }
+}
+
+
+
 .hover-gradient {
    position: relative;
 
@@ -176,4 +197,10 @@
    &.js-modal-visible {
       display: block;
    }
+}
+
+.js-tab-content {
+   height: 0;
+   overflow: hidden;
+   transition: height 0.2s;
 }

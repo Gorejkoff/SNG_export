@@ -20,7 +20,7 @@ function openModal(event) {
    let modalElement = event.target.closest('.js-modal-open').dataset.modal_open;
    if (typeof modalElement !== "undefined" && document.querySelector(`#${modalElement}`)) {
       document.querySelector(`#${modalElement}`).classList.add('js-modal-visible');
-      document.body.classList.add('body-overflow')
+      document.body.classList.add('js-modal-scroll-off')
    }
 }
 function testModalStopClose(event) {
@@ -34,6 +34,6 @@ function testModalStopClose(event) {
 function closeModal(event) {
    event.target.closest('.js-modal-hidden').classList.remove('js-modal-visible');
    if (!document.querySelector('.js-modal-visible')) {
-      document.body.classList.remove('body-overflow');
+      document.body.classList.remove('js-modal-scroll-off');
    }
 }
