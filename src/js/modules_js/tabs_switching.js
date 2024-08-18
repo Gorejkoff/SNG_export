@@ -26,6 +26,13 @@ if (CALCULATOR_LIST.length > 0) {
    })
 }
 
-new TabsSwitching(false, '.calculator__buttons-profile', '.calculator__proile-button', '.calculator__type').init();
+if (document.querySelector('.calculator__buttons-profile')) {
+   new TabsSwitching(false, '.calculator__buttons-profile', '.calculator__proile-button', '.calculator__type').init();
+}
+
+
+if (document.querySelector('.product-card__tabs')) {
+   new TabsSwitching('.product-card__content', '.product-card__content', '.js-product-tabs-button', '.product-card__tabs-content').init();
+}
 
 

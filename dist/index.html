@@ -5,7 +5,7 @@
    <title>"Export"</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <meta name="viewport" content="width=device-width initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css?_v=20240812160335">
+<link rel="stylesheet" href="css/style.css?_v=20240818222601">
 </head>
 
 
@@ -35,8 +35,8 @@
                <li class="header__menu-list-item"><a href="projects.html">Проекты</a></li>
             </ol>
          </nav>
-         <div class="header__button-calculator" data-da=".header-menu__mobile,2,1100">
-            <button type="button" class=" button-blue">Металлический калькулятор</button>
+         <div class="header__button-calculator js-modal-open" data-modal_open="modal-calculator" data-da=".header-menu__mobile,2,1100">
+            <button type="button" class="button-blue">Металлический калькулятор</button>
          </div>
          <div class="header__mail" data-da=".header-menu__mobile,3,1100">
             <button type="button">
@@ -57,7 +57,9 @@
          <div class="header__slogan">Китай. Металл. Качество. Мы объединяем!</div>
          <nav class="header__menu-bottom" data-da=".header-menu__mobile,1,1100">
             <ol class="header__menu-list">
-               <li class="header__menu-list-item"><a href="#0">Каталог</a></li>
+               <li class="header__menu-list-item js-catalog-button">
+                  <a href="catalog.html">Каталог</a>
+               </li>
                <li class="header__menu-list-item header__menu-open">
                   <a href="#0">Компания</a>
                   <div class="header__menu-sublist">
@@ -183,58 +185,70 @@
       <div class="block-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.</div>
       <div class="block-catalog__content">
          <article class="block-catalog__card">
-            <div class="block-catalog__card-image">
-               <img src="./img/jpg/img-3.jpg" alt="img">
-            </div>
-            <div class="block-catalog__card-content">
-               <h3 class="block-catalog__card-title">Фитинги</h3>
-               <p class="block-catalog__card-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса</p>
-            </div>
+            <a href="product_card.html">
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-3.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Фитинги</h3>
+                  <p class="block-catalog__card-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса</p>
+               </div>
+            </a>
          </article>
          <article class="block-catalog__card">
-            <div class="block-catalog__card-image">
-               <img src="./img/jpg/img-4.jpg" alt="img">
-            </div>
-            <div class="block-catalog__card-content">
-               <h3 class="block-catalog__card-title">Фланцы</h3>
-               <p class="block-catalog__card-text">Предлагаем широкий выбор металлопроката для любых потребностей </p>
-            </div>
+            <a href="#0">
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-4.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Фланцы</h3>
+                  <p class="block-catalog__card-text">Предлагаем широкий выбор металлопроката для любых потребностей </p>
+               </div>
+            </a>
          </article>
          <article class="block-catalog__card">
-            <div class="block-catalog__card-image">
-               <img src="./img/jpg/img-6.jpg" alt="img">
-            </div>
-            <div class="block-catalog__card-content">
-               <h3 class="block-catalog__card-title">Трубы</h3>
-               <p class="block-catalog__card-text">Предлагаем широкий выбор металлопроката для любых потребностей </p>
-            </div>
+            <a href="#0">
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-6.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Трубы</h3>
+                  <p class="block-catalog__card-text">Предлагаем широкий выбор металлопроката для любых потребностей </p>
+               </div>
+            </a>
          </article>
          <article class="block-catalog__card">
-            <div class="block-catalog__card-image">
-               <img src="./img/jpg/img-6.jpg" alt="img">
-            </div>
-            <div class="block-catalog__card-content">
-               <h3 class="block-catalog__card-title">Листовой прокат</h3>
-               <p class="block-catalog__card-text">Предлагаем широкий выбор металлопроката для любых потребностей </p>
-            </div>
+            <a href="#0">
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-6.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Листовой прокат</h3>
+                  <p class="block-catalog__card-text">Предлагаем широкий выбор металлопроката для любых потребностей </p>
+               </div>
+            </a>
          </article>
          <article class="block-catalog__card">
-            <div class="block-catalog__card-image">
-               <img src="./img/jpg/img-7.jpg" alt="img">
-            </div>
-            <div class="block-catalog__card-content">
-               <h3 class="block-catalog__card-title">Сортовой прокат</h3>
-               <p class="block-catalog__card-text">Предлагаем широкий выбор металлопроката для любых потребностей </p>
-            </div>
+            <a href="#0">
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-7.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Сортовой прокат</h3>
+                  <p class="block-catalog__card-text">Предлагаем широкий выбор металлопроката для любых потребностей </p>
+               </div>
+            </a>
          </article>
          <article class="block-catalog__card">
-            <div class="block-catalog__card-image">
-               <img src="./img/jpg/img-8.jpg" alt="img">
-            </div>
-            <div class="block-catalog__card-content">
-               <h3 class="block-catalog__card-title">Крепеж</h3>
-               <p class="block-catalog__card-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ.</p>
-            </div>
+            <a href="#0">
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-8.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Крепеж</h3>
+                  <p class="block-catalog__card-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ.</p>
+               </div>
+            </a>
          </article>
       </div>
 
@@ -437,6 +451,116 @@
 </footer>
 
    </div>
+
+   <div id="catalog-modal" class="catalog-modal">
+   <div class="catalog-modal__container">
+      <div class="block-catalog__content">
+         <article class="block-catalog__card">
+            <div>
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-3.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Фитинги</h3>
+                  <ol>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                  </ol>
+               </div>
+            </div>
+         </article>
+         <article class="block-catalog__card">
+            <div>
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-4.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Фланцы</h3>
+                  <ol>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                  </ol>
+               </div>
+            </div>
+         </article>
+         <article class="block-catalog__card">
+            <div>
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-6.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Трубы</h3>
+                  <ol>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                  </ol>
+               </div>
+            </div>
+         </article>
+         <article class="block-catalog__card">
+            <div>
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-6.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Листовой прокат</h3>
+                  <ol>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                  </ol>
+               </div>
+            </div>
+         </article>
+         <article class="block-catalog__card">
+            <div>
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-7.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Сортовой прокат</h3>
+                  <ol>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                  </ol>
+               </div>
+            </div>
+         </article>
+         <article class="block-catalog__card">
+            <div>
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-8.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Крепеж</h3>
+                  <ol>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                  </ol>
+               </div>
+            </div>
+         </article>
+      </div>
+      <a class="catalog-modal__link" href="">показать еще</a>
+   </div>
+</div>
 
    <div id="modal-calculator" class="modal size-l js-modal-close js-modal-hidden ">
    <div class="modal__wrapper">
@@ -2563,7 +2687,7 @@
    </div>
 </div>
 
-   <script defer src='./js/app.js?_v=20240812160335'></script>
+   <script defer src='./js/app.js?_v=20240818222601'></script>
 
 </body>
 

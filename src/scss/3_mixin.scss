@@ -18,6 +18,11 @@
    #{$prop}: calc($minpx + (100vw - 768px)/(1100 - 768)*($max - $min));
 }
 
+@mixin size_768_320 ($prop, $max, $min) {
+   $minpx : $min + px;
+   #{$prop}: calc($minpx + (100vw - 320px)/(768 - 320)*($max - $min));
+}
+
 @mixin size_768_1366 ($prop, $max, $min) {
    $minpx : $min + px;
    #{$prop}: calc($minpx + (100vw - 768px)/(1366 - 768)*($max - $min));

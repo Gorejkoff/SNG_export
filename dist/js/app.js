@@ -48,6 +48,19 @@ document.addEventListener('click', (event) => {
    } else if (!event.target.closest('.marking__item-list')) {
       MARKING_ITEM.forEach((e) => { e.classList.remove('list-open') })
    }
+   if (event.target.closest('.product-card__grade-grid .show')) {
+      event.target.closest('.product-card__grade-grid').classList.add('show-all');
+   }
+   if (event.target.closest('.product-card__grade-grid .hide')) {
+      event.target.closest('.product-card__grade-grid').classList.remove('show-all');
+   }
+   if (event.target.closest('.product-card__grade-grid-cell')) {
+      let gradeCell = event.target.closest('.product-card__grade-grid-cell');
+      let gradeBlock = event.target.closest('.product-card__grade-block');
+      let cellList = gradeBlock.querySelectorAll('.product-card__grade-grid-cell');
+      gradeBlock.querySelector('.product-card__grade-value').innerHTML = gradeCell.innerHTML;
+      cellList.forEach((e) => { e.classList.toggle('active', e == gradeCell) })
+   }
 })
 
 document.addEventListener('scroll', () => {
@@ -65,6 +78,14 @@ function scrollHeader() {
       HEADER.classList.remove('scroll-header');
    }
 }
+if (isPC && document.querySelector('#catalog-modal')) {
+   const CATALOG_MODAL = document.querySelector('#catalog-modal');
+   document.body.addEventListener('mouseover', (event) => {
+      CATALOG_MODAL.classList.toggle('open', event.target.closest('.js-catalog-button') || event.target.closest('#catalog-modal'));
+   })
+}
+
+
 // перемещение блоков при адаптиве по данным атрибута 
 // data-da=".class,3,768" 
 // класс родителя куда перемещать
@@ -121,6 +142,21 @@ function moving(e, order, addressMove) {
 
 
 
+/* const CATALOG_NAV = document.querySelector('.catalog-nav');
+
+if (CATALOG_NAV) {
+   document.addEventListener('click', (event) => {
+      if (event.target.closest('.catalog-nav__first')) {
+         clickFirst(event.target.closest('.catalog-nav__first'))
+      }
+
+   })
+}
+
+
+function clickFirst(element) {
+   element.classList.add('open');
+} */
 if (document.querySelector('.filter')) {
    // переменные
    const FORM_FILTER = document.forms.filter;
@@ -437,11 +473,51 @@ function closeModal(event) {
       document.body.classList.remove('js-modal-scroll-off');
    }
 }
+document.addEventListener('click', (event) => {
+   // уменьшить количесво товара в корзине
+   if (event.target.closest('.js-dicrement')) {
+      dicrementQuantity(event);
+   }
+   // увеличить количесво товара в корзине
+   if (event.target.closest('.js-increment')) {
+      incrementQuantity(event);
+   }
+
+})
+
+// проверка количесва в input при вводе
+const QUANTITY_BASKET = document.querySelectorAll('.js-quantity input');
+QUANTITY_BASKET.forEach((e) => {
+   e.addEventListener('input', () => validationQuantityBasket(e))
+})
+// нельзя вводить меньше 1
+function validationQuantityBasket(e) {
+   if (e.value < 1) { e.value = 1; }
+}
+function dicrementQuantity(event) {
+   const input = event.target.closest('.js-quantity').querySelector('input');
+   input.value = Number(input.value) - 1;
+   validationQuantityBasket(input);
+}
+
+function incrementQuantity(event) {
+   const input = event.target.closest('.js-quantity').querySelector('input');
+   input.value = Number(input.value) + 1;
+}
 class TabsOpen {
    constructor(options) {
+      this.tabBody = options.tabBody;
+      this.tabButton = options.tabButton;
+      this.tabContent = options.tabContent;
+      this.tabContentInner = options.tabContentInner;
+      this.tabBodySecond = options.tabBodySecond;
+      this.tabButtonSecond = options.tabButtonSecond;
+      this.tabContentSecond = options.tabContentSecond;
+      this.tabContentInnerSecond = options.tabContentInnerSecond;
       this.pc = document.body.classList.contains('_pc'); // true если dasktop, иначе false. Работает в связке с isMobile
       this.parentTabs = document.querySelector(options.name);
-      this.tabsList = this.parentTabs.querySelectorAll('.js-tab-body');
+      this.tabsList = this.parentTabs.querySelectorAll(options.tabBody);
+      this.tabsListSecond = this.parentTabs.querySelectorAll(options.tabBodySecond);
       this.hover = options.hover == false ? false : true; // реакция табов на hover
       this.closeAllTabs = options.closeAllTabs == true ? true : false; // закрывать все табы
       this.closeClickContent = options.closeClickContent == true ? true : false; // закрыть при клике в области контента таба
@@ -456,70 +532,125 @@ class TabsOpen {
    examinationClick = (event) => {
       this.externalFunction && this.externalFunction(event);
       if (this.hover && this.pc) return;
-      let eventElement = this.closeClickContent ? event.target.closest('.js-tab-body') : event.target.closest('.js-tab-button');
-      if (eventElement && event.target.closest('.js-tab-body').classList.contains('active')) {
-         this.close(event.target.closest('.js-tab-body'));
+      let eventElement = this.closeClickContent ? event.target.closest(this.tabBody) : event.target.closest(this.tabButton);
+      if (eventElement && event.target.closest(this.tabBody).classList.contains('active')) {
+         this.close(event.target.closest(this.tabBody));
          return;
       }
       if (eventElement && !this.closeAllTabs) {
-         this.open(event.target.closest('.js-tab-body'));
+         this.open(event.target.closest(this.tabBody));
          return;
       }
+      if (event.target.closest(this.tabBodySecond)) {
+         if (event.target.closest(this.tabBodySecond).classList.contains('active')) {
+            this.closeSecond(event.target.closest(this.tabBodySecond));
+         } else {
+            this.openSecond(event.target.closest(this.tabBodySecond));
+         }
+         this.open(event.target.closest(this.tabBody));
+      }
+
       if (eventElement) {
          this.tabsList.forEach((element) => {
-            element == event.target.closest('.js-tab-body') ? this.open(element) : this.close(element);
+            element == event.target.closest(this.tabBody) ? this.open(element) : this.close(element);
          });
          return;
       }
-      if (!event.target.closest('.js-tab-content') && this.closeAllTabs) {
+      if (!event.target.closest(this.tabContent) && this.closeAllTabs) {
          this.tabsList.forEach(element => this.close(element));
+         this.tabsListSecond.forEach(element => this.closeSecond(element));
       }
    }
    examinationHover = (event) => {
-      if (event.target.closest('.js-tab-body')) {
+      if (event.target.closest(this.tabBody)) {
          this.tabsList.forEach((element) => {
-            element == event.target.closest('.js-tab-body') ? this.open(element) : this.close(element);
+            element == event.target.closest(this.tabBody) ? this.open(element) : this.close(element);
          });
       } else {
          this.tabsList.forEach(element => this.close(element));
       }
+      if (event.target.closest(this.tabBodySecond)) {
+         this.tabsListSecond.forEach((element) => {
+            element == event.target.closest(this.tabBodySecond) ? this.openSecond(element) : this.closeSecond(element);
+         });
+         this.open(event.target.closest(this.tabBody));
+      } else {
+         this.tabsListSecond.forEach(element => this.closeSecond(element));
+         this.open(event.target.closest(this.tabBody));
+      }
    }
    open = (element) => {
-      element.querySelector('.js-tab-content').style.height = this.getSize(element) + 'px';
+      element.querySelector(this.tabContent).style.height = this.getSize(element) + 'px';
+      element.classList.add('active');
+   };
+   openSecond = (element) => {
+      element.querySelector(this.tabContentSecond).style.height = this.getSizSecond(element) + 'px';
       element.classList.add('active');
    };
    close = (element) => {
-      element.querySelector('.js-tab-content').style.height = '';
+      if (element.querySelector(this.tabContent)) element.querySelector(this.tabContent).style.height = '';
+      element.classList.remove('active');
+      this.tabsListSecond.forEach(element => this.closeSecond(element));
+   };
+   closeSecond = (element) => {
+      if (element.querySelector(this.tabContentSecond)) element.querySelector(this.tabContentSecond).style.height = '';
       element.classList.remove('active');
    };
    adjustment = () => {
       this.tabsList.forEach((e) => e.classList.contains('active') && this.open(e));
       this.externalFunctionResize && this.externalFunctionResize()
    };
-   getSize = (element) => { return element.querySelector('.js-tab-content-inner').clientHeight };
+   getSize = (element) => { return element.querySelector(this.tabContentInner).clientHeight };
+   getSizSecond = (element) => { return element.querySelector(this.tabContentInnerSecond).clientHeight };
    resize = () => window.addEventListener('resize', this.adjustment);
 }
 
 if (document.querySelector('.calculator')) {
    new TabsOpen({
-      name: 'body',
+      name: '#modal-calculator',
+      tabBody: '.js-tab-body',
+      tabButton: '.js-tab-button',
+      tabContent: '.js-tab-content',
+      tabContentInner: '.js-tab-content-inner',
       hover: false,
       closeAllTabs: true,
       closeClickContent: false,
       externalFunction: choise,
-      // externalFunctionResize: outResize,
    }).init();
 }
 
-/* внешние функции */
 function choise(event) {
    if (event.target.closest('.js-tabs-value')) {
-      let tabBbody = event.target.closest('.js-tab-body');
+      let tabBbody = event.target.closest(this.tabBody);
       let tabSelect = tabBbody.querySelector('.js-tab-selected');
       let valueInput = event.target.closest('.js-tabs-value').querySelector('input').value;
       tabSelect.innerHTML = valueInput;
    }
 }
+
+
+if (document.querySelector('.catalog-nav')) {
+
+   const first = new TabsOpen({
+      name: '.catalog-nav',
+      tabBody: '.catalog-nav__first',
+      tabButton: '.catalog-nav__first-button',
+      tabContent: '.catalog-nav__second',
+      tabContentInner: '.catalog-nav__second-inner',
+      tabBodySecond: '.catalog-nav__second-item',
+      tabButtonSecond: '.catalog-nav__second-button',
+      tabContentSecond: '.catalog-nav__third',
+      tabContentInnerSecond: '.catalog-nav__third-inner',
+      hover: false,
+      closeAllTabs: true,
+      closeClickContent: false,
+   }).init();
+
+
+
+}
+
+
 
 class TabsSwitching {
    constructor(bodyTabs, bodyButtons, button, tab, execute) {
@@ -549,6 +680,13 @@ if (CALCULATOR_LIST.length > 0) {
    })
 }
 
-new TabsSwitching(false, '.calculator__buttons-profile', '.calculator__proile-button', '.calculator__type').init();
+if (document.querySelector('.calculator__buttons-profile')) {
+   new TabsSwitching(false, '.calculator__buttons-profile', '.calculator__proile-button', '.calculator__type').init();
+}
+
+
+if (document.querySelector('.product-card__tabs')) {
+   new TabsSwitching('.product-card__content', '.product-card__content', '.js-product-tabs-button', '.product-card__tabs-content').init();
+}
 
 

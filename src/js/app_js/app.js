@@ -48,6 +48,19 @@ document.addEventListener('click', (event) => {
    } else if (!event.target.closest('.marking__item-list')) {
       MARKING_ITEM.forEach((e) => { e.classList.remove('list-open') })
    }
+   if (event.target.closest('.product-card__grade-grid .show')) {
+      event.target.closest('.product-card__grade-grid').classList.add('show-all');
+   }
+   if (event.target.closest('.product-card__grade-grid .hide')) {
+      event.target.closest('.product-card__grade-grid').classList.remove('show-all');
+   }
+   if (event.target.closest('.product-card__grade-grid-cell')) {
+      let gradeCell = event.target.closest('.product-card__grade-grid-cell');
+      let gradeBlock = event.target.closest('.product-card__grade-block');
+      let cellList = gradeBlock.querySelectorAll('.product-card__grade-grid-cell');
+      gradeBlock.querySelector('.product-card__grade-value').innerHTML = gradeCell.innerHTML;
+      cellList.forEach((e) => { e.classList.toggle('active', e == gradeCell) })
+   }
 })
 
 document.addEventListener('scroll', () => {
@@ -65,3 +78,10 @@ function scrollHeader() {
       HEADER.classList.remove('scroll-header');
    }
 }
+if (isPC && document.querySelector('#catalog-modal')) {
+   const CATALOG_MODAL = document.querySelector('#catalog-modal');
+   document.body.addEventListener('mouseover', (event) => {
+      CATALOG_MODAL.classList.toggle('open', event.target.closest('.js-catalog-button') || event.target.closest('#catalog-modal'));
+   })
+}
+

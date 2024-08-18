@@ -5,7 +5,9 @@
 @import "4_rules";
 
 html {
+   scroll-padding-top: 170px;
    scrollbar-gutter: stable;
+   scroll-behavior: smooth;
 }
 
 body {
@@ -55,6 +57,9 @@ body {
 @import "marking";
 @import "services";
 @import "modal";
+@import "product_card";
+@import "catalog_nav";
+@import "catalog";
 
 
 

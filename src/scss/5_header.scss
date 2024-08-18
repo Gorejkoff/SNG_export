@@ -7,7 +7,9 @@
       list-style: none;
    }
 
-   &__container {}
+   &__container {
+      transform: translateZ(0);
+   }
 
    &__body {
       width: 100%;
@@ -399,6 +401,13 @@
       }
    }
 
+   &__menu-catalog {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+   }
 
 }
 

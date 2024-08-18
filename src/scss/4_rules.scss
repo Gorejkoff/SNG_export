@@ -125,7 +125,14 @@
    text-transform: uppercase;
    font-size: 14px;
    box-shadow: 0px 16px 16px 0px rgba(0, 0, 2, 0.21);
-   background: var(--color-blue) linear-gradient(90deg, var(--color-blue-2), transparent);
+   background: var(--color-blue) linear-gradient(90deg, transparent, var(--color-blue-2), transparent);
+   background-size: 200% 100%;
+   background-position: 100% 0;
+   transition: all 0.3s;
+
+   &:hover {
+      background-position: 0% 0;
+   }
 }
 
 .button-radial-gradient {
@@ -136,8 +143,14 @@
    min-height: 60px;
    color: var(--color-white);
    background: var(--button-bg, #898989) radial-gradient(circle at 23% -100%, var(--button-gr, #ffffff) 0%, transparent 50%);
+   background-size: 100% 100%;
    text-transform: uppercase;
    font-size: 22px;
+   transition: all 0.3s;
+
+   &:hover {
+      background-size: 150% 100%;
+   }
 }
 
 .button-blue-tabs {
@@ -155,7 +168,15 @@
    }
 }
 
-
+.button-grey {
+   padding: 5px 20px;
+   font-size: 12px;
+   text-transform: uppercase;
+   background-color: var(--color-gray-4);
+   width: 100%;
+   min-height: 32px;
+   box-shadow: 0px 16px 32px 0px rgba(0, 0, 2, 0.11);
+}
 
 .hover-gradient {
    position: relative;
