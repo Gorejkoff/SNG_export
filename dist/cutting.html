@@ -5,7 +5,7 @@
    <title>"Cutting"</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <meta name="viewport" content="width=device-width initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css?_v=20240818222601">
+<link rel="stylesheet" href="css/style.css?_v=20240820104748">
 </head>
 
 
@@ -44,8 +44,8 @@
                <span class="header__mail-text">zakaz@mksngexp.ru</span>
             </button>
          </div>
-         <div class="header__phone" data-da=".header-menu__mobile,4,1100">
-            <button type="button">
+         <div id="header-phone" class="header__phone" data-da=".header-menu__mobile,4,1100">
+            <button class="header__phone-button hidden-mobile-menu" type="button">
                <img class="header__phone-icon" src="./img/svg/phone.svg" alt="img">
                <span class="header__phone-text">
                   <span class="header__phone-number">+7 123 456 78 90</span>
@@ -53,6 +53,46 @@
                </span>
                <img class="header__phone-arrow" src="./img/svg/triangle.svg" alt="img">
             </button>
+            <div class="header__phone-window">
+               <div class="header__phone-window-body">
+                  <div class="header__phone-button">
+                     <img class="header__phone-icon" src="./img/svg/phone.svg" alt="img">
+                     <span class="header__phone-text">
+                        <span class="header__phone-number">+7 123 456 78 90</span>
+                        <span class="header__phone-order">отдел продаж</span>
+                     </span>
+                     <img class="header__phone-arrow" src="./img/svg/triangle-2.svg" alt="img">
+                  </div>
+                  <div class="header__phone-window-line"></div>
+                  <div class="header__phone-button">
+                     <img class="header__phone-icon" src="./img/svg/phone.svg" alt="img">
+                     <span class="header__phone-text">
+                        <span class="header__phone-number">8 800 456 78 90</span>
+                        <span class="header__phone-order">Бесплатный звонок по России</span>
+                     </span>
+                  </div>
+                  <button class="button-blue" type="button">Заказать звонок</button>
+                  <div class="header__phone-window-address">
+                     <span>E-mail:</span>
+                     <span>zakaz@mksngexp.ru</span>
+                  </div>
+                  <div class="header__phone-window-line"></div>
+                  <div class="header__phone-window-address">
+                     <span>Адрес:</span>
+                     <span>Челябинск, ул. Лермонтова 21, 3 этаж, офис 4</span>
+                  </div>
+                  <div class="header__phone-window-line"></div>
+                  <div class="header__phone-window-address">
+                     <span>Режим работы:</span>
+                     <p>Пн - Вс: 11.00 - 19.00</p>
+                  </div>
+                  <div class="header__phone-window-links">
+                     <a href="#0"><img src="./img/png/whatsapp.png" alt="img"></a>
+                     <a href="#0"><img src="./img/png/telegram.png" alt="img"></a>
+                     <a href="#0"><img src="./img/png/viber.png" alt="img"></a>
+                  </div>
+               </div>
+            </div>
          </div>
          <div class="header__slogan">Китай. Металл. Качество. Мы объединяем!</div>
          <nav class="header__menu-bottom" data-da=".header-menu__mobile,1,1100">
@@ -1659,7 +1699,7 @@
    </div>
 </div>
 
-   <script defer src='./js/app.js?_v=20240818222601'></script>
+   <script defer src='./js/app.js?_v=20240820104748'></script>
 
 </body>
 

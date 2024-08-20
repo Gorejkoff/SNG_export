@@ -84,6 +84,12 @@ if (isPC && document.querySelector('#catalog-modal')) {
       CATALOG_MODAL.classList.toggle('open', event.target.closest('.js-catalog-button') || event.target.closest('#catalog-modal'));
    })
 }
+if (MIN1100.matches && document.querySelector('#header-phone')) {
+   const HEADER_PHONE = document.querySelector('#header-phone');
+   document.body.addEventListener('mouseover', (event) => {
+      HEADER_PHONE.classList.toggle('open', event.target.closest('#header-phone'));
+   })
+}
 
 
 // перемещение блоков при адаптиве по данным атрибута 

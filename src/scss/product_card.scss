@@ -2,6 +2,17 @@
 
    &__container {}
 
+   &__page-header {
+      margin-bottom: 60px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 150%;
+
+      &>*:not(:last-child) {
+         margin-bottom: 15px;
+      }
+   }
+
    &__shell {
       gap: 15px;
 
@@ -537,4 +548,117 @@
          margin-top: 3px;
       }
    }
+
+   &__filter {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+
+      @media (min-width:768px) {
+         flex-direction: row;
+      }
+   }
+
+   &__filter-icon {
+      img {
+         width: 50px;
+      }
+   }
+
+   &__filter-body {}
+
+   &__filter-list {
+      margin-bottom: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+   }
+
+   &__filter-list-button {
+      position: relative;
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      min-height: 50px;
+      font-size: 16px;
+      font-weight: 700;
+      box-shadow: 0px 8px 26.73px 0.27px rgba(19, 86, 102, 0.24);
+      border: 1px solid rgb(231, 231, 231);
+
+      @media (min-width:992px) {
+         font-size: 20px;
+      }
+
+      span {
+         display: flex;
+         align-items: center;
+      }
+
+      img {
+         width: 12px;
+      }
+
+      &[data-quantity]::before {
+         content: attr(data-quantity);
+         position: absolute;
+         top: -20px;
+         right: 0;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: var(--color-white);
+         font-weight: 700;
+         min-width: 32px;
+         height: 32px;
+         background-color: var(--color-blue-4);
+         border-radius: 16px;
+      }
+   }
+
+   &__filter-selected {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      gap: 20px;
+
+      @media (min-width:768px) {
+         flex-direction: row;
+      }
+   }
+
+   &__filter-selected-items {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+   }
+
+   &__filter-selected-button {
+      padding: 2px 3px 2px 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 13px;
+      color: var(--color-gray-2);
+      border: 1px solid var(--color-gray-2);
+      border-radius: 13px;
+
+      img {
+         width: 19px;
+      }
+   }
+
+   &__filter-selected-reset {
+      padding: 2px 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 13px;
+      background-color: var(--color-gray-3);
+      white-space: nowrap;
+      border-radius: 13px;
+   }
+
 }

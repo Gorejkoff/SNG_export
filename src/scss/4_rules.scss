@@ -225,3 +225,9 @@
    overflow: hidden;
    transition: height 0.2s;
 }
+
+.hidden-mobile-menu {
+   @media (max-width:1099.98px) {
+      display: none !important;
+   }
+}

@@ -7,15 +7,25 @@
       list-style: none;
    }
 
-   &__container {
-      transform: translateZ(0);
-   }
+   &__container {}
 
    &__body {
       width: 100%;
       display: grid;
       grid-template-columns: 220px 1fr 325px 230px 265px;
       align-items: center;
+
+      @media (max-width:1669.98px) {
+         grid-template-columns: min-content 1fr 325px 230px 265px;
+      }
+
+      @media (min-width: 1100px) and (max-width:1600px) {
+         grid-template-columns: min-content 1fr auto auto calc(185px + (100vw - 1024px)/(1600 - 1024)*(265 - 185));
+      }
+
+      @media (max-width:1099.98px) {
+         grid-template-columns: 1fr 1fr 1fr;
+      }
 
       &>* {
          padding: 8px 15px;
@@ -32,18 +42,6 @@
 
       &>*:nth-child(-n+5) {
          border-bottom: 1px solid var(--color-gray);
-      }
-
-      @media (max-width:1669.98px) {
-         grid-template-columns: min-content 1fr 325px 230px 265px;
-      }
-
-      @media (min-width: 1100px) and (max-width:1600px) {
-         grid-template-columns: min-content 1fr auto auto calc(185px + (100vw - 1024px)/(1600 - 1024)*(265 - 185));
-      }
-
-      @media (max-width:1099.98px) {
-         grid-template-columns: 1fr 1fr 1fr;
       }
    }
 
@@ -121,15 +119,30 @@
       }
    }
 
+   &__phone {
+      position: relative;
+
+      &.open {
+         .header__phone-window {
+            display: block;
+         }
+      }
+   }
+
    &__mail-text {
       font-size: 14px;
    }
 
-   &__phone {
-      button {
-         display: flex;
-         gap: 5px;
-         text-align: end;
+   &__phone-button {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      text-align: end;
+
+      @media (min-width:1100px) {
+         justify-content: space-between;
+         width: 100%;
       }
    }
 
@@ -150,9 +163,12 @@
    &__phone-text {}
 
    &__phone-number {
+      margin-top: 5px;
+      margin-bottom: 10px;
       display: block;
       font-size: 18px;
       font-weight: 700;
+      // white-space: nowrap;
 
       @media (min-width: 1100px) and (max-width:1600px) {
          @include size_1600_1100 (font-size, 18, 14)
@@ -160,9 +176,11 @@
    }
 
    &__phone-order {
+      margin-left: -30px;
       display: block;
       font-size: 14px;
       font-weight: 500;
+      color: var(--color-blue-3);
 
       @media (min-width: 1100px) and (max-width:1600px) {
          @include size_1600_1100 (font-size, 14, 12)
@@ -171,6 +189,75 @@
 
    &__phone-arrow {
       margin-top: 3px;
+      display: none;
+
+      @media (min-width:1100px) {
+         display: block;
+      }
+   }
+
+   &__phone-window {
+      top: 0;
+      right: 0;
+
+      @media (min-width:1100px) {
+         position: absolute;
+         width: 100%;
+         display: none;
+      }
+   }
+
+   &__phone-window-body {
+      padding: 15px 8px;
+
+      color: var(--color-white);
+
+      @media (min-width:1100px) {
+         color: var(--color-black);
+         background-color: var(--color-white);
+         border: 1px solid var(--color-pacific-blue);
+      }
+
+      .header__phone-order {
+         font-size: 12px;
+      }
+
+      .button-blue {
+         width: 100%;
+      }
+
+      &>* {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__phone-window-line {
+      display: none;
+      border-top: 1px solid var(--color-pacific-blue);
+
+      @media (min-width:1100px) {
+         display: block;
+      }
+   }
+
+   &__phone-window-address {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 130%;
+
+      &>*:first-child {
+         color: var(--color-blue-3);
+      }
+   }
+
+   &__phone-window-links {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+
+      img {
+         width: 32px;
+      }
    }
 
    &__slogan {
