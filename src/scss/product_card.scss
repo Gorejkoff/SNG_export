@@ -220,8 +220,12 @@
 
    &__grade-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 5px;
+
+      @media (min-width:500px) {
+         grid-template-columns: repeat(4, 1fr);
+      }
 
       .hide {
          display: none;
@@ -268,8 +272,12 @@
    }
 
    &__grade-button {
-      grid-column: span 4;
+      grid-column: span 2;
       display: none;
+
+      @media (min-width:500px) {
+         grid-column: span 4;
+      }
 
       button {
          margin-top: 5px;
@@ -476,13 +484,16 @@
    }
 
    &__card-reduced {
-      margin-bottom: 25px;
+      flex: 1 1 auto;
       padding: 25px 5px;
       display: flex;
       flex-wrap: wrap;
-      gap: 30px;
+      gap: min(25px, 1.5vw);
       border: 1px solid var(--color-blue-4);
 
+      @media (min-width:1300px) {
+         flex-wrap: nowrap;
+      }
 
       .product-card__specifications {
          margin-top: 10px;
@@ -496,15 +507,20 @@
 
    &__card-right {
       margin-left: auto;
+      min-width: 220px;
 
       @media (min-width:768px) {
-         padding-right: 30px;
+         padding-right: 10px;
       }
    }
 
    &__besides {
       margin-top: 50px;
       margin-bottom: 50px;
+
+      .product-card__card-reduced {
+         margin-bottom: 25px;
+      }
    }
 
    &__besides-title {

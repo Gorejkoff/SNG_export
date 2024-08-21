@@ -231,3 +231,53 @@
       display: none !important;
    }
 }
+
+.check {
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+
+   input {
+      display: none;
+   }
+
+   &__delete {
+      --check-border: var(--color-red);
+      --check-selected: var(--color-red);
+      --check-text: var(--color-red);
+   }
+}
+
+.check-item {
+   margin-right: 15px;
+   display: inline-block;
+   position: relative;
+   width: 24px;
+   min-width: 24px;
+   height: 24px;
+   border: 1px solid var(--check-border, #12a4cb);
+
+   svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 14px;
+      max-width: 14px;
+      display: none;
+
+      path {
+         stroke: var(--check-selected, #12a4cb);
+      }
+   }
+
+   input:checked+& svg {
+      display: block;
+   }
+
+}
+
+.check-text {
+   font-size: 14px;
+   color: var(--check-text, #5a5140);
+}

@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/1_head.html',{"title":"Favourites"})
+</head>
+
+
+<body>
+
+   <div class="wrapper">
+
+      @@include('html/2_header.html',{})
+
+      @@include('html/2.1_header-scroll.html',{})
+
+      <main class="main">
+         <div class="title">
+            <div class="title__container">
+               <h1 class="block-title">Отводы</h1>
+               @@include('html/bread_crumbs/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Избранное", "link": "favourites.html"}]})
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-card__container">
+               <div class="product-card__shell">
+                  <div class="product-card__menu">
+                     @@include('html/catalog_nav.html',{"active": "1"})
+                  </div>
+
+                  <div class="product-card__favourites">
+                     <form class="product-card__favourites-body" action="#" method="post" name="" id="">
+                        <div class="product-card__favourites-text">Чтобы не потерять ваши избранные товары , добавьте их в корзину и оформите заказ</div>
+                        <div class="product-card__favourites-add"><a href="basket.html">добавить всё в корзину</a></div>
+                        <div class="product-card__favourite-title">Избранные товары:</div>
+                        <div class="product-card__favourites-buttons">
+                           <div class="product-card__favourites-buttons-check">
+                              <label class="check__all check">
+                                 <input type="checkbox" name="check-all">
+                                 <span class="check-item">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M21 2.5L11.5 21L3 2" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                 </span>
+                                 <span class="check-text">выбрать все</span>
+                              </label>
+                              <label class="check__delete check">
+                                 <input type="checkbox" name="delete-all">
+                                 <span class="check-item">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M21 2.5L11.5 21L3 2" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                 </span>
+                                 <span class="check-text">удалить выбранные товары</span>
+                              </label>
+                              <div class="product-card__favourites-filter">
+                                 <button class="product-card__favourites-filter-button" type="button">
+                                    сортировать
+                                    <img src="@img/svg/arrow-10.svg" alt="img">
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="product-card__favourites-buttons-action">
+                              <button class="product-card__favourites-download" type="button" title="Скачать"><img src="@img/svg/download-3.svg" alt="img"></button>
+                              <button class="product-card__favourites-print" type="button" title="Печать"><img src="@img/svg/print.svg" alt="img"></button>
+                              <button class="product-card__favourites-share" type="button" title="Поделиться"><img src="@img/svg/share-2.svg" alt="img"></button>
+                              <button class="product-card__favourites-delete" type="button" title="Очистить всё"><img src="@img/svg/delete.svg" alt="img"></button>
+                           </div>
+                        </div>
+
+                        <div class="product-card__favourites-item">
+                           <label class="check__item check">
+                              <input type="checkbox" name="check-item">
+                              <span class="check-item">
+                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 2.5L11.5 21L3 2" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                 </svg>
+                              </span>
+                           </label>
+                           <div class="product-card__card-reduced">
+                              <div class="product-card__side">
+                                 <div class="product-card__status">
+                                    <img src="@img/svg/check.svg" alt="img">
+                                    в наличии / под заказ
+                                 </div>
+                                 <div class="product-card__swiper-body">
+                                    <div class="product-card__swiper-shell">
+                                       <div class="product-card__besides-swiper swiper">
+                                          <div class="swiper-wrapper">
+                                             <div class="swiper-slide">
+                                                <div class="product-card__slide-body">
+                                                   <img src="@img/jpg/img-5.jpg" alt="img">
+                                                </div>
+                                             </div>
+                                             <div class="swiper-slide">
+                                                <div class="product-card__slide-body">
+                                                   <img src="@img/jpg/img-5.jpg" alt="img">
+                                                </div>
+                                             </div>
+                                             <div class="swiper-slide">
+                                                <div class="product-card__slide-body">
+                                                   <img src="@img/jpg/img-5.jpg" alt="img">
+                                                </div>
+                                             </div>
+                                             <div class="swiper-slide">
+                                                <div class="product-card__slide-body">
+                                                   <img src="@img/jpg/img-5.jpg" alt="img">
+                                                </div>
+                                             </div>
+                                             <div class="swiper-slide">
+                                                <div class="product-card__slide-body">
+                                                   <img src="@img/jpg/img-5.jpg" alt="img">
+                                                </div>
+                                             </div>
+                                             <div class="swiper-slide">
+                                                <div class="product-card__slide-body">
+                                                   <img src="@img/jpg/img-5.jpg" alt="img">
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="product-card__besides-pagination"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="product-card__article">
+                                    <span>артикул:</span>
+                                    <span>12345</span>
+                                 </div>
+                              </div>
+                              <div class="product-card__card-center">
+                                 <a href="product_card.html" class="product-card__title">Наименование товара</a>
+                                 <div class="product-card__specifications">
+                                    <div class="product-card__title">Характеристики:</div>
+                                    <div class="product-card__specifications-text">
+                                       <p>примерный текст, размеры товара, наименование товара, примерный</p>
+                                    </div>
+                                 </div>
+                                 <div class="product-card__grade">
+                                    <div class="product-card__grade-title">марка стали:</div>
+                                    <div class="product-card__grade-block">
+                                       <div class="product-card__grade-value">12х18н10Т</div>
+                                       <div class="product-card__grade-grid">
+                                          <div class="product-card__grade-grid-cell active">12х18н10Т</div>
+                                          <div class="product-card__grade-grid-cell">12х19н10Т</div>
+                                          <div class="product-card__grade-grid-cell">12х18н11Т</div>
+                                          <div class="product-card__grade-grid-cell">12х18н12Т</div>
+                                          <div class="product-card__grade-grid-cell">12х18н13Т</div>
+                                          <div class="product-card__grade-grid-cell">12х28н14Т</div>
+                                          <div class="product-card__grade-grid-cell">12х18н15Т</div>
+                                          <div class="product-card__grade-grid-cell">12х19н10Т</div>
+                                          <div class="product-card__grade-grid-cell">12х28н14Т</div>
+                                          <div class="product-card__grade-grid-cell">12х18н15Т</div>
+                                          <div class="product-card__grade-grid-cell">12х19н10Т</div>
+                                          <div class="product-card__grade-button">
+                                             <button class="hide" type="button">скрыть всё</button>
+                                             <button class="show" type="button">показать всё</button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="product-card__card-right">
+                                 <div class="product-card__actions-body">
+                                    <button class="product-card__actions-favourites" type="button">
+                                       <span class="outside">в избранное</span>
+                                       <span class="inside">в избранном</span>
+                                       <svg width="23" height="23" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M44.6664 5.89665C41.7594 7.90014 34.9765 13.4096 34.9765 13.4096C34.9765 13.4096 28.6781 7.90002 25.2867 5.89665C21.8952 3.89328 15.5968 3.58488 10.7519 5.89665C5.90696 8.20842 3 14.4113 3 19.9208C3 25.4302 4.93797 29.4371 7.36044 32.4423C9.7829 35.4475 34.9765 66 34.9765 66C34.9765 66 61.1391 34.4457 62.5926 32.4423C64.0461 30.4389 67.4375 26.9329 66.953 19.9208C66.4686 12.9086 63.5616 8.90177 58.7167 5.89665C53.8717 2.89153 47.5733 3.89315 44.6664 5.89665Z" stroke="#0E81B2" stroke-width="4.5" stroke-linejoin="round" />
+                                       </svg>
+                                    </button>
+                                    <button class="button-grey" type="button">узнать цену</button>
+                                    <div class="product-card__actions-quantity">
+                                       <div class="product-card__actions-quantity-form js-quantity">
+                                          <button class="product-card__actions-quantity-decreament js-dicrement" type="button">-</button>
+                                          <input type="number" max="100" value="1">
+                                          <button class="product-card__actions-quantity-increament js-increment" type="button">+</button>
+                                       </div>
+                                       <div class="product-card__actions-quantity-measure">шт</div>
+                                       <button class="product-card__actions-basket" type="button">
+                                          <span class="outside">в корзину</span>
+                                          <span class="inside">в корзине</span>
+                                       </button>
+                                    </div>
+                                    <button class="button-grey" type="button">купить в 1 клик</button>
+                                 </div>
+                              </div>
+                           </div>
+                           <button class="product-card__favourites-delete" type="button" title="Удалить"><img src="@img/svg/delete.svg" alt="img"></button>
+                        </div>
+                        <div class="product-card__favourites-item">
+                           <label class="check__item check">
+                              <input type="checkbox" name="check-item">
+                              <span class="check-item">
+                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 2.5L11.5 21L3 2" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                 </svg>
+                              </span>
+                           </label>
+                           <div class="product-card__card-reduced">
+                              <div class="product-card__side">
+                                 <div class="product-card__status">
+                                    <img src="@img/svg/check.svg" alt="img">
+                                    в наличии / под заказ
+                                 </div>
+                                 <div class="product-card__swiper-body">
+                                    <div class="product-card__swiper-shell">
+                                       <div class="product-card__besides-swiper swiper">
+                                          <div class="swiper-wrapper">
+                                             <div class="swiper-slide">
+                                                <div class="product-card__slide-body">
+                                                   <img src="@img/jpg/img-5.jpg" alt="img">
+                                                </div>
+                                             </div>
+                                             <div class="swiper-slide">
+                                                <div class="product-card__slide-body">
+                                                   <img src="@img/jpg/img-5.jpg" alt="img">
+                                                </div>
+                                             </div>
+                                             <div class="swiper-slide">
+                                                <div class="product-card__slide-body">
+                                                   <img src="@img/jpg/img-5.jpg" alt="img">
+                                                </div>
+                                             </div>
+                                             <div class="swiper-slide">
+                                                <div class="product-card__slide-body">
+                                                   <img src="@img/jpg/img-5.jpg" alt="img">
+                                                </div>
+                                             </div>
+                                             <div class="swiper-slide">
+                                                <div class="product-card__slide-body">
+                                                   <img src="@img/jpg/img-5.jpg" alt="img">
+                                                </div>
+                                             </div>
+                                             <div class="swiper-slide">
+                                                <div class="product-card__slide-body">
+                                                   <img src="@img/jpg/img-5.jpg" alt="img">
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="product-card__besides-pagination"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="product-card__article">
+                                    <span>артикул:</span>
+                                    <span>12345</span>
+                                 </div>
+                              </div>
+                              <div class="product-card__card-center">
+                                 <a href="product_card.html" class="product-card__title">Наименование товара</a>
+                                 <div class="product-card__specifications">
+                                    <div class="product-card__title">Характеристики:</div>
+                                    <div class="product-card__specifications-text">
+                                       <p>примерный текст, размеры товара, наименование товара, примерный</p>
+                                    </div>
+                                 </div>
+                                 <div class="product-card__grade">
+                                    <div class="product-card__grade-title">марка стали:</div>
+                                    <div class="product-card__grade-block">
+                                       <div class="product-card__grade-value">12х18н10Т</div>
+                                       <div class="product-card__grade-grid">
+                                          <div class="product-card__grade-grid-cell active">12х18н10Т</div>
+                                          <div class="product-card__grade-grid-cell">12х19н10Т</div>
+                                          <div class="product-card__grade-grid-cell">12х18н11Т</div>
+                                          <div class="product-card__grade-grid-cell">12х18н12Т</div>
+                                          <div class="product-card__grade-grid-cell">12х18н13Т</div>
+                                          <div class="product-card__grade-grid-cell">12х28н14Т</div>
+                                          <div class="product-card__grade-grid-cell">12х18н15Т</div>
+                                          <div class="product-card__grade-grid-cell">12х19н10Т</div>
+                                          <div class="product-card__grade-button">
+                                             <button class="hide" type="button">скрыть всё</button>
+                                             <button class="show" type="button">показать всё</button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="product-card__card-right">
+                                 <div class="product-card__actions-body">
+                                    <button class="product-card__actions-favourites" type="button">
+                                       <span class="outside">в избранное</span>
+                                       <span class="inside">в избранном</span>
+                                       <svg width="23" height="23" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M44.6664 5.89665C41.7594 7.90014 34.9765 13.4096 34.9765 13.4096C34.9765 13.4096 28.6781 7.90002 25.2867 5.89665C21.8952 3.89328 15.5968 3.58488 10.7519 5.89665C5.90696 8.20842 3 14.4113 3 19.9208C3 25.4302 4.93797 29.4371 7.36044 32.4423C9.7829 35.4475 34.9765 66 34.9765 66C34.9765 66 61.1391 34.4457 62.5926 32.4423C64.0461 30.4389 67.4375 26.9329 66.953 19.9208C66.4686 12.9086 63.5616 8.90177 58.7167 5.89665C53.8717 2.89153 47.5733 3.89315 44.6664 5.89665Z" stroke="#0E81B2" stroke-width="4.5" stroke-linejoin="round" />
+                                       </svg>
+                                    </button>
+                                    <button class="button-grey" type="button">узнать цену</button>
+                                    <div class="product-card__actions-quantity">
+                                       <div class="product-card__actions-quantity-form js-quantity">
+                                          <button class="product-card__actions-quantity-decreament js-dicrement" type="button">-</button>
+                                          <input type="number" max="100" value="1">
+                                          <button class="product-card__actions-quantity-increament js-increment" type="button">+</button>
+                                       </div>
+                                       <div class="product-card__actions-quantity-measure">шт</div>
+                                       <button class="product-card__actions-basket" type="button">
+                                          <span class="outside">в корзину</span>
+                                          <span class="inside">в корзине</span>
+                                       </button>
+                                    </div>
+                                    <button class="button-grey" type="button">купить в 1 клик</button>
+                                 </div>
+                              </div>
+                           </div>
+                           <button class="product-card__favourites-delete" type="button" title="Удалить"><img src="@img/svg/delete.svg" alt="img"></button>
+                        </div>
+
+                        <div class="product-card__favourites-buttons">
+                           <div class="product-card__favourites-buttons-check">
+                              <label class="check__all check">
+                                 <input type="checkbox" name="check-all">
+                                 <span class="check-item">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M21 2.5L11.5 21L3 2" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                 </span>
+                                 <span class="check-text">выбрать все</span>
+                              </label>
+                              <label class="check__delete check">
+                                 <input type="checkbox" name="delete-all">
+                                 <span class="check-item">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M21 2.5L11.5 21L3 2" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                 </span>
+                                 <span class="check-text">удалить выбранные товары</span>
+                              </label>
+                              <div class="product-card__favourites-filter">
+                                 <button class="product-card__favourites-filter-button" type="button">
+                                    сортировать
+                                    <img src="@img/svg/arrow-10.svg" alt="img">
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="product-card__favourites-buttons-action">
+                              <button class="product-card__favourites-download" type="button" title="Скачать"><img src="@img/svg/download-3.svg" alt="img"></button>
+                              <button class="product-card__favourites-print" type="button" title="Печать"><img src="@img/svg/print.svg" alt="img"></button>
+                              <button class="product-card__favourites-share" type="button" title="Поделиться"><img src="@img/svg/share-2.svg" alt="img"></button>
+                              <button class="product-card__favourites-delete" type="button" title="Очистить всё"><img src="@img/svg/delete.svg" alt="img"></button>
+                           </div>
+                        </div>
+
+
+                     </form>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </main>
+
+      @@include('html/4_footer.html',{})
+
+   </div>
+
+   @@include('html/modal_calculator.html',{})
+
+   @@include('html/header_menu.html',{})
+
+   @@include('html/search.html',{})
+
+   @@include('html/3_scripts.html',{})
+   <script defer src='./js/swiper.min.js'></script>
+</body>
+
+</html>
