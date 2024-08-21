@@ -83,6 +83,23 @@
       margin-bottom: 25px;
       display: flex;
       align-items: center;
-
    }
+
+   &__favourites-add-basket {
+      text-align: center;
+   }
+
+   &__favourites-add-basket-button {
+      margin-top: 40px;
+      margin-bottom: 100px;
+      padding: 20px 35px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 72px;
+      font-size: 22px;
+      font-weight: 700;
+      text-transform: none;
+   }
+
 }
