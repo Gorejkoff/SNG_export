@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-   <title>"History"</title>
+   <title>"Basket"</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <meta name="viewport" content="width=device-width initial-scale=1.0">
 <link rel="stylesheet" href="css/style.css?_v=20240822151648">
@@ -196,59 +196,380 @@
 </header>
 
       <main class="main">
-
          <div class="title">
             <div class="title__container">
-               <h1 class="block-title">История</h1>
+               <h1 class="block-title">Корзина</h1>
                <div class="bread-crumbs">
    <ol class="bread-crumbs__body">
-       <li><a href="index.html">Главная</a></li>  <li><a href="history.html">История</a></li> 
+       <li><a href="index.html">Главная</a></li>  <li><a href="basket.html">Корзина</a></li> 
    </ol>
 </div>
             </div>
          </div>
 
-         <div class="about">
-            <div class="about__container">
-               <div class="about__body">
-                  <div class="about__links">
-                     <div class="about__shedow">
-   <ol class="about__list">
-      <li class="about__list-item "><a href="about_company.html">О компании</a></li>
-      <li class="about__list-item active"><a href="history.html">История</a></li>
-      <li class="about__list-item "><a href="certificates.html">Сертификаты</a></li>
-      <li class="about__list-item "><a href="404.html">Отзывы</a></li>
-      <li class="about__list-item "><a href="thanks.html">Благодарственные письма</a></li>
-      <li class="about__list-item "><a href="#0">Этапы работ</a></li>
-      <li class="about__list-item "><a href="#0">Оплата / доставка</a></li>
-      <li class="about__list-item "><a href="staff.html">Сотрудники</a></li>
-      <li class="about__list-item "><a href="vacancy.html">Вакансии</a></li>
-      <li class="about__list-item "><a href="#0">Реквизиты</a></li>
-      <li class="about__list-item "><a href="documents.html">Документы</a></li>
-   </ol>
-</div>
+         <div class="basket">
+            <div class="basket__container">
+
+               <form class="basket__fast" action="#" method="post" name="" id="">
+                  <div class="basket__fast-text">быстрое добавление: </div>
+                  <div class="basket__fast-block">
+                     <input type="text" placeholder="введите наименование или артикуль">
+                     <button class="basket__fast-button" type="button">
+                        <img src="./img/svg/search.svg" alt="img">
+                     </button>
                   </div>
-                  <div class="about__content">
-                     <p class="about__history-text about-text">
-                        Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.
-                     </p>
-                     <div class="about__history-item">
-                        <div class="about__history-item-date">2026</div>
-                        <div class="about__history-item-text about-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и </div>
-                     </div>
-                     <div class="about__history-item">
-                        <div class="about__history-item-date">2026</div>
-                        <div class="about__history-item-text about-text">
-                           <div class="about__history-item-image-body">
-                              <img src="./img/jpg/img-15.jpg" alt="img">
-                           </div>
-                           <p>
-                              Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована —
-                           </p>
+               </form>
+               <form class="basket__body" action="#" method="post" name="" id="">
+                  <div class="basket__anchor">
+                     <a href="#register">ОФОРМЛЕНИЕ ЗАКАЗА</a>
+                  </div>
+                  <div class="basket__title">Товары в вашей корзине:</div>
+
+                  <div class="product-card__favourites-buttons">
+                     <div class="product-card__favourites-buttons-check">
+                        <label class="check__all check">
+                           <input type="checkbox" name="check-all">
+                           <span class="check-item">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M21 2.5L11.5 21L3 2" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </span>
+                           <span class="check-text">выбрать все</span>
+                        </label>
+                        <label class="check__delete check">
+                           <input type="checkbox" name="delete-all">
+                           <span class="check-item">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M21 2.5L11.5 21L3 2" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </span>
+                           <span class="check-text">удалить выбранные товары</span>
+                        </label>
+                        <div class="product-card__favourites-filter">
+                           <button class="product-card__favourites-filter-button" type="button">
+                              сортировать
+                              <img src="./img/svg/arrow-10.svg" alt="img">
+                           </button>
                         </div>
                      </div>
+                     <div class="product-card__favourites-buttons-action">
+                        <button class="product-card__favourites-xl" type="button" title="Скачать"><img src="./img/svg/xl.svg" alt="img"></button>
+                        <button class="product-card__favourites-print" type="button" title="Печать"><img src="./img/svg/print.svg" alt="img"></button>
+                        <button class="product-card__favourites-share" type="button" title="Поделиться"><img src="./img/svg/share-2.svg" alt="img"></button>
+                        <button class="product-card__favourites-delete" type="button" title="Очистить всё"><img src="./img/svg/delete.svg" alt="img"></button>
+                     </div>
                   </div>
-               </div>
+                  <div class="basket__table-scroll scroll">
+                     <div class="basket__table">
+                        <div class="basket__table-header">
+                           <p>№</p>
+                           <img src="./img/svg/check-2.svg" alt="img">
+                        </div>
+                        <div class="basket__table-header">Артикул</div>
+                        <div class="basket__table-header">Наименование</div>
+                        <div class="basket__table-header">Цена</div>
+                        <div class="basket__table-header">Количество / ед.изм</div>
+                        <div class="basket__table-header">Комментарий</div>
+                        <div class="basket__table-header"></div>
+                        <div class="basket__table-number">
+                           <span>1</span>
+                           <label class="check__item check">
+                              <input type="checkbox" name="check-item">
+                              <span class="check-item">
+                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 2.5L11.5 21L3 2" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                 </svg>
+                              </span>
+                           </label>
+                        </div>
+                        <div class="basket__table-article">
+                           <div>
+                              <div class="basket__table-article-image">
+                                 <img src="./img/png/img-basket.png" alt="img">
+                              </div>
+                              <div class="basket__table-article-number">4567809</div>
+                           </div>
+                           <button class="basket__table-related" type="button">
+                              Сопутствующие товары
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M21 2.5L11.5 21L3 2" stroke="#404040" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </button>
+                           <div class="basket__table-related-shell">
+                              <div class="basket__table-related-grid">
+                                 <div class="basket__table-related-grid-cell">
+                                    <div class="basket__table-related-grid-image">
+                                       <div class="basket__table-article-image">
+                                          <img src="./img/png/img-basket.png" alt="img">
+                                       </div>
+                                       <div class="basket__table-article-number">4567809</div>
+                                    </div>
+                                    <div class="basket__table-related-grid-content">
+                                       <p class="basket__table-related-grid-content-text">Наименование товара, примерный текст, размеры товара, наименование товара, примерный</p>
+                                       <button class="basket__table-basket button-blue" type="button">
+                                          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M0.588352 1.19162H4.03217L5.80508 6.44594L6.74644 9.62892V9.63692L7.90745 13.5637C7.90745 13.5717 7.9153 13.5797 7.9153 13.5877L8.62917 15.9949H8.3546C6.93471 15.9949 5.78154 17.1705 5.78154 18.618C5.78154 20.0656 6.93471 21.2412 8.3546 21.2412H9.63329C9.41364 21.6171 9.28028 22.0569 9.28028 22.5208C9.28028 23.8884 10.3707 25 11.7121 25C13.0536 25 14.144 23.8884 14.144 22.5208C14.144 22.0489 14.0185 21.6171 13.791 21.2412H18.4586C18.2389 21.6171 18.1056 22.0569 18.1056 22.5208C18.1056 23.8884 19.196 25 20.5374 25C21.8789 25 22.9693 23.8884 22.9693 22.5208C22.9693 22.0489 22.8438 21.6171 22.6163 21.2412H23.6753C23.9969 21.2412 24.2636 20.9693 24.2636 20.6414C24.2636 20.3135 23.9969 20.0416 23.6753 20.0416H8.34676C7.57798 20.0416 6.9504 19.4018 6.9504 18.618C6.9504 17.8343 7.57798 17.1945 8.34676 17.1945H9.41364H12.4731H19.298H22.3574C22.6163 17.1945 22.8438 17.0186 22.9222 16.7706L23.8636 13.5877C23.8636 13.5797 23.8636 13.5797 23.8636 13.5717L25.9738 6.43794C26.0287 6.254 25.9973 6.06206 25.8797 5.91011C25.762 5.75816 25.5972 5.67019 25.409 5.67019H21.2434C21.2434 5.67019 21.2434 5.67019 21.2356 5.67019H15.8777H10.5197H10.5119H6.76997L4.99707 0.407869C4.91862 0.167946 4.69113 0 4.4401 0H0.588352C0.26672 0 0 0.271913 0 0.599808C0 0.927703 0.26672 1.19162 0.588352 1.19162ZM12.9673 22.5128C12.9673 23.2166 12.4025 23.7924 11.7121 23.7924C11.0218 23.7924 10.457 23.2166 10.457 22.5128C10.457 21.809 11.0218 21.2332 11.7121 21.2332C12.4025 21.2332 12.9673 21.809 12.9673 22.5128ZM21.8004 22.5128C21.8004 23.2166 21.2356 23.7924 20.5453 23.7924C19.8549 23.7924 19.2901 23.2166 19.2901 22.5128C19.2901 21.809 19.8549 21.2332 20.5453 21.2332C21.2356 21.2332 21.8004 21.809 21.8004 22.5128ZM22.8751 12.7879H20.6237L21.1415 10.0528H23.6831L22.8751 12.7879ZM19.4235 12.7879H16.4817V10.0528H19.9491L19.4235 12.7879ZM16.4817 15.9869V13.9875H19.196L18.8194 15.9869H16.4817ZM12.9673 15.9869L12.5907 13.9875H15.305V15.9869H12.9673ZM9.26459 13.9875H11.3905L11.767 15.9869H9.85294L9.26459 13.9875ZM16.4817 8.85317V6.85381H20.5531L20.1766 8.85317H16.4817ZM15.305 8.85317H11.6102L11.2336 6.85381H15.305V8.85317ZM15.305 10.0528V12.7879H12.3632L11.8455 10.0528H15.305ZM11.163 12.7879H8.91158L8.10357 10.0528H10.6453L11.163 12.7879ZM21.9338 15.9869H20.0197L20.3962 13.9875H22.5221L21.9338 15.9869ZM24.044 8.85317H21.3768L21.7533 6.85381H24.6323L24.044 8.85317ZM10.0334 6.85381L10.4099 8.85317H7.74272L7.15436 6.85381H10.0334Z" fill="#ffffff" />
+                                          </svg>
+                                          <span class="outside">в корзину</span>
+                                          <span class="inside">в корзине</span>
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div class="basket__table-related-grid-cell">
+                                    <div class="basket__table-related-grid-image">
+                                       <div class="basket__table-article-image">
+                                          <img src="./img/png/img-basket.png" alt="img">
+                                       </div>
+                                       <div class="basket__table-article-number">4567809</div>
+                                    </div>
+                                    <div class="basket__table-related-grid-content">
+                                       <p class="basket__table-related-grid-content-text">Наименование товара, примерный текст, размеры товара, наименование товара, примерный</p>
+                                       <button class="basket__table-basket button-blue active" type="button">
+                                          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M0.588352 1.19162H4.03217L5.80508 6.44594L6.74644 9.62892V9.63692L7.90745 13.5637C7.90745 13.5717 7.9153 13.5797 7.9153 13.5877L8.62917 15.9949H8.3546C6.93471 15.9949 5.78154 17.1705 5.78154 18.618C5.78154 20.0656 6.93471 21.2412 8.3546 21.2412H9.63329C9.41364 21.6171 9.28028 22.0569 9.28028 22.5208C9.28028 23.8884 10.3707 25 11.7121 25C13.0536 25 14.144 23.8884 14.144 22.5208C14.144 22.0489 14.0185 21.6171 13.791 21.2412H18.4586C18.2389 21.6171 18.1056 22.0569 18.1056 22.5208C18.1056 23.8884 19.196 25 20.5374 25C21.8789 25 22.9693 23.8884 22.9693 22.5208C22.9693 22.0489 22.8438 21.6171 22.6163 21.2412H23.6753C23.9969 21.2412 24.2636 20.9693 24.2636 20.6414C24.2636 20.3135 23.9969 20.0416 23.6753 20.0416H8.34676C7.57798 20.0416 6.9504 19.4018 6.9504 18.618C6.9504 17.8343 7.57798 17.1945 8.34676 17.1945H9.41364H12.4731H19.298H22.3574C22.6163 17.1945 22.8438 17.0186 22.9222 16.7706L23.8636 13.5877C23.8636 13.5797 23.8636 13.5797 23.8636 13.5717L25.9738 6.43794C26.0287 6.254 25.9973 6.06206 25.8797 5.91011C25.762 5.75816 25.5972 5.67019 25.409 5.67019H21.2434C21.2434 5.67019 21.2434 5.67019 21.2356 5.67019H15.8777H10.5197H10.5119H6.76997L4.99707 0.407869C4.91862 0.167946 4.69113 0 4.4401 0H0.588352C0.26672 0 0 0.271913 0 0.599808C0 0.927703 0.26672 1.19162 0.588352 1.19162ZM12.9673 22.5128C12.9673 23.2166 12.4025 23.7924 11.7121 23.7924C11.0218 23.7924 10.457 23.2166 10.457 22.5128C10.457 21.809 11.0218 21.2332 11.7121 21.2332C12.4025 21.2332 12.9673 21.809 12.9673 22.5128ZM21.8004 22.5128C21.8004 23.2166 21.2356 23.7924 20.5453 23.7924C19.8549 23.7924 19.2901 23.2166 19.2901 22.5128C19.2901 21.809 19.8549 21.2332 20.5453 21.2332C21.2356 21.2332 21.8004 21.809 21.8004 22.5128ZM22.8751 12.7879H20.6237L21.1415 10.0528H23.6831L22.8751 12.7879ZM19.4235 12.7879H16.4817V10.0528H19.9491L19.4235 12.7879ZM16.4817 15.9869V13.9875H19.196L18.8194 15.9869H16.4817ZM12.9673 15.9869L12.5907 13.9875H15.305V15.9869H12.9673ZM9.26459 13.9875H11.3905L11.767 15.9869H9.85294L9.26459 13.9875ZM16.4817 8.85317V6.85381H20.5531L20.1766 8.85317H16.4817ZM15.305 8.85317H11.6102L11.2336 6.85381H15.305V8.85317ZM15.305 10.0528V12.7879H12.3632L11.8455 10.0528H15.305ZM11.163 12.7879H8.91158L8.10357 10.0528H10.6453L11.163 12.7879ZM21.9338 15.9869H20.0197L20.3962 13.9875H22.5221L21.9338 15.9869ZM24.044 8.85317H21.3768L21.7533 6.85381H24.6323L24.044 8.85317ZM10.0334 6.85381L10.4099 8.85317H7.74272L7.15436 6.85381H10.0334Z" fill="#ffffff" />
+                                          </svg>
+                                          <span class="outside">в корзину</span>
+                                          <span class="inside">в корзине</span>
+                                       </button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="basket__table-name">Наименование товара, примерный текст, размеры товара, наименование товара, примерный</div>
+                        <div class="basket__table-price">567р</div>
+                        <div class="basket__table-quantity">
+                           <div class="product-card__actions-quantity-form js-quantity">
+                              <button class="product-card__actions-quantity-decreament js-dicrement" type="button">-</button>
+                              <input type="number" max="100" value="1">
+                              <button class="product-card__actions-quantity-increament js-increment" type="button">+</button>
+                           </div>
+                           <div class="basket__table-quantity-unit">м</div>
+                        </div>
+                        <div class="basket__table-comment">Комментарий товара, примерный текст, размеры товара, наименование товара, примерный</div>
+                        <div class="basket__table-delete">
+                           <button class="basket__table-favourites active" type="button">
+                              <svg width="23" height="23" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M44.6664 5.89665C41.7594 7.90014 34.9765 13.4096 34.9765 13.4096C34.9765 13.4096 28.6781 7.90002 25.2867 5.89665C21.8952 3.89328 15.5968 3.58488 10.7519 5.89665C5.90696 8.20842 3 14.4113 3 19.9208C3 25.4302 4.93797 29.4371 7.36044 32.4423C9.7829 35.4475 34.9765 66 34.9765 66C34.9765 66 61.1391 34.4457 62.5926 32.4423C64.0461 30.4389 67.4375 26.9329 66.953 19.9208C66.4686 12.9086 63.5616 8.90177 58.7167 5.89665C53.8717 2.89153 47.5733 3.89315 44.6664 5.89665Z" stroke="#0E81B2" stroke-width="4.5" stroke-linejoin="round" />
+                              </svg>
+                           </button>
+                           <button class="basket__table-" type="button">
+                              <img src="./img/svg/delete.svg" alt="img">
+                           </button>
+                        </div>
+                        <div class="basket__table-number">
+                           <span>1</span>
+                           <label class="check__item check">
+                              <input type="checkbox" name="check-item">
+                              <span class="check-item">
+                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 2.5L11.5 21L3 2" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                 </svg>
+                              </span>
+                           </label>
+                        </div>
+                        <div class="basket__table-article">
+                           <div>
+                              <div class="basket__table-article-image">
+                                 <img src="./img/png/img-basket.png" alt="img">
+                              </div>
+                              <div class="basket__table-article-number">4567809</div>
+                           </div>
+
+                           <button class="basket__table-related" type="button">
+                              Сопутствующие товары
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M21 2.5L11.5 21L3 2" stroke="#404040" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </button>
+
+                           <div class="basket__table-related-shell">
+                              <div class="basket__table-related-grid">
+                                 <div class="basket__table-related-grid-cell">
+                                    <div class="basket__table-related-grid-image">
+                                       <div class="basket__table-article-image">
+                                          <img src="./img/png/img-basket.png" alt="img">
+                                       </div>
+                                       <div class="basket__table-article-number">4567809</div>
+                                    </div>
+                                    <div class="basket__table-related-grid-content">
+                                       <p class="basket__table-related-grid-content-text">Наименование товара, примерный текст, размеры товара, наименование товара, примерный</p>
+                                       <button class="basket__table-basket button-blue" type="button">
+                                          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M0.588352 1.19162H4.03217L5.80508 6.44594L6.74644 9.62892V9.63692L7.90745 13.5637C7.90745 13.5717 7.9153 13.5797 7.9153 13.5877L8.62917 15.9949H8.3546C6.93471 15.9949 5.78154 17.1705 5.78154 18.618C5.78154 20.0656 6.93471 21.2412 8.3546 21.2412H9.63329C9.41364 21.6171 9.28028 22.0569 9.28028 22.5208C9.28028 23.8884 10.3707 25 11.7121 25C13.0536 25 14.144 23.8884 14.144 22.5208C14.144 22.0489 14.0185 21.6171 13.791 21.2412H18.4586C18.2389 21.6171 18.1056 22.0569 18.1056 22.5208C18.1056 23.8884 19.196 25 20.5374 25C21.8789 25 22.9693 23.8884 22.9693 22.5208C22.9693 22.0489 22.8438 21.6171 22.6163 21.2412H23.6753C23.9969 21.2412 24.2636 20.9693 24.2636 20.6414C24.2636 20.3135 23.9969 20.0416 23.6753 20.0416H8.34676C7.57798 20.0416 6.9504 19.4018 6.9504 18.618C6.9504 17.8343 7.57798 17.1945 8.34676 17.1945H9.41364H12.4731H19.298H22.3574C22.6163 17.1945 22.8438 17.0186 22.9222 16.7706L23.8636 13.5877C23.8636 13.5797 23.8636 13.5797 23.8636 13.5717L25.9738 6.43794C26.0287 6.254 25.9973 6.06206 25.8797 5.91011C25.762 5.75816 25.5972 5.67019 25.409 5.67019H21.2434C21.2434 5.67019 21.2434 5.67019 21.2356 5.67019H15.8777H10.5197H10.5119H6.76997L4.99707 0.407869C4.91862 0.167946 4.69113 0 4.4401 0H0.588352C0.26672 0 0 0.271913 0 0.599808C0 0.927703 0.26672 1.19162 0.588352 1.19162ZM12.9673 22.5128C12.9673 23.2166 12.4025 23.7924 11.7121 23.7924C11.0218 23.7924 10.457 23.2166 10.457 22.5128C10.457 21.809 11.0218 21.2332 11.7121 21.2332C12.4025 21.2332 12.9673 21.809 12.9673 22.5128ZM21.8004 22.5128C21.8004 23.2166 21.2356 23.7924 20.5453 23.7924C19.8549 23.7924 19.2901 23.2166 19.2901 22.5128C19.2901 21.809 19.8549 21.2332 20.5453 21.2332C21.2356 21.2332 21.8004 21.809 21.8004 22.5128ZM22.8751 12.7879H20.6237L21.1415 10.0528H23.6831L22.8751 12.7879ZM19.4235 12.7879H16.4817V10.0528H19.9491L19.4235 12.7879ZM16.4817 15.9869V13.9875H19.196L18.8194 15.9869H16.4817ZM12.9673 15.9869L12.5907 13.9875H15.305V15.9869H12.9673ZM9.26459 13.9875H11.3905L11.767 15.9869H9.85294L9.26459 13.9875ZM16.4817 8.85317V6.85381H20.5531L20.1766 8.85317H16.4817ZM15.305 8.85317H11.6102L11.2336 6.85381H15.305V8.85317ZM15.305 10.0528V12.7879H12.3632L11.8455 10.0528H15.305ZM11.163 12.7879H8.91158L8.10357 10.0528H10.6453L11.163 12.7879ZM21.9338 15.9869H20.0197L20.3962 13.9875H22.5221L21.9338 15.9869ZM24.044 8.85317H21.3768L21.7533 6.85381H24.6323L24.044 8.85317ZM10.0334 6.85381L10.4099 8.85317H7.74272L7.15436 6.85381H10.0334Z" fill="#ffffff" />
+                                          </svg>
+                                          <span class="outside">в корзину</span>
+                                          <span class="inside">в корзине</span>
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div class="basket__table-related-grid-cell">
+                                    <div class="basket__table-related-grid-image">
+                                       <div class="basket__table-article-image">
+                                          <img src="./img/png/img-basket.png" alt="img">
+                                       </div>
+                                       <div class="basket__table-article-number">4567809</div>
+                                    </div>
+                                    <div class="basket__table-related-grid-content">
+                                       <p class="basket__table-related-grid-content-text">Наименование товара, примерный текст, размеры товара, наименование товара, примерный</p>
+                                       <button class="basket__table-basket button-blue active" type="button">
+                                          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M0.588352 1.19162H4.03217L5.80508 6.44594L6.74644 9.62892V9.63692L7.90745 13.5637C7.90745 13.5717 7.9153 13.5797 7.9153 13.5877L8.62917 15.9949H8.3546C6.93471 15.9949 5.78154 17.1705 5.78154 18.618C5.78154 20.0656 6.93471 21.2412 8.3546 21.2412H9.63329C9.41364 21.6171 9.28028 22.0569 9.28028 22.5208C9.28028 23.8884 10.3707 25 11.7121 25C13.0536 25 14.144 23.8884 14.144 22.5208C14.144 22.0489 14.0185 21.6171 13.791 21.2412H18.4586C18.2389 21.6171 18.1056 22.0569 18.1056 22.5208C18.1056 23.8884 19.196 25 20.5374 25C21.8789 25 22.9693 23.8884 22.9693 22.5208C22.9693 22.0489 22.8438 21.6171 22.6163 21.2412H23.6753C23.9969 21.2412 24.2636 20.9693 24.2636 20.6414C24.2636 20.3135 23.9969 20.0416 23.6753 20.0416H8.34676C7.57798 20.0416 6.9504 19.4018 6.9504 18.618C6.9504 17.8343 7.57798 17.1945 8.34676 17.1945H9.41364H12.4731H19.298H22.3574C22.6163 17.1945 22.8438 17.0186 22.9222 16.7706L23.8636 13.5877C23.8636 13.5797 23.8636 13.5797 23.8636 13.5717L25.9738 6.43794C26.0287 6.254 25.9973 6.06206 25.8797 5.91011C25.762 5.75816 25.5972 5.67019 25.409 5.67019H21.2434C21.2434 5.67019 21.2434 5.67019 21.2356 5.67019H15.8777H10.5197H10.5119H6.76997L4.99707 0.407869C4.91862 0.167946 4.69113 0 4.4401 0H0.588352C0.26672 0 0 0.271913 0 0.599808C0 0.927703 0.26672 1.19162 0.588352 1.19162ZM12.9673 22.5128C12.9673 23.2166 12.4025 23.7924 11.7121 23.7924C11.0218 23.7924 10.457 23.2166 10.457 22.5128C10.457 21.809 11.0218 21.2332 11.7121 21.2332C12.4025 21.2332 12.9673 21.809 12.9673 22.5128ZM21.8004 22.5128C21.8004 23.2166 21.2356 23.7924 20.5453 23.7924C19.8549 23.7924 19.2901 23.2166 19.2901 22.5128C19.2901 21.809 19.8549 21.2332 20.5453 21.2332C21.2356 21.2332 21.8004 21.809 21.8004 22.5128ZM22.8751 12.7879H20.6237L21.1415 10.0528H23.6831L22.8751 12.7879ZM19.4235 12.7879H16.4817V10.0528H19.9491L19.4235 12.7879ZM16.4817 15.9869V13.9875H19.196L18.8194 15.9869H16.4817ZM12.9673 15.9869L12.5907 13.9875H15.305V15.9869H12.9673ZM9.26459 13.9875H11.3905L11.767 15.9869H9.85294L9.26459 13.9875ZM16.4817 8.85317V6.85381H20.5531L20.1766 8.85317H16.4817ZM15.305 8.85317H11.6102L11.2336 6.85381H15.305V8.85317ZM15.305 10.0528V12.7879H12.3632L11.8455 10.0528H15.305ZM11.163 12.7879H8.91158L8.10357 10.0528H10.6453L11.163 12.7879ZM21.9338 15.9869H20.0197L20.3962 13.9875H22.5221L21.9338 15.9869ZM24.044 8.85317H21.3768L21.7533 6.85381H24.6323L24.044 8.85317ZM10.0334 6.85381L10.4099 8.85317H7.74272L7.15436 6.85381H10.0334Z" fill="#ffffff" />
+                                          </svg>
+                                          <span class="outside">в корзину</span>
+                                          <span class="inside">в корзине</span>
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div class="basket__table-related-grid-cell">
+                                    <div class="basket__table-related-grid-image">
+                                       <div class="basket__table-article-image">
+                                          <img src="./img/png/img-basket.png" alt="img">
+                                       </div>
+                                       <div class="basket__table-article-number">4567809</div>
+                                    </div>
+                                    <div class="basket__table-related-grid-content">
+                                       <p class="basket__table-related-grid-content-text">Наименование товара, примерный текст, размеры товара, наименование товара, примерный</p>
+                                       <button class="basket__table-basket button-blue active" type="button">
+                                          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M0.588352 1.19162H4.03217L5.80508 6.44594L6.74644 9.62892V9.63692L7.90745 13.5637C7.90745 13.5717 7.9153 13.5797 7.9153 13.5877L8.62917 15.9949H8.3546C6.93471 15.9949 5.78154 17.1705 5.78154 18.618C5.78154 20.0656 6.93471 21.2412 8.3546 21.2412H9.63329C9.41364 21.6171 9.28028 22.0569 9.28028 22.5208C9.28028 23.8884 10.3707 25 11.7121 25C13.0536 25 14.144 23.8884 14.144 22.5208C14.144 22.0489 14.0185 21.6171 13.791 21.2412H18.4586C18.2389 21.6171 18.1056 22.0569 18.1056 22.5208C18.1056 23.8884 19.196 25 20.5374 25C21.8789 25 22.9693 23.8884 22.9693 22.5208C22.9693 22.0489 22.8438 21.6171 22.6163 21.2412H23.6753C23.9969 21.2412 24.2636 20.9693 24.2636 20.6414C24.2636 20.3135 23.9969 20.0416 23.6753 20.0416H8.34676C7.57798 20.0416 6.9504 19.4018 6.9504 18.618C6.9504 17.8343 7.57798 17.1945 8.34676 17.1945H9.41364H12.4731H19.298H22.3574C22.6163 17.1945 22.8438 17.0186 22.9222 16.7706L23.8636 13.5877C23.8636 13.5797 23.8636 13.5797 23.8636 13.5717L25.9738 6.43794C26.0287 6.254 25.9973 6.06206 25.8797 5.91011C25.762 5.75816 25.5972 5.67019 25.409 5.67019H21.2434C21.2434 5.67019 21.2434 5.67019 21.2356 5.67019H15.8777H10.5197H10.5119H6.76997L4.99707 0.407869C4.91862 0.167946 4.69113 0 4.4401 0H0.588352C0.26672 0 0 0.271913 0 0.599808C0 0.927703 0.26672 1.19162 0.588352 1.19162ZM12.9673 22.5128C12.9673 23.2166 12.4025 23.7924 11.7121 23.7924C11.0218 23.7924 10.457 23.2166 10.457 22.5128C10.457 21.809 11.0218 21.2332 11.7121 21.2332C12.4025 21.2332 12.9673 21.809 12.9673 22.5128ZM21.8004 22.5128C21.8004 23.2166 21.2356 23.7924 20.5453 23.7924C19.8549 23.7924 19.2901 23.2166 19.2901 22.5128C19.2901 21.809 19.8549 21.2332 20.5453 21.2332C21.2356 21.2332 21.8004 21.809 21.8004 22.5128ZM22.8751 12.7879H20.6237L21.1415 10.0528H23.6831L22.8751 12.7879ZM19.4235 12.7879H16.4817V10.0528H19.9491L19.4235 12.7879ZM16.4817 15.9869V13.9875H19.196L18.8194 15.9869H16.4817ZM12.9673 15.9869L12.5907 13.9875H15.305V15.9869H12.9673ZM9.26459 13.9875H11.3905L11.767 15.9869H9.85294L9.26459 13.9875ZM16.4817 8.85317V6.85381H20.5531L20.1766 8.85317H16.4817ZM15.305 8.85317H11.6102L11.2336 6.85381H15.305V8.85317ZM15.305 10.0528V12.7879H12.3632L11.8455 10.0528H15.305ZM11.163 12.7879H8.91158L8.10357 10.0528H10.6453L11.163 12.7879ZM21.9338 15.9869H20.0197L20.3962 13.9875H22.5221L21.9338 15.9869ZM24.044 8.85317H21.3768L21.7533 6.85381H24.6323L24.044 8.85317ZM10.0334 6.85381L10.4099 8.85317H7.74272L7.15436 6.85381H10.0334Z" fill="#ffffff" />
+                                          </svg>
+                                          <span class="outside">в корзину</span>
+                                          <span class="inside">в корзине</span>
+                                       </button>
+                                    </div>
+                                 </div>
+
+                              </div>
+                           </div>
+
+
+                        </div>
+                        <div class="basket__table-name">Наименование товара, примерный текст, размеры товара, наименование товара, примерный</div>
+                        <div class="basket__table-price">567р</div>
+                        <div class="basket__table-quantity">
+                           <div class="product-card__actions-quantity-form js-quantity">
+                              <button class="product-card__actions-quantity-decreament js-dicrement" type="button">-</button>
+                              <input type="number" max="100" value="1">
+                              <button class="product-card__actions-quantity-increament js-increment" type="button">+</button>
+                           </div>
+                           <div class="basket__table-quantity-unit">м</div>
+                        </div>
+                        <div class="basket__table-comment">Комментарий товара, примерный текст, размеры товара, наименование товара, примерный</div>
+                        <div class="basket__table-delete">
+                           <button class="basket__table-favourites" type="button">
+                              <svg width="23" height="23" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M44.6664 5.89665C41.7594 7.90014 34.9765 13.4096 34.9765 13.4096C34.9765 13.4096 28.6781 7.90002 25.2867 5.89665C21.8952 3.89328 15.5968 3.58488 10.7519 5.89665C5.90696 8.20842 3 14.4113 3 19.9208C3 25.4302 4.93797 29.4371 7.36044 32.4423C9.7829 35.4475 34.9765 66 34.9765 66C34.9765 66 61.1391 34.4457 62.5926 32.4423C64.0461 30.4389 67.4375 26.9329 66.953 19.9208C66.4686 12.9086 63.5616 8.90177 58.7167 5.89665C53.8717 2.89153 47.5733 3.89315 44.6664 5.89665Z" stroke="#0E81B2" stroke-width="4.5" stroke-linejoin="round" />
+                              </svg>
+                           </button>
+                           <button class="basket__table-" type="button">
+                              <img src="./img/svg/delete.svg" alt="img">
+                           </button>
+                        </div>
+
+
+                     </div>
+                  </div>
+                  <div class="product-card__favourites-buttons">
+                     <div class="product-card__favourites-buttons-check">
+                        <label class="check__all check">
+                           <input type="checkbox" name="check-all">
+                           <span class="check-item">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M21 2.5L11.5 21L3 2" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </span>
+                           <span class="check-text">выбрать все</span>
+                        </label>
+                        <label class="check__delete check">
+                           <input type="checkbox" name="delete-all">
+                           <span class="check-item">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M21 2.5L11.5 21L3 2" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </span>
+                           <span class="check-text">удалить выбранные товары</span>
+                        </label>
+                        <div class="product-card__favourites-filter">
+                           <button class="product-card__favourites-filter-button" type="button">
+                              сортировать
+                              <img src="./img/svg/arrow-10.svg" alt="img">
+                           </button>
+                        </div>
+                     </div>
+                     <div class="product-card__favourites-buttons-action">
+                        <button class="product-card__favourites-xl" type="button" title="Скачать"><img src="./img/svg/xl.svg" alt="img"></button>
+                        <button class="product-card__favourites-print" type="button" title="Печать"><img src="./img/svg/print.svg" alt="img"></button>
+                        <button class="product-card__favourites-share" type="button" title="Поделиться"><img src="./img/svg/share-2.svg" alt="img"></button>
+                        <button class="product-card__favourites-delete" type="button" title="Очистить всё"><img src="./img/svg/delete.svg" alt="img"></button>
+                     </div>
+                  </div>
+
+                  <div class="add-file">
+                     <div class="add-file__block">
+                        <img src="./img/svg/attach.svg" alt="img">
+                        <div class="add-file__text">Выберите файл с раширением /jpeg/png/doc/</div>
+                     </div>
+                     <label type="button" class="add-file__button button-blue">
+                        <input type="file" accept=".jpeg,.png,.doc">
+                        Прикрепить файлы на расчет
+                     </label>
+                  </div>
+
+                  <div class="basket__registration">
+                     <div id="register" class="basket__registration-title">Оформление заказа</div>
+                     <div class="basket__registration-block">
+                        <div>
+                           <label class="input-text">
+                              <input type="text" placeholder="ИНН*" required>
+                              <span class="input-placeholder">ИНН<span>*</span></span>
+                           </label>
+                           <label class="input-text">
+                              <input type="text" placeholder="Контактное лицо:ФИО">
+                           </label>
+                           <label class="input-text">
+                              <input type="text" placeholder="Электронный адрес*" required>
+                              <span class="input-placeholder">Электронный адрес<span>*</span></span>
+                           </label>
+                        </div>
+                        <div>
+                           <label class="input-text">
+                              <input type="text" placeholder="Название организации">
+                           </label>
+                           <label class="input-text">
+                              <input type="text" placeholder="Номер телефона*" required>
+                              <span class="input-placeholder">Номер телефона<span>*</span></span>
+                           </label>
+                           <label class="input-text">
+                              <input type="text" placeholder="Адрес доставки/город">
+                           </label>
+                        </div>
+                     </div>
+                     <textarea class="textarea" name="" id="" placeholder="Добавить омментарий к заказу"></textarea>
+                  </div>
+
+                  <div class="add-file">
+                     <div class="add-file__block">
+                        <img src="./img/svg/attach.svg" alt="img">
+                        <div class="add-file__text">Выберите файл с раширением /jpeg/png/doc/</div>
+                     </div>
+                     <label type="button" class="add-file__button button-blue">
+                        <input type="file" accept=".jpeg,.png,.doc">
+                        Прикрепить файлы на расчет
+                     </label>
+                  </div>
+
+                  <div class="basket__submit">
+                     <button class="button-blue" type="submit">отправить заказ</button>
+                  </div>
+
+                  <div class="basket__agreement">
+                     <img src="./img/svg/check-3.svg" alt="img">
+                     <span>Нажимая кнопку отправить Вы подтверждаете свое согласие на </span><a href="#0">обработку персональных данных</a>
+                  </div>
+
+               </form>
+
             </div>
          </div>
 
@@ -318,6 +639,796 @@
 </footer>
 
    </div>
+
+   <div id="modal-calculator" class="modal size-l js-modal-close js-modal-hidden ">
+   <div class="modal__wrapper">
+      <div class="modal__shell">
+         <div class="calculator js-modal-stop-close">
+            <div class="calculator__header">
+               <button type="button" class="calculator__close js-modal-close">
+                  <img src="./img/svg/close-4.svg" alt="img">
+               </button>
+               <div>
+                  <div class="calculator__title">тип металло&shy;проката:</div>
+                  <div class="calculator__buttons-profile">
+                     <button class="calculator__proile-button active" type="button" data-button="1">
+                        <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M40.5 69C56.2401 69 69 56.2401 69 40.5C69 24.7599 56.2401 12 40.5 12C24.7599 12 12 24.7599 12 40.5C12 56.2401 24.7599 69 40.5 69ZM40.5 61C51.8218 61 61 51.8218 61 40.5C61 29.1782 51.8218 20 40.5 20C29.1782 20 20 29.1782 20 40.5C20 51.8218 29.1782 61 40.5 61Z" fill="#6B6B6B" />
+                        </svg>
+                     </button>
+                     <button class="calculator__proile-button" type="button" data-button="2">
+                        <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M67 15H15V67H67V15ZM60 22H23V59H60V22Z" fill="#6b6b6b" />
+                        </svg>
+                     </button>
+                     <button class="calculator__proile-button" type="button" data-button="3">
+                        <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <circle cx="40.5" cy="40.5" r="28.5" fill="#6b6b6b" />
+                        </svg>
+                     </button>
+                     <button class="calculator__proile-button" type="button" data-button="4">
+                        <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect x="16" y="16" width="52" height="52" fill="#6b6b6b" />
+                        </svg>
+                     </button>
+                     <button class="calculator__proile-button" type="button" data-button="5">
+                        <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                           <rect x="23" y="16" width="38" height="52" fill="#6b6b6b" />
+                        </svg>
+                     </button>
+                     <button class="calculator__proile-button" type="button" data-button="6">
+                        <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M39.1489 10.7082C40.5508 9.68963 42.4492 9.68963 43.8511 10.7082L72.9114 31.8217C74.3133 32.8403 74.8999 34.6457 74.3644 36.2938L63.2644 70.4562C62.7289 72.1043 61.1931 73.2201 59.4602 73.2201H23.5398C21.8069 73.2201 20.2711 72.1043 19.7356 70.4562L8.63555 36.2938C8.10005 34.6457 8.68669 32.8403 10.0886 31.8217L39.1489 10.7082Z" fill="#6b6b6b" />
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+               <div>
+                  <div class="calculator__icon">
+                     <img src="./img/svg/calculator.svg" alt="img">
+                  </div>
+               </div>
+            </div>
+            <div class="calculator__body">
+
+               <form class="calculator__type active" action="#" method="post" name="type-circle" id="" data-tab="1">
+
+                  <div class="calculator__parameters ">
+
+                     <div class="calculator__parameters-item js-tab-body">
+                        <button class="calculator__parameters-button js-tab-button" type="button">
+                           <span class="js-tab-selected">металл</span>
+                           <img src="./img/svg/arrow-8.svg" alt="img">
+                        </button>
+                        <div class="calculator__parameters-list js-tab-content scroll">
+                           <ol class="js-tab-content-inner">
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="Железо">
+                                    <span>Железо</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="Алюминий">
+                                    <span>Алюминий </span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="Бронза">
+                                    <span>Бронза</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="Нержавейка">
+                                    <span>Нержавейка</span>
+                                 </label>
+                              </li>
+                           </ol>
+                        </div>
+                     </div>
+
+                     <div class="calculator__parameters-item js-tab-body">
+                        <button class="calculator__parameters-button js-tab-button" type="button">
+                           <span class="js-tab-selected">стандарт</span>
+                           <img src="./img/svg/arrow-8.svg" alt="img">
+                        </button>
+                        <div class="calculator__parameters-list js-tab-content scroll">
+                           <ol class="js-tab-content-inner">
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="ASME">
+                                    <span>ASME</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="EN">
+                                    <span>EN</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="DIN">
+                                    <span>DIN</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="API">
+                                    <span>API</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="ISO">
+                                    <span>ISO</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="ASTM">
+                                    <span>ASTM</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="AISI">
+                                    <span>AISI</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="UNI">
+                                    <span>UNI</span>
+                                 </label>
+                              </li>
+                           </ol>
+                        </div>
+                     </div>
+
+                     <div class="calculator__parameters-item js-tab-body">
+                        <button class="calculator__parameters-button js-tab-button" type="button">
+                           <span class="js-tab-selected">марка</span>
+                           <img src="./img/svg/arrow-8.svg" alt="img">
+                        </button>
+                        <div class="calculator__parameters-list list-scroll js-tab-content">
+                           <div class="js-tab-content-inner">
+                              <div class="calculator__search">
+                                 <input type="text" placeholder="поиск">
+                              </div>
+                              <ol class="scroll">
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 16.9">
+                                       <span>ASME B 16.9</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 17.2">
+                                       <span>ASME B 17.2</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 17.8">
+                                       <span>ASME B 17.8</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 18.0">
+                                       <span>ASME B 18.0</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 16.9">
+                                       <span>ASME B 16.9</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 17.2">
+                                       <span>ASME B 17.2</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 17.8">
+                                       <span>ASME B 17.8</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 18.0">
+                                       <span>ASME B 18.0</span>
+                                    </label>
+                                 </li>
+                              </ol>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="calculator__parameters-description">
+                        <div class="calculator__parameters-description-title">химический состав </div>
+                        <div class="calculator__parameters-description-mark">марка</div>
+                        <div class="calculator__parameters-description-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в </div>
+                     </div>
+                  </div>
+
+                  <div class="calculator__image">
+                     <div class="calculator__image-body">
+                        <img src="./img/jpg/calc-image-1.jpg" alt="img">
+                     </div>
+                  </div>
+
+                  <div class="calculator__item">
+                     <div class="calculator__item-buttons">
+                        <button class="button-blue-tabs calculator__item-button active" type="button" data-button="1">Расчет веса</button>
+                        <button class="button-blue-tabs calculator__item-button" type="button" data-button="2">Расчет длины</button>
+                     </div>
+
+                     <div class="calculator__item-data active" data-tab="1">
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр L</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр D</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр t</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-button-calc">
+                           <!-- активная: убрать disabled, добавить класс active -->
+                           <button class="button-blue-tabs" type="button" disabled>расчитать</button>
+                        </div>
+                        <div class="calculator__item-result">
+                           <div class="calculator__item-result-name">Вес:</div>
+                           <div class="calculator__item-result-data"></div>
+                           <div class="calculator__item-result-measurement">кг</div>
+                        </div>
+                     </div>
+
+                     <div class="calculator__item-data" data-tab="2">
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр кг</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр D</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр t</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-button-calc">
+                           <!-- активная: убрать disabled, добавить класс active -->
+                           <button class="button-blue-tabs" type="button" disabled>расчитать</button>
+                        </div>
+                        <div class="calculator__item-result">
+                           <div class="calculator__item-result-name">Длина:</div>
+                           <div class="calculator__item-result-data"></div>
+                           <div class="calculator__item-result-measurement">м</div>
+                        </div>
+                     </div>
+                  </div>
+
+               </form>
+
+               <form class="calculator__type" action="#" method="post" name="type-circle" id="" data-tab="2">
+
+                  <div class="calculator__parameters">
+
+                     <div class="calculator__parameters-item js-tab-body">
+                        <button class="calculator__parameters-button js-tab-button" type="button">
+                           <span class="js-tab-selected">металл</span>
+                           <img src="./img/svg/arrow-8.svg" alt="img">
+                        </button>
+                        <div class="calculator__parameters-list js-tab-content scroll">
+                           <ol class="js-tab-content-inner">
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="Железо">
+                                    <span>Железо</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="Алюминий">
+                                    <span>Алюминий </span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="Бронза">
+                                    <span>Бронза</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="Нержавейка">
+                                    <span>Нержавейка</span>
+                                 </label>
+                              </li>
+                           </ol>
+                        </div>
+                     </div>
+
+                     <div class="calculator__parameters-item js-tab-body">
+                        <button class="calculator__parameters-button js-tab-button" type="button">
+                           <span class="js-tab-selected">стандарт</span>
+                           <img src="./img/svg/arrow-8.svg" alt="img">
+                        </button>
+                        <div class="calculator__parameters-list js-tab-content scroll">
+                           <ol class="js-tab-content-inner">
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="ASME">
+                                    <span>ASME</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="EN">
+                                    <span>EN</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="DIN">
+                                    <span>DIN</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="API">
+                                    <span>API</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="ISO">
+                                    <span>ISO</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="ASTM">
+                                    <span>ASTM</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="AISI">
+                                    <span>AISI</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="UNI">
+                                    <span>UNI</span>
+                                 </label>
+                              </li>
+                           </ol>
+                        </div>
+                     </div>
+
+                     <div class="calculator__parameters-item js-tab-body">
+                        <button class="calculator__parameters-button js-tab-button" type="button">
+                           <span class="js-tab-selected">марка</span>
+                           <img src="./img/svg/arrow-8.svg" alt="img">
+                        </button>
+                        <div class="calculator__parameters-list list-scroll js-tab-content">
+                           <div class="js-tab-content-inner">
+                              <div class="calculator__search">
+                                 <input type="text" placeholder="поиск">
+                              </div>
+                              <ol class="scroll">
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 16.9">
+                                       <span>ASME B 16.9</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 17.2">
+                                       <span>ASME B 17.2</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 17.8">
+                                       <span>ASME B 17.8</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 18.0">
+                                       <span>ASME B 18.0</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 16.9">
+                                       <span>ASME B 16.9</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 17.2">
+                                       <span>ASME B 17.2</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 17.8">
+                                       <span>ASME B 17.8</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 18.0">
+                                       <span>ASME B 18.0</span>
+                                    </label>
+                                 </li>
+                              </ol>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="calculator__parameters-description">
+                        <div class="calculator__parameters-description-title">химический состав </div>
+                        <div class="calculator__parameters-description-mark">марка</div>
+                        <div class="calculator__parameters-description-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в </div>
+                     </div>
+                  </div>
+
+                  <div class="calculator__image">
+                     <div class="calculator__image-body">
+                        <img src="./img/jpg/calc-image-2.jpg" alt="img">
+                     </div>
+                  </div>
+
+                  <div class="calculator__item">
+                     <div class="calculator__item-buttons">
+                        <button class="button-blue-tabs calculator__item-button active" type="button" data-button="1">Расчет веса</button>
+                        <button class="button-blue-tabs calculator__item-button" type="button" data-button="2">Расчет длины</button>
+                     </div>
+
+                     <div class="calculator__item-data active" data-tab="1">
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр L</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр B</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр A</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр t</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-button-calc">
+                           <!-- активная: убрать disabled, добавить класс active -->
+                           <button class="button-blue-tabs" type="button" disabled>расчитать</button>
+                        </div>
+                        <div class="calculator__item-result">
+                           <div class="calculator__item-result-name">Вес:</div>
+                           <div class="calculator__item-result-data"></div>
+                           <div class="calculator__item-result-measurement">кг</div>
+                        </div>
+                     </div>
+
+                     <div class="calculator__item-data" data-tab="2">
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр кг</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр B</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр A</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр t</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-button-calc">
+                           <!-- активная: убрать disabled, добавить класс active -->
+                           <button class="button-blue-tabs" type="button" disabled>расчитать</button>
+                        </div>
+                        <div class="calculator__item-result">
+                           <div class="calculator__item-result-name">Длина:</div>
+                           <div class="calculator__item-result-data"></div>
+                           <div class="calculator__item-result-measurement">м</div>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+
+               <form class="calculator__type" action="#" method="post" name="type-circle" id="" data-tab="3">
+
+                  <div class="calculator__parameters">
+
+                     <div class="calculator__parameters-item js-tab-body">
+                        <button class="calculator__parameters-button js-tab-button" type="button">
+                           <span class="js-tab-selected">металл</span>
+                           <img src="./img/svg/arrow-8.svg" alt="img">
+                        </button>
+                        <div class="calculator__parameters-list js-tab-content scroll">
+                           <ol class="js-tab-content-inner">
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="Железо">
+                                    <span>Железо</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="Алюминий">
+                                    <span>Алюминий </span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="Бронза">
+                                    <span>Бронза</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="Нержавейка">
+                                    <span>Нержавейка</span>
+                                 </label>
+                              </li>
+                           </ol>
+                        </div>
+                     </div>
+
+                     <div class="calculator__parameters-item js-tab-body">
+                        <button class="calculator__parameters-button js-tab-button" type="button">
+                           <span class="js-tab-selected">стандарт</span>
+                           <img src="./img/svg/arrow-8.svg" alt="img">
+                        </button>
+                        <div class="calculator__parameters-list js-tab-content scroll">
+                           <ol class="js-tab-content-inner">
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="ASME">
+                                    <span>ASME</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="EN">
+                                    <span>EN</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="DIN">
+                                    <span>DIN</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="API">
+                                    <span>API</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="ISO">
+                                    <span>ISO</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="ASTM">
+                                    <span>ASTM</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="AISI">
+                                    <span>AISI</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="js-tabs-value">
+                                    <input type="radio" name="metal-circle" value="UNI">
+                                    <span>UNI</span>
+                                 </label>
+                              </li>
+                           </ol>
+                        </div>
+                     </div>
+
+                     <div class="calculator__parameters-item js-tab-body">
+                        <button class="calculator__parameters-button js-tab-button" type="button">
+                           <span class="js-tab-selected">марка</span>
+                           <img src="./img/svg/arrow-8.svg" alt="img">
+                        </button>
+                        <div class="calculator__parameters-list list-scroll js-tab-content">
+                           <div class="js-tab-content-inner">
+                              <div class="calculator__search">
+                                 <input type="text" placeholder="поиск">
+                              </div>
+                              <ol class="scroll">
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 16.9">
+                                       <span>ASME B 16.9</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 17.2">
+                                       <span>ASME B 17.2</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 17.8">
+                                       <span>ASME B 17.8</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 18.0">
+                                       <span>ASME B 18.0</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 16.9">
+                                       <span>ASME B 16.9</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 17.2">
+                                       <span>ASME B 17.2</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 17.8">
+                                       <span>ASME B 17.8</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="js-tabs-value">
+                                       <input type="radio" name="metal-circle" value="ASME B 18.0">
+                                       <span>ASME B 18.0</span>
+                                    </label>
+                                 </li>
+                              </ol>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="calculator__parameters-description">
+                        <div class="calculator__parameters-description-title">химический состав </div>
+                        <div class="calculator__parameters-description-mark">марка</div>
+                        <div class="calculator__parameters-description-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в </div>
+                     </div>
+                  </div>
+
+                  <div class="calculator__image">
+                     <div class="calculator__image-body">
+                        <img src="./img/jpg/calc-image-3.jpg" alt="img">
+                     </div>
+                  </div>
+
+                  <div class="calculator__item">
+                     <div class="calculator__item-buttons">
+                        <button class="button-blue-tabs calculator__item-button active" type="button" data-button="1">Расчет веса</button>
+                        <button class="button-blue-tabs calculator__item-button" type="button" data-button="2">Расчет длины</button>
+                     </div>
+
+                     <div class="calculator__item-data active" data-tab="1">
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр L</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр B</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр A</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр t</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-button-calc">
+                           <!-- активная: убрать disabled, добавить класс active -->
+                           <button class="button-blue-tabs" type="button" disabled>расчитать</button>
+                        </div>
+                        <div class="calculator__item-result">
+                           <div class="calculator__item-result-name">Вес:</div>
+                           <div class="calculator__item-result-data"></div>
+                           <div class="calculator__item-result-measurement">кг</div>
+                        </div>
+                     </div>
+
+                     <div class="calculator__item-data" data-tab="2">
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр кг</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр B</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр A</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-input">
+                           <span class="calculator__item-input-name">параметр t</span>
+                           <input type="number" name="">
+                           <span>мм</span>
+                        </div>
+                        <div class="calculator__item-button-calc">
+                           <!-- активная: убрать disabled, добавить класс active -->
+                           <button class="button-blue-tabs" type="button" disabled>расчитать</button>
+                        </div>
+                        <div class="calculator__item-result">
+                           <div class="calculator__item-result-name">Длина:</div>
+                           <div class="calculator__item-result-data"></div>
+                           <div class="calculator__item-result-measurement">м</div>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+
+            </div>
+
+         </div>
+      </div>
+   </div>
+</div>
 
    <div id="header-menu" class="header-menu js-modal-hidden">
    <div class="header-menu__container">
@@ -1639,6 +2750,7 @@
       </div>
    </div>
 </div>
+
    <div id="search" class="search js-modal-hidden">
    <div class="search__container">
       <form class="search__body" action="#" method="post" name="" id="">
@@ -1654,7 +2766,7 @@
 </div>
 
    <script defer src='./js/app.js?_v=20240822151648'></script>
-
+   <script defer src='./js/swiper.min.js?_v=20240822151648'></script>
 </body>
 
 </html>

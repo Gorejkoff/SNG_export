@@ -91,7 +91,18 @@ if (MIN1100.matches && document.querySelector('#header-phone')) {
    })
 }
 
+if (document.querySelector('.add-file__button input')) {
+   const inputFile = document.querySelectorAll('.add-file__button input');
+   inputFile.forEach((element) => {
+      element.addEventListener('change', () => {
+         inputFileChange(element);
 
+      })
+   })
+   function inputFileChange(element) {
+      element.closest('.add-file').querySelector('.add-file__text').innerHTML = element.files[0].name;
+   }
+}
 // перемещение блоков при адаптиве по данным атрибута 
 // data-da=".class,3,768" 
 // класс родителя куда перемещать
@@ -163,41 +174,34 @@ if (CATALOG_NAV) {
 function clickFirst(element) {
    element.classList.add('open');
 } */
-if (document.querySelector('.product-card__favourites-body')) {
-   const CHECK_ALL = document.querySelectorAll('.check__all input');
-   const CHECK_ITEM = document.querySelectorAll('.check__item input');
-   const CHECK_DALETE = document.querySelectorAll('.check__delete input');
 
-   CHECK_ALL.forEach((element) => {
-      element.addEventListener('change', () => {
-         changeCheckedAll(element, CHECK_ALL, CHECK_ITEM);
-      })
+const CHECK_ALL = document.querySelectorAll('.check__all input');
+const CHECK_ITEM = document.querySelectorAll('.check__item input');
+const CHECK_DALETE = document.querySelectorAll('.check__delete input');
+
+CHECK_ALL.forEach((element) => {
+   element.addEventListener('change', () => {
+      changeCheckedAll(element, CHECK_ALL, CHECK_ITEM);
    })
+})
 
-   CHECK_DALETE.forEach((element) => {
-      element.addEventListener('change', () => {
-         changeCheckedAll(element, CHECK_DALETE);
-      })
+CHECK_DALETE.forEach((element) => {
+   element.addEventListener('change', () => {
+      changeCheckedAll(element, CHECK_DALETE);
    })
+})
 
-   function changeCheckedAll(element, list, sublist) {
-      if (element.checked) {
-         list && list.forEach((e) => { e.checked = true });
-         sublist && sublist.forEach((e) => { e.checked = true });
-      } else {
-         list && list.forEach((e) => { e.checked = false });
-         sublist && sublist.forEach((e) => { e.checked = false });
-      }
+function changeCheckedAll(element, list, sublist) {
+   if (element.checked) {
+      list && list.forEach((e) => { e.checked = true });
+      sublist && sublist.forEach((e) => { e.checked = true });
+   } else {
+      list && list.forEach((e) => { e.checked = false });
+      sublist && sublist.forEach((e) => { e.checked = false });
    }
-
-
-
-   /* document.addEventListener('change', (event) => {
-      if (event.target.closest('.check__all')) {
-         console.log(event.target);
-      }
-   }) */
 }
+
+
 if (document.querySelector('.filter')) {
    // переменные
    const FORM_FILTER = document.forms.filter;
@@ -686,11 +690,20 @@ if (document.querySelector('.catalog-nav')) {
       closeAllTabs: true,
       closeClickContent: false,
    }).init();
-
-
-
 }
 
+if (document.querySelector('.basket__table')) {
+   new TabsOpen({
+      name: '.basket__table',
+      tabBody: '.basket__table-article',
+      tabButton: '.basket__table-related',
+      tabContent: '.basket__table-related-shell',
+      tabContentInner: '.basket__table-related-grid',
+      hover: false,
+      closeAllTabs: false,
+      closeClickContent: false,
+   }).init();
+}
 
 
 class TabsSwitching {

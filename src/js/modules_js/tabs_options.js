@@ -139,9 +139,18 @@ if (document.querySelector('.catalog-nav')) {
       closeAllTabs: true,
       closeClickContent: false,
    }).init();
-
-
-
 }
 
+if (document.querySelector('.basket__table')) {
+   new TabsOpen({
+      name: '.basket__table',
+      tabBody: '.basket__table-article',
+      tabButton: '.basket__table-related',
+      tabContent: '.basket__table-related-shell',
+      tabContentInner: '.basket__table-related-grid',
+      hover: false,
+      closeAllTabs: false,
+      closeClickContent: false,
+   }).init();
+}
 
