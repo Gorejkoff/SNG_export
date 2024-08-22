@@ -78,8 +78,11 @@
       color: var(--color-blue-4);
       font-weight: 700;
       line-height: 110%;
+      text-align: center;
 
       .size-l & {
+         text-align: start;
+
          @media (min-width:768px) {
             font-size: 42px;
          }
@@ -135,6 +138,50 @@
          font-size: inherit;
          color: var(--color-blue-3);
       }
+   }
+
+   &__file-title {
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+   }
+
+   &__file-list {
+      margin-bottom: 10px;
+      padding-left: 18px;
+      margin-bottom: 15px;
+   }
+
+   &__file-list-item {
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 700;
+
+      span {
+         font-weight: 400;
+         color: var(--color-blue-bright);
+      }
+   }
+
+   &__file-button {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 18px;
+      font-weight: 700;
+
+      input {
+         display: none;
+      }
+   }
+
+   &__file-signature {
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-style: italic;
+      line-height: 150%;
    }
 }
 

@@ -165,6 +165,7 @@ input[type=number]::-webkit-outer-spin-button {
   --color-blue-5: #088fcb;
   --color-blue-03: rgba(8, 144, 203, 0.4);
   --color-blue-6: #0c6d9d;
+  --color-blue-bright: #000cfa;
   --color-Water-blue: #246584;
   --color-turquoise-blue: #82D4E7;
   --color-pacific-blue: #12a4cb;
@@ -3692,6 +3693,11 @@ body {
   color: var(--color-blue-4);
   font-weight: 700;
   line-height: 110%;
+  text-align: center;
+}
+
+.size-l .modal__title {
+  text-align: start;
 }
 
 .modal__header-text {
@@ -3735,6 +3741,54 @@ body {
 .modal__agreement a {
   font-size: inherit;
   color: var(--color-blue-3);
+}
+
+.modal__file-title {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.modal__file-list {
+  margin-bottom: 10px;
+  padding-left: 18px;
+  margin-bottom: 15px;
+}
+
+.modal__file-list-item {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.modal__file-list-item span {
+  font-weight: 400;
+  color: var(--color-blue-bright);
+}
+
+.modal__file-button {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.modal__file-button input {
+  display: none;
+}
+
+.modal__file-signature {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 150%;
 }
 
 @supports (height: 100dvh) {

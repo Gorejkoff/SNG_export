@@ -94,12 +94,10 @@ if (MIN1100.matches && document.querySelector('#header-phone')) {
 if (document.querySelector('.add-file__button input')) {
    const inputFile = document.querySelectorAll('.add-file__button input');
    inputFile.forEach((element) => {
-      element.addEventListener('change', () => {
-         inputFileChange(element);
-
-      })
+      element.addEventListener('change', () => { inputFileChange(element) })
    })
    function inputFileChange(element) {
       element.closest('.add-file').querySelector('.add-file__text').innerHTML = element.files[0].name;
    }
 }
+
