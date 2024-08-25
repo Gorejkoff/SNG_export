@@ -5,7 +5,7 @@
    <title>"Product List"</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <meta name="viewport" content="width=device-width initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css?_v=20240822171321">
+<link rel="stylesheet" href="css/style.css?_v=20240825191118">
 </head>
 
 
@@ -145,9 +145,9 @@
          </div>
          <div class="header__pages">
             <a class="header__pages-mail-phone" href="#0"><img src="./img/svg/mail-phone.svg" alt="img"></a>
-            <a href="basket.html"><img src="./img/svg/shop.svg" alt="img"></a>
-            <a href="favourites.html"><img src="./img/svg/heart.svg" alt="img"></a>
-            <a href="#0"><img src="./img/svg/account.svg" alt="img"></a>
+            <a href="basket.html" data-quantity="4"><img src="./img/svg/shop.svg" alt="img"></a>
+            <a href="favourites.html" data-quantity="24"><img src="./img/svg/heart.svg" alt="img"></a>
+            <a href="account.html"><img src="./img/svg/account.svg" alt="img"></a>
          </div>
          <div class="header__button-order" data-da=".header-menu__mobile,5,1100">
             <button class="button-blue" type="button">Быстрый заказ</button>
@@ -477,7 +477,7 @@
                                        <span class="inside">в корзине</span>
                                     </button>
                                  </div>
-                                 <button class="button-grey" type="button">купить в 1 клик</button>
+                                 <button class="button-grey js-modal-open" type="button" data-modal_open="modal-order">купить в 1 клик</button>
                               </div>
                            </div>
                         </div>
@@ -582,7 +582,7 @@
                                        <span class="inside">в корзине</span>
                                     </button>
                                  </div>
-                                 <button class="button-grey" type="button">купить в 1 клик</button>
+                                 <button class="button-grey js-modal-open" type="button" data-modal_open="modal-order">купить в 1 клик</button>
                               </div>
                            </div>
                         </div>
@@ -687,7 +687,7 @@
                                        <span class="inside">в корзине</span>
                                     </button>
                                  </div>
-                                 <button class="button-grey" type="button">купить в 1 клик</button>
+                                 <button class="button-grey js-modal-open" type="button" data-modal_open="modal-order">купить в 1 клик</button>
                               </div>
                            </div>
                         </div>
@@ -792,7 +792,7 @@
                                        <span class="inside">в корзине</span>
                                     </button>
                                  </div>
-                                 <button class="button-grey" type="button">купить в 1 клик</button>
+                                 <button class="button-grey js-modal-open" type="button" data-modal_open="modal-order">купить в 1 клик</button>
                               </div>
                            </div>
                         </div>
@@ -874,6 +874,46 @@
    </div>
 
    <div id="modal-price" class="modal js-modal-close js-modal-hidden">
+   <div class="modal__wrapper">
+      <div class="modal__shell">
+         <div class="modal__body js-modal-stop-close">
+
+            <button class="modal__close js-modal-close" type="button">
+               <img src="./img/svg/close-2.svg" alt="img">
+            </button>
+            <div class="modal__header">
+               <div class="modal__title">Запрос цены на товар*</div>
+               <div class="modal__header-text">Уголок латунный 25x25 применый текст </div>
+            </div>
+
+            <form action="#" method="post" name="" id="">
+               <div class="modal__input">
+                  <input type="text" placeholder="Ваше имя">
+               </div>
+               <div class="modal__input">
+                  <input type="number" required placeholder="Номер телефона*">
+               </div>
+               <div class="modal__input">
+                  <input type="text" required placeholder="Электронный адрес*">
+               </div>
+               <div class="modal__input">
+                  <input type="text" required placeholder="ИНН организации*">
+               </div>
+               <div class="modal__button">
+                  <button class="button-blue" type="submit">Отправить</button>
+               </div>
+            </form>
+
+            <div class="modal__agreement">
+               Нажимая кнопку “Отправить” вы подтверждаете свое <a href="#0">согласие на обработку персональных данных</a>
+            </div>
+            <div class="modal__explanation">*цена товара зависит от объема поставки, формы оплаты, способа и адреса доставки.</div>
+         </div>
+      </div>
+   </div>
+</div>
+
+   <div id="modal-order" class="modal js-modal-close js-modal-hidden">
    <div class="modal__wrapper">
       <div class="modal__shell">
          <div class="modal__body js-modal-stop-close">
@@ -3058,8 +3098,8 @@
    </div>
 </div>
 
-   <script defer src='./js/app.js?_v=20240822171321'></script>
-   <script defer src='./js/swiper.min.js?_v=20240822171321'></script>
+   <script defer src='./js/app.js?_v=20240825191118'></script>
+   <script defer src='./js/swiper.min.js?_v=20240825191118'></script>
 </body>
 
 </html>

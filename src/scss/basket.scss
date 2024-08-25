@@ -241,11 +241,11 @@
          background: var(--color-blue) linear-gradient(90deg, transparent, var(--color-blue-2), transparent);
 
          svg {
+            transform: rotate3d(1, 0, 0, 180deg);
+
             path {
                stroke: var(--color-white);
             }
-
-            transform: rotate3d(1, 0, 0, 180deg);
          }
       }
    }

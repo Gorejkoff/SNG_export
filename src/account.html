@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/1_head.html',{"title":"Account"})
+</head>
+
+
+<body>
+
+   <div class="wrapper">
+
+      @@include('html/2_header.html',{})
+
+      @@include('html/2.1_header-scroll.html',{})
+
+      <main class="main">
+
+         <div class="account">
+            <div class="account__container">
+               <div class="account__body">
+                  <div class="account__side">
+                     <nav>
+                        <ol>
+                           <li>
+                              <a href="account.html" class="account__nav-title">
+                                 <img src="@img/svg/home.svg" alt="img">
+                                 <p>мой кабинет</p>
+                              </a>
+                           </li>
+                           <li>
+                              <div class="account__subtitle">
+                                 <img src="@img/svg/order.svg" alt="img">
+                                 <p>заказы</p>
+                              </div>
+                              <ol class="account__links">
+                                 <li><a href="">Активные заказы</a></li>
+                                 <li><a href="">Все заказы</a></li>
+                                 <li><a href="">Документы по заказам</a></li>
+                              </ol>
+                           </li>
+                           <li>
+                              <div class="account__subtitle">
+                                 <img src="@img/svg/shop-2.svg" alt="img">
+                                 <p>товары</p>
+                              </div>
+                              <ol class="account__links">
+                                 <li><a href="">Корзина <span>4</span></a></li>
+                                 <li><a href="">Избранное <span>24</span></a></li>
+                                 <li><a href="">Быстрый поиск товара</a></li>
+                                 <li><a href="">Отправить заказ на расчет</a></li>
+                              </ol>
+                           </li>
+                           <li>
+                              <div class="account__subtitle">
+                                 <img src="@img/svg/options.svg" alt="img">
+                                 <p>сервисное обслуживание</p>
+                              </div>
+                              <ol class="account__links">
+                                 <li><a href="">Обмен/возврат товара</a></li>
+                                 <li><a href="">Возврат денежных средств</a></li>
+                                 <li><a href="">Запрос акта сверки</a></li>
+                                 <li><a href="">Как работать с личным кабинетом</a></li>
+                              </ol>
+                           </li>
+                           <li>
+                              <div class="account__subtitle">
+                                 <img src="@img/svg/account-2.svg" alt="img">
+                                 <p>профиль</p>
+                              </div>
+                              <ol class="account__links">
+                                 <li><a href="">Личные данные</a></li>
+                                 <li><a href="">Моя организация</a></li>
+                              </ol>
+                           </li>
+                        </ol>
+                     </nav>
+                     <div class="account__manager">
+                        <div class="account__manager-body">
+                           <div>
+                              <div class="account__manager-foto">
+                                 <img src="@img/jpg/avatar.jpg" alt="img">
+                              </div>
+                           </div>
+                           <div class="account__manager-data">
+                              <div class="account__manager-name">Анна Демидова</div>
+                              <div>ваш личный мнеджер</div>
+                           </div>
+                           <div class="account__icon">
+                              <img src="@img/svg/phone-3.svg" alt="img">
+                           </div>
+                           <div>
+                              <p>9-492 249., доб 111</p>
+                              <p>9-492 249</p>
+                           </div>
+                           <div class="account__icon">
+                              <img src="@img/svg/phone-2.svg" alt="img">
+                           </div>
+                           <div>
+                              <p>8 978 987 98 98</p>
+                              <div>
+                                 <a href=""><img src="@img/png/whatsapp-2.png" alt="img"></a>
+                                 <a href=""><img src="@img/png/telegram-2.png" alt="img"></a>
+                                 <a href=""><img src="@img/png/viber-2.png" alt="img"></a>
+                                 <a href=""><img src="@img/png/skype.png" alt="img"></a>
+                              </div>
+                           </div>
+                           <div class="account__icon">
+                              <img src="@img/svg/mail-2.svg" alt="img">
+                           </div>
+                           <div>вашапочта@eandex.ru</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="account__content">
+                     <h1 class="account__title">OOO “Витязь”</h1>
+                     <div class="account__sections">
+
+                        <div class="account__sections-list">
+                           <div class="account__sections-list-body">
+                              <div class="account__sections-list-title">активные заказы</div>
+                              <div class="account__sections-list-item"><span>заказ по счету:</span> rhfhh от 24.08.2023</div>
+                              <div class="account__sections-list-item"><span>Статус заказа:</span> оформлен 24.08.2023</div>
+                              <div class="account__sections-list-item"><span>Сумма заказа:</span> 1 000 000 руб</div>
+                              <div class="account__sections-list-item"><span>Статус оплаты:</span> не оплачен</div>
+                           </div>
+                           <a class="account__sections-list-link" href="#0">все активные заказы <img src="@img/svg/arrow-11.svg" alt="img"></a>
+                        </div>
+
+                        <div class="account__sections-list">
+                           <div class="account__sections-list-body">
+                              <div class="account__sections-list-title">Документы по заказам</div>
+                              <div class="account__sections-list-item"><span>Счет на оплату:</span> rhfhh от 24.08.2023</div>
+                              <div class="account__sections-list-item"><span>Спецификация:</span> № 12 24.08.2023</div>
+                              <div class="account__sections-list-item"><span> Договор:</span> № 12345 24.08.2023</div>
+                           </div>
+                           <a class="account__sections-list-link" href="#0">все документы <img src="@img/svg/arrow-11.svg" alt="img"></a>
+                        </div>
+
+                        <div class="account__sections-list">
+                           <div class="account__sections-list-body">
+                              <div class="account__sections-list-title">Моя корзина</div>
+                              <div class="account__sections-list-item"><span>4</span> товаров</div>
+                           </div>
+                           <a class="account__sections-list-link" href="basket.html">перейти в корзину<img src="@img/svg/arrow-11.svg" alt="img"></a>
+                        </div>
+
+                        <div class="account__sections-list">
+                           <div class="account__sections-list-body">
+                              <div class="account__sections-list-title">Избранные товары</div>
+                              <div class="account__sections-list-item"><span>24</span> товаров</div>
+                           </div>
+                           <a class="account__sections-list-link" href="favourites.html">перейти в избранное <img src="@img/svg/arrow-11.svg" alt="img"></a>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div class="account__data">
+                     <button class="button-blue" type="button">новый заказ</button>
+                     <button class="account__button-video" type="button">Видео инструкция по личному кабинету</button>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+      </main>
+
+      @@include('html/4_footer.html',{})
+
+   </div>
+
+   @@include('html/catalog_modal.html',{})
+
+   @@include('html/header_menu.html',{})
+
+   @@include('html/search.html',{})
+
+   @@include('html/3_scripts.html',{})
+
+</body>
+
+</html>
