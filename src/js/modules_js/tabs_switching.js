@@ -30,9 +30,12 @@ if (document.querySelector('.calculator__buttons-profile')) {
    new TabsSwitching(false, '.calculator__buttons-profile', '.calculator__proile-button', '.calculator__type').init();
 }
 
-
 if (document.querySelector('.product-card__tabs')) {
    new TabsSwitching('.product-card__content', '.product-card__content', '.js-product-tabs-button', '.product-card__tabs-content').init();
+}
+
+if (document.querySelector('.account__document-buttons')) {
+   new TabsSwitching(false, '.account__document-buttons', '.account__document-button', '.account__document-content').init();
 }
 
 

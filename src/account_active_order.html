@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-   @@include('html/1_head.html',{"title":"Account"})
+   @@include('html/1_head.html',{"title":"Account Active Order"})
 </head>
 
 
@@ -21,8 +21,8 @@
                <div class="account__body">
                   @@include('html/account/account_side.html',{})
                   <div class="account__content">
-                     <h1 class="account__title" data-da=".account__container,0,1199.98">OOO “Витязь”</h1>
-                     @@include('html/account/account_sections.html',{})
+                     <h1 class="account__title" data-da=".account__container,0,1199.98">Активные заказы</h1>
+                     @@include('html/account/account_active_orders.html',{})
                   </div>
                   @@include('html/account/accound_data.html',{})
                </div>
@@ -42,7 +42,6 @@
    @@include('html/search.html',{})
 
    @@include('html/3_scripts.html',{})
-   <script defer src='./js/datepicker-app.js'></script>
 
 </body>
 

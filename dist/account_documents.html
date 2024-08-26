@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-   <title>"Catalog"</title>
+   <title>"Account Documents"</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <meta name="viewport" content="width=device-width initial-scale=1.0">
 <link rel="stylesheet" href="css/style.css?_v=20240827015836">
@@ -196,186 +196,285 @@
 </header>
 
       <main class="main">
-         <div class="title">
-            <div class="title__container">
-               <h1 class="block-title">каталог</h1>
-               <div class="bread-crumbs">
-   <ol class="bread-crumbs__body">
-       <li><a href="index.html">Главная</a></li>  <li><a href="catalog.html">Каталог</a></li> 
-   </ol>
-</div>
+
+         <div class="account">
+            <div class="account__container">
+               <div class="account__body">
+                  <div class="account__side">
+   <nav>
+      <ol>
+         <li>
+            <a href="account.html" class="account__nav-title">
+               <img src="./img/svg/home.svg" alt="img">
+               <p>мой кабинет</p>
+            </a>
+         </li>
+         <li>
+            <div class="account__subtitle">
+               <img src="./img/svg/order.svg" alt="img">
+               <p>заказы</p>
+            </div>
+            <ol class="account__links">
+               <li><a href="account_active_order.html">Активные заказы</a></li>
+               <li><a href="account_all_order.html">Все заказы</a></li>
+               <li><a href="account_documents.html">Документы по заказам</a></li>
+            </ol>
+         </li>
+         <li>
+            <div class="account__subtitle">
+               <img src="./img/svg/shop-2.svg" alt="img">
+               <p>товары</p>
+            </div>
+            <ol class="account__links">
+               <li><a href="">Корзина <span>4</span></a></li>
+               <li><a href="">Избранное <span>24</span></a></li>
+               <li><a href="">Быстрый поиск товара</a></li>
+               <li><a href="">Отправить заказ на расчет</a></li>
+            </ol>
+         </li>
+         <li>
+            <div class="account__subtitle">
+               <img src="./img/svg/options.svg" alt="img">
+               <p>сервисное обслуживание</p>
+            </div>
+            <ol class="account__links">
+               <li><a href="account_exchange.html">Обмен/возврат товара</a></li>
+               <li><a href="">Возврат денежных средств</a></li>
+               <li><a href="">Запрос акта сверки</a></li>
+               <li><a href="">Как работать с личным кабинетом</a></li>
+            </ol>
+         </li>
+         <li>
+            <div class="account__subtitle">
+               <img src="./img/svg/account-2.svg" alt="img">
+               <p>профиль</p>
+            </div>
+            <ol class="account__links">
+               <li><a href="">Личные данные</a></li>
+               <li><a href="">Моя организация</a></li>
+            </ol>
+         </li>
+      </ol>
+   </nav>
+   <div class="account__manager">
+      <div class="account__manager-body">
+         <div>
+            <div class="account__manager-foto">
+               <img src="./img/jpg/avatar.jpg" alt="img">
             </div>
          </div>
-         <div class="catalog">
-            <div class="catalog__container">
-               <div class="catalog__menu">
-                  <nav class="catalog-nav">
-   <div class="catalog-nav__body  scroll"></div>
-   <li class="catalog-nav__first ">
-      <button class="catalog-nav__first-button" type="button">Фитинги</button>
-      <div class="catalog-nav__second">
-         <ol class="catalog-nav__second-inner">
-            <li class="catalog-nav__second-item">
-               <button class="catalog-nav__second-button" type="button">меню 2 уровня</button>
-               <div class="catalog-nav__third">
-                  <ol class="catalog-nav__third-inner">
-                     <li><a href="#0">меню 3 уровня</a></li>
-                     <li><a href="#0">меню 3 уровня</a></li>
-                     <li><a href="#0">меню 3 уровня</a></li>
-                     <li><a href="#0">меню 3 уровня</a></li>
-                  </ol>
-               </div>
-            </li>
-            <li class="catalog-nav__second-item">
-               <button class="catalog-nav__second-button" type="button">меню 2 уровня</button>
-               <div class="catalog-nav__third">
-                  <ol class="catalog-nav__third-inner">
-                     <li><a href="#0">меню 3 уровня</a></li>
-                     <li><a href="#0">меню 3 уровня</a></li>
-                     <li><a href="#0">меню 3 уровня</a></li>
-                     <li><a href="#0">меню 3 уровня</a></li>
-                  </ol>
-               </div>
-            </li>
-         </ol>
+         <div class="account__manager-data">
+            <div class="account__manager-name">Анна Демидова</div>
+            <div>ваш личный мнеджер</div>
+         </div>
+         <div class="account__icon">
+            <img src="./img/svg/phone-3.svg" alt="img">
+         </div>
+         <div>
+            <p>9-492 249., доб 111</p>
+            <p>9-492 249</p>
+         </div>
+         <div class="account__icon">
+            <img src="./img/svg/phone-2.svg" alt="img">
+         </div>
+         <div>
+            <p>8 978 987 98 98</p>
+            <div>
+               <a href=""><img src="./img/png/whatsapp-2.png" alt="img"></a>
+               <a href=""><img src="./img/png/telegram-2.png" alt="img"></a>
+               <a href=""><img src="./img/png/viber-2.png" alt="img"></a>
+               <a href=""><img src="./img/png/skype.png" alt="img"></a>
+            </div>
+         </div>
+         <div class="account__icon">
+            <img src="./img/svg/mail-2.svg" alt="img">
+         </div>
+         <div>вашапочта@eandex.ru</div>
       </div>
-   </li>
-   <li class="catalog-nav__first  ">
-      <button class="catalog-nav__first-button" type="button">Фланцы</button>
-      <div class="catalog-nav__second">
-         <ol class="catalog-nav__second-inner">
-            <li class="catalog-nav__second-item">
-               <button class="catalog-nav__second-button" type="button">меню 2 уровня</button>
-               <div class="catalog-nav__third">
-                  <ol class="catalog-nav__third-inner">
-                     <li><a href="#0">меню 3 уровня</a></li>
-                     <li><a href="#0">меню 3 уровня</a></li>
-                     <li><a href="#0">меню 3 уровня</a></li>
-                     <li><a href="#0">меню 3 уровня</a></li>
-                  </ol>
-               </div>
-            </li>
-            <li class="catalog-nav__second-item">
-               <button class="catalog-nav__second-button" type="button">меню 2 уровня</button>
-               <div class="catalog-nav__third">
-                  <ol class="catalog-nav__third-inner">
-                     <li><a href="#0">меню 3 уровня</a></li>
-                     <li><a href="#0">меню 3 уровня</a></li>
-                     <li><a href="#0">меню 3 уровня</a></li>
-                     <li><a href="#0">меню 3 уровня</a></li>
-                  </ol>
-               </div>
-            </li>
-         </ol>
-      </div>
-   </li>
-   <li class="catalog-nav__first  "><button class="catalog-nav__first-button" type="button">Трубы</button></li>
-   <li class="catalog-nav__first  "><button class="catalog-nav__first-button" type="button">Листовой прокат</button></li>
-   <li class="catalog-nav__first  "><button class="catalog-nav__first-button" type="button">Сортовой прокат</button></li>
-   <li class="catalog-nav__first  "><button class="catalog-nav__first-button" type="button">Крепёж</button></li>
-</nav>
-               </div>
-               <div class="catalog__contant">
-                  <div class="catalog__text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам.</div>
-                  <div class="catalog__grig">
-                     <div class="catalog__grig-cell">
-                        <div class="catalog__grig-body">
-                           <img src="./img/jpg/img-39.jpg" alt="img">
-                           <div class="catalog__grig-text">
-                              <div class="catalog__grig-title">Фитинги</div>
-                              <div class="catalog__grig-quantity">16 товаров</div>
-                              <ol class="catalog__grig-list">
-                                 <li><a href="">Раздел товара продукции</a></li>
-                                 <li><a href="">Меню раздела </a></li>
-                                 <li><a href="">Раздел продукции</a></li>
-                                 <li><a href="">Меню</a></li>
-                                 <li><a href="">Раздел товара продукции</a></li>
-                              </ol>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="catalog__grig-cell">
-                        <div class="catalog__grig-body">
-                           <img src="./img/jpg/img-40.jpg" alt="img">
-                           <div class="catalog__grig-text">
-                              <div class="catalog__grig-title">Фланцы</div>
-                              <div class="catalog__grig-quantity">16 товаров</div>
-                              <ol class="catalog__grig-list">
-                                 <li><a href="">Раздел товара продукции</a></li>
-                                 <li><a href="">Меню раздела </a></li>
-                              </ol>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="catalog__grig-cell">
-                        <div class="catalog__grig-body">
-                           <img src="./img/jpg/img-41.jpg" alt="img">
-                           <div class="catalog__grig-text">
-                              <div class="catalog__grig-title">Трубы</div>
-                              <div class="catalog__grig-quantity">16 товаров</div>
-                              <ol class="catalog__grig-list">
-                                 <li><a href="">Раздел товара продукции</a></li>
-                                 <li><a href="">Меню раздела </a></li>
-                                 <li><a href="">Раздел продукции</a></li>
-                                 <li><a href="">Меню</a></li>
-                                 <li><a href="">Раздел товара продукции</a></li>
-                              </ol>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="catalog__grig-cell">
-                        <div class="catalog__grig-body">
-                           <img src="./img/jpg/img-42.jpg" alt="img">
-                           <div class="catalog__grig-text">
-                              <div class="catalog__grig-title">Листовой прокат</div>
-                              <div class="catalog__grig-quantity">16 товаров</div>
-                              <ol class="catalog__grig-list">
-                                 <li><a href="">Раздел товара продукции</a></li>
-                                 <li><a href="">Меню раздела </a></li>
-                                 <li><a href="">Раздел продукции</a></li>
-                                 <li><a href="">Меню</a></li>
-                                 <li><a href="">Раздел товара продукции</a></li>
-                              </ol>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="catalog__grig-cell">
-                        <div class="catalog__grig-body">
-                           <img src="./img/jpg/img-43.jpg" alt="img">
-                           <div class="catalog__grig-text">
-                              <div class="catalog__grig-title">Сортовой прокат</div>
-                              <div class="catalog__grig-quantity">16 товаров</div>
-                              <ol class="catalog__grig-list">
-                                 <li><a href="">Раздел товара продукции</a></li>
-                                 <li><a href="">Меню раздела </a></li>
-                                 <li><a href="">Раздел продукции</a></li>
-                                 <li><a href="">Меню</a></li>
-                                 <li><a href="">Раздел товара продукции</a></li>
-                              </ol>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="catalog__grig-cell">
-                        <div class="catalog__grig-body">
-                           <img src="./img/jpg/img-44.jpg" alt="img">
-                           <div class="catalog__grig-text">
-                              <div class="catalog__grig-title">Крепеж</div>
-                              <div class="catalog__grig-quantity">16 товаров</div>
-                              <ol class="catalog__grig-list">
-                                 <li><a href="">Раздел товара продукции</a></li>
-                                 <li><a href="">Меню раздела </a></li>
-                                 <li><a href="">Раздел продукции</a></li>
-                                 <li><a href="">Меню</a></li>
-                                 <li><a href="">Раздел товара продукции</a></li>
-                              </ol>
-                           </div>
-                        </div>
-                     </div>
+   </div>
+</div>
+                  <div class="account__content">
+                     <h1 class="account__title" data-da=".account__container,0,1199.98">Документы по заказам</h1>
+                     <div class="account__document-buttons">
+   <button class="account__document-button active" type="button" data-button="1">Договора спецификации</button>
+   <button class="account__document-button" type="button" data-button="2">Отгрузочные документы</button>
+   <button class="account__document-button" type="button" data-button="3">Уставные документы</button>
+   <button class="account__document-button" type="button" data-button="4">Акты сверки</button>
+   <button class="account__document-button" type="button" data-button="5">Бланки</button>
+</div>
+<div class="account__document-content active" data-tab="1">
+   <div class="account__document-title">Договора, спецификации</div>
+   <div class="account__document-list-title">Наименование документа</div>
+   <div class="account__document-list-item">
+      Договор доставки № 207/ 1101 от 24.05.2024
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Протокол разногласий к договору № 207/ 1101 от 24.05.2024
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Спецификация № 1 к договору
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Спецификация № 2 к договору
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Спецификация № 3 к договору
+      <a href="#0">⭣</a>
+   </div>
+</div>
 
+<div class="account__document-content" data-tab="2">
+   <div class="account__document-title">Отгрузочные документы</div>
+   <div class="account__document-table-scroll">
+      <div class="account__document-table">
+         <div class="account__document-table-header">Заказ по<br> счету №</div>
+         <div class="account__document-table-header">Сумма</div>
+         <div class="account__document-table-header">Тип документа</div>
+         <div class="account__document-table-header"></div>
+         <div class="account__document-table-cell">№ УТ-283</div>
+         <div class="account__document-table-cell">1500p</div>
+         <div class="account__document-table-cell">Счёт на оплату №-ут-283 от 28.03.23</div>
+         <div class="account__document-table-cell"><a href="#0">⭣</a></div>
+         <div class="account__document-table-cell">№ УТ-283</div>
+         <div class="account__document-table-cell">1500p</div>
+         <div class="account__document-table-cell">Счёт на оплату №-ут-283 от 28.03.23</div>
+         <div class="account__document-table-cell"><a href="#0">⭣</a></div>
+         <div class="account__document-table-cell">№ УТ-283</div>
+         <div class="account__document-table-cell">1500p</div>
+         <div class="account__document-table-cell">Счет фактура №-ут-283 от 28.03.23</div>
+         <div class="account__document-table-cell"><a href="#0">⭣</a></div>
+         <div class="account__document-table-cell">№ УТ-283</div>
+         <div class="account__document-table-cell">1500p</div>
+         <div class="account__document-table-cell">Счет на оплату №-ут-283 от 28.03.23</div>
+         <div class="account__document-table-cell"><a href="#0">⭣</a></div>
+         <div class="account__document-table-cell">№ УТ-283</div>
+         <div class="account__document-table-cell">1500p</div>
+         <div class="account__document-table-cell">Товарная накладка №-ут-283 от 28.03.23</div>
+         <div class="account__document-table-cell"><a href="#0">⭣</a></div>
+      </div>
+   </div>
+</div>
+
+
+<div class="account__document-content" data-tab="3">
+   <div class="account__document-title">Уставные документы</div>
+   <div class="account__document-list-title">Наименование документа</div>
+   <div class="account__document-list-item">
+      Договор доставки № 207/ 1101 от 24.05.2024
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Протокол разногласий к договору № 207/ 1101 от 24.05.2024
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Спецификация № 1 к договору
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Спецификация № 2 к договору
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Спецификация № 3 к договору
+      <a href="#0">⭣</a>
+   </div>
+</div>
+<div class="account__document-content" data-tab="4">
+   <div class="account__document-title">Акты сверки</div>
+   <div class="account__document-list-title">Наименование документа</div>
+   <div class="account__document-list-item">
+      Договор доставки № 207/ 1101 от 24.05.2024
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Протокол разногласий к договору № 207/ 1101 от 24.05.2024
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Спецификация № 1 к договору
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Спецификация № 2 к договору
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Спецификация № 3 к договору
+      <a href="#0">⭣</a>
+   </div>
+</div>
+<div class="account__document-content" data-tab="5">
+   <div class="account__document-title">Бланки</div>
+   <div class="account__document-list-title">Наименование документа</div>
+   <div class="account__document-list-item">
+      Договор доставки № 207/ 1101 от 24.05.2024
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Протокол разногласий к договору № 207/ 1101 от 24.05.2024
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Спецификация № 1 к договору
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Спецификация № 2 к договору
+      <a href="#0">⭣</a>
+   </div>
+   <div class="account__document-list-item">
+      Спецификация № 3 к договору
+      <a href="#0">⭣</a>
+   </div>
+</div>
                   </div>
+                  <div class="account__data">
+   <button class="button-blue" type="button">новый заказ</button>
+   <button class="account__button-video" type="button">Видео инструкция по личному кабинету</button>
+
+   <div class="datepicker">
+
+      <div class="datepicker__designations">
+         <div class="datepicker__designations-item">
+            <div class="datepicker__designations-example completed">6</div>
+            <div class="datepicker__designations-description">Примерный текст описания</div>
+         </div>
+         <div class="datepicker__designations-item">
+            <div class="datepicker__designations-example in-production">6</div>
+            <div class="datepicker__designations-description">Примерный текст описания</div>
+         </div>
+         <div class="datepicker__designations-item">
+            <div class="datepicker__designations-example ready">6</div>
+            <div class="datepicker__designations-description">Примерный текст описания</div>
+         </div>
+         <div class="datepicker__designations-item">
+            <div class="datepicker__designations-example ready-payment">6</div>
+            <div class="datepicker__designations-description">Примерный текст описания</div>
+         </div>
+         <div class="datepicker__designations-item">
+            <div class="datepicker__designations-example shipped">6</div>
+            <div class="datepicker__designations-description">Примерный текст описания</div>
+         </div>
+         <div class="datepicker__designations-item">
+            <div class="datepicker__designations-example shipped-payment">6</div>
+            <div class="datepicker__designations-description">Примерный текст описания</div>
+         </div>
+         <div class="datepicker__designations-item">
+            <div class="datepicker__designations-example finished">6</div>
+            <div class="datepicker__designations-description">Примерный текст описания</div>
+         </div>
+      </div>
+
+   </div>
+
+</div>
                </div>
             </div>
-
          </div>
 
       </main>
@@ -445,793 +544,113 @@
 
    </div>
 
-   <div id="modal-calculator" class="modal size-l js-modal-close js-modal-hidden ">
-   <div class="modal__wrapper">
-      <div class="modal__shell">
-         <div class="calculator js-modal-stop-close">
-            <div class="calculator__header">
-               <button type="button" class="calculator__close js-modal-close">
-                  <img src="./img/svg/close-4.svg" alt="img">
-               </button>
-               <div>
-                  <div class="calculator__title">тип металло&shy;проката:</div>
-                  <div class="calculator__buttons-profile">
-                     <button class="calculator__proile-button active" type="button" data-button="1">
-                        <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M40.5 69C56.2401 69 69 56.2401 69 40.5C69 24.7599 56.2401 12 40.5 12C24.7599 12 12 24.7599 12 40.5C12 56.2401 24.7599 69 40.5 69ZM40.5 61C51.8218 61 61 51.8218 61 40.5C61 29.1782 51.8218 20 40.5 20C29.1782 20 20 29.1782 20 40.5C20 51.8218 29.1782 61 40.5 61Z" fill="#6B6B6B" />
-                        </svg>
-                     </button>
-                     <button class="calculator__proile-button" type="button" data-button="2">
-                        <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M67 15H15V67H67V15ZM60 22H23V59H60V22Z" fill="#6b6b6b" />
-                        </svg>
-                     </button>
-                     <button class="calculator__proile-button" type="button" data-button="3">
-                        <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <circle cx="40.5" cy="40.5" r="28.5" fill="#6b6b6b" />
-                        </svg>
-                     </button>
-                     <button class="calculator__proile-button" type="button" data-button="4">
-                        <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <rect x="16" y="16" width="52" height="52" fill="#6b6b6b" />
-                        </svg>
-                     </button>
-                     <button class="calculator__proile-button" type="button" data-button="5">
-                        <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                           <rect x="23" y="16" width="38" height="52" fill="#6b6b6b" />
-                        </svg>
-                     </button>
-                     <button class="calculator__proile-button" type="button" data-button="6">
-                        <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M39.1489 10.7082C40.5508 9.68963 42.4492 9.68963 43.8511 10.7082L72.9114 31.8217C74.3133 32.8403 74.8999 34.6457 74.3644 36.2938L63.2644 70.4562C62.7289 72.1043 61.1931 73.2201 59.4602 73.2201H23.5398C21.8069 73.2201 20.2711 72.1043 19.7356 70.4562L8.63555 36.2938C8.10005 34.6457 8.68669 32.8403 10.0886 31.8217L39.1489 10.7082Z" fill="#6b6b6b" />
-                        </svg>
-                     </button>
-                  </div>
+   <div id="catalog-modal" class="catalog-modal">
+   <div class="catalog-modal__container">
+      <div class="block-catalog__content">
+         <article class="block-catalog__card">
+            <div>
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-3.jpg" alt="img">
                </div>
-               <div>
-                  <div class="calculator__icon">
-                     <img src="./img/svg/calculator.svg" alt="img">
-                  </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Фитинги</h3>
+                  <ol>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                  </ol>
                </div>
             </div>
-            <div class="calculator__body">
-
-               <form class="calculator__type active" action="#" method="post" name="type-circle" id="" data-tab="1">
-
-                  <div class="calculator__parameters ">
-
-                     <div class="calculator__parameters-item js-tab-body">
-                        <button class="calculator__parameters-button js-tab-button" type="button">
-                           <span class="js-tab-selected">металл</span>
-                           <img src="./img/svg/arrow-8.svg" alt="img">
-                        </button>
-                        <div class="calculator__parameters-list js-tab-content scroll">
-                           <ol class="js-tab-content-inner">
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="Железо">
-                                    <span>Железо</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="Алюминий">
-                                    <span>Алюминий </span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="Бронза">
-                                    <span>Бронза</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="Нержавейка">
-                                    <span>Нержавейка</span>
-                                 </label>
-                              </li>
-                           </ol>
-                        </div>
-                     </div>
-
-                     <div class="calculator__parameters-item js-tab-body">
-                        <button class="calculator__parameters-button js-tab-button" type="button">
-                           <span class="js-tab-selected">стандарт</span>
-                           <img src="./img/svg/arrow-8.svg" alt="img">
-                        </button>
-                        <div class="calculator__parameters-list js-tab-content scroll">
-                           <ol class="js-tab-content-inner">
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="ASME">
-                                    <span>ASME</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="EN">
-                                    <span>EN</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="DIN">
-                                    <span>DIN</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="API">
-                                    <span>API</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="ISO">
-                                    <span>ISO</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="ASTM">
-                                    <span>ASTM</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="AISI">
-                                    <span>AISI</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="UNI">
-                                    <span>UNI</span>
-                                 </label>
-                              </li>
-                           </ol>
-                        </div>
-                     </div>
-
-                     <div class="calculator__parameters-item js-tab-body">
-                        <button class="calculator__parameters-button js-tab-button" type="button">
-                           <span class="js-tab-selected">марка</span>
-                           <img src="./img/svg/arrow-8.svg" alt="img">
-                        </button>
-                        <div class="calculator__parameters-list list-scroll js-tab-content">
-                           <div class="js-tab-content-inner">
-                              <div class="calculator__search">
-                                 <input type="text" placeholder="поиск">
-                              </div>
-                              <ol class="scroll">
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 16.9">
-                                       <span>ASME B 16.9</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 17.2">
-                                       <span>ASME B 17.2</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 17.8">
-                                       <span>ASME B 17.8</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 18.0">
-                                       <span>ASME B 18.0</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 16.9">
-                                       <span>ASME B 16.9</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 17.2">
-                                       <span>ASME B 17.2</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 17.8">
-                                       <span>ASME B 17.8</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 18.0">
-                                       <span>ASME B 18.0</span>
-                                    </label>
-                                 </li>
-                              </ol>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="calculator__parameters-description">
-                        <div class="calculator__parameters-description-title">химический состав </div>
-                        <div class="calculator__parameters-description-mark">марка</div>
-                        <div class="calculator__parameters-description-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в </div>
-                     </div>
-                  </div>
-
-                  <div class="calculator__image">
-                     <div class="calculator__image-body">
-                        <img src="./img/jpg/calc-image-1.jpg" alt="img">
-                     </div>
-                  </div>
-
-                  <div class="calculator__item">
-                     <div class="calculator__item-buttons">
-                        <button class="button-blue-tabs calculator__item-button active" type="button" data-button="1">Расчет веса</button>
-                        <button class="button-blue-tabs calculator__item-button" type="button" data-button="2">Расчет длины</button>
-                     </div>
-
-                     <div class="calculator__item-data active" data-tab="1">
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр L</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр D</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр t</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-button-calc">
-                           <!-- активная: убрать disabled, добавить класс active -->
-                           <button class="button-blue-tabs" type="button" disabled>расчитать</button>
-                        </div>
-                        <div class="calculator__item-result">
-                           <div class="calculator__item-result-name">Вес:</div>
-                           <div class="calculator__item-result-data"></div>
-                           <div class="calculator__item-result-measurement">кг</div>
-                        </div>
-                     </div>
-
-                     <div class="calculator__item-data" data-tab="2">
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр кг</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр D</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр t</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-button-calc">
-                           <!-- активная: убрать disabled, добавить класс active -->
-                           <button class="button-blue-tabs" type="button" disabled>расчитать</button>
-                        </div>
-                        <div class="calculator__item-result">
-                           <div class="calculator__item-result-name">Длина:</div>
-                           <div class="calculator__item-result-data"></div>
-                           <div class="calculator__item-result-measurement">м</div>
-                        </div>
-                     </div>
-                  </div>
-
-               </form>
-
-               <form class="calculator__type" action="#" method="post" name="type-circle" id="" data-tab="2">
-
-                  <div class="calculator__parameters">
-
-                     <div class="calculator__parameters-item js-tab-body">
-                        <button class="calculator__parameters-button js-tab-button" type="button">
-                           <span class="js-tab-selected">металл</span>
-                           <img src="./img/svg/arrow-8.svg" alt="img">
-                        </button>
-                        <div class="calculator__parameters-list js-tab-content scroll">
-                           <ol class="js-tab-content-inner">
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="Железо">
-                                    <span>Железо</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="Алюминий">
-                                    <span>Алюминий </span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="Бронза">
-                                    <span>Бронза</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="Нержавейка">
-                                    <span>Нержавейка</span>
-                                 </label>
-                              </li>
-                           </ol>
-                        </div>
-                     </div>
-
-                     <div class="calculator__parameters-item js-tab-body">
-                        <button class="calculator__parameters-button js-tab-button" type="button">
-                           <span class="js-tab-selected">стандарт</span>
-                           <img src="./img/svg/arrow-8.svg" alt="img">
-                        </button>
-                        <div class="calculator__parameters-list js-tab-content scroll">
-                           <ol class="js-tab-content-inner">
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="ASME">
-                                    <span>ASME</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="EN">
-                                    <span>EN</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="DIN">
-                                    <span>DIN</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="API">
-                                    <span>API</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="ISO">
-                                    <span>ISO</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="ASTM">
-                                    <span>ASTM</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="AISI">
-                                    <span>AISI</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="UNI">
-                                    <span>UNI</span>
-                                 </label>
-                              </li>
-                           </ol>
-                        </div>
-                     </div>
-
-                     <div class="calculator__parameters-item js-tab-body">
-                        <button class="calculator__parameters-button js-tab-button" type="button">
-                           <span class="js-tab-selected">марка</span>
-                           <img src="./img/svg/arrow-8.svg" alt="img">
-                        </button>
-                        <div class="calculator__parameters-list list-scroll js-tab-content">
-                           <div class="js-tab-content-inner">
-                              <div class="calculator__search">
-                                 <input type="text" placeholder="поиск">
-                              </div>
-                              <ol class="scroll">
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 16.9">
-                                       <span>ASME B 16.9</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 17.2">
-                                       <span>ASME B 17.2</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 17.8">
-                                       <span>ASME B 17.8</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 18.0">
-                                       <span>ASME B 18.0</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 16.9">
-                                       <span>ASME B 16.9</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 17.2">
-                                       <span>ASME B 17.2</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 17.8">
-                                       <span>ASME B 17.8</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 18.0">
-                                       <span>ASME B 18.0</span>
-                                    </label>
-                                 </li>
-                              </ol>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="calculator__parameters-description">
-                        <div class="calculator__parameters-description-title">химический состав </div>
-                        <div class="calculator__parameters-description-mark">марка</div>
-                        <div class="calculator__parameters-description-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в </div>
-                     </div>
-                  </div>
-
-                  <div class="calculator__image">
-                     <div class="calculator__image-body">
-                        <img src="./img/jpg/calc-image-2.jpg" alt="img">
-                     </div>
-                  </div>
-
-                  <div class="calculator__item">
-                     <div class="calculator__item-buttons">
-                        <button class="button-blue-tabs calculator__item-button active" type="button" data-button="1">Расчет веса</button>
-                        <button class="button-blue-tabs calculator__item-button" type="button" data-button="2">Расчет длины</button>
-                     </div>
-
-                     <div class="calculator__item-data active" data-tab="1">
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр L</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр B</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр A</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр t</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-button-calc">
-                           <!-- активная: убрать disabled, добавить класс active -->
-                           <button class="button-blue-tabs" type="button" disabled>расчитать</button>
-                        </div>
-                        <div class="calculator__item-result">
-                           <div class="calculator__item-result-name">Вес:</div>
-                           <div class="calculator__item-result-data"></div>
-                           <div class="calculator__item-result-measurement">кг</div>
-                        </div>
-                     </div>
-
-                     <div class="calculator__item-data" data-tab="2">
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр кг</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр B</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр A</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр t</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-button-calc">
-                           <!-- активная: убрать disabled, добавить класс active -->
-                           <button class="button-blue-tabs" type="button" disabled>расчитать</button>
-                        </div>
-                        <div class="calculator__item-result">
-                           <div class="calculator__item-result-name">Длина:</div>
-                           <div class="calculator__item-result-data"></div>
-                           <div class="calculator__item-result-measurement">м</div>
-                        </div>
-                     </div>
-                  </div>
-               </form>
-
-               <form class="calculator__type" action="#" method="post" name="type-circle" id="" data-tab="3">
-
-                  <div class="calculator__parameters">
-
-                     <div class="calculator__parameters-item js-tab-body">
-                        <button class="calculator__parameters-button js-tab-button" type="button">
-                           <span class="js-tab-selected">металл</span>
-                           <img src="./img/svg/arrow-8.svg" alt="img">
-                        </button>
-                        <div class="calculator__parameters-list js-tab-content scroll">
-                           <ol class="js-tab-content-inner">
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="Железо">
-                                    <span>Железо</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="Алюминий">
-                                    <span>Алюминий </span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="Бронза">
-                                    <span>Бронза</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="Нержавейка">
-                                    <span>Нержавейка</span>
-                                 </label>
-                              </li>
-                           </ol>
-                        </div>
-                     </div>
-
-                     <div class="calculator__parameters-item js-tab-body">
-                        <button class="calculator__parameters-button js-tab-button" type="button">
-                           <span class="js-tab-selected">стандарт</span>
-                           <img src="./img/svg/arrow-8.svg" alt="img">
-                        </button>
-                        <div class="calculator__parameters-list js-tab-content scroll">
-                           <ol class="js-tab-content-inner">
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="ASME">
-                                    <span>ASME</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="EN">
-                                    <span>EN</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="DIN">
-                                    <span>DIN</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="API">
-                                    <span>API</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="ISO">
-                                    <span>ISO</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="ASTM">
-                                    <span>ASTM</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="AISI">
-                                    <span>AISI</span>
-                                 </label>
-                              </li>
-                              <li>
-                                 <label class="js-tabs-value">
-                                    <input type="radio" name="metal-circle" value="UNI">
-                                    <span>UNI</span>
-                                 </label>
-                              </li>
-                           </ol>
-                        </div>
-                     </div>
-
-                     <div class="calculator__parameters-item js-tab-body">
-                        <button class="calculator__parameters-button js-tab-button" type="button">
-                           <span class="js-tab-selected">марка</span>
-                           <img src="./img/svg/arrow-8.svg" alt="img">
-                        </button>
-                        <div class="calculator__parameters-list list-scroll js-tab-content">
-                           <div class="js-tab-content-inner">
-                              <div class="calculator__search">
-                                 <input type="text" placeholder="поиск">
-                              </div>
-                              <ol class="scroll">
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 16.9">
-                                       <span>ASME B 16.9</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 17.2">
-                                       <span>ASME B 17.2</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 17.8">
-                                       <span>ASME B 17.8</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 18.0">
-                                       <span>ASME B 18.0</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 16.9">
-                                       <span>ASME B 16.9</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 17.2">
-                                       <span>ASME B 17.2</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 17.8">
-                                       <span>ASME B 17.8</span>
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="js-tabs-value">
-                                       <input type="radio" name="metal-circle" value="ASME B 18.0">
-                                       <span>ASME B 18.0</span>
-                                    </label>
-                                 </li>
-                              </ol>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="calculator__parameters-description">
-                        <div class="calculator__parameters-description-title">химический состав </div>
-                        <div class="calculator__parameters-description-mark">марка</div>
-                        <div class="calculator__parameters-description-text">Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в наличии и под заказ. Вся продукция сертифицирована — гарантируем качество, надежность и соответствие нормативам ГОСТ и международным стандартам. Предлагаем широкий выбор металлопроката для любых потребностей вашего бизнеса в </div>
-                     </div>
-                  </div>
-
-                  <div class="calculator__image">
-                     <div class="calculator__image-body">
-                        <img src="./img/jpg/calc-image-3.jpg" alt="img">
-                     </div>
-                  </div>
-
-                  <div class="calculator__item">
-                     <div class="calculator__item-buttons">
-                        <button class="button-blue-tabs calculator__item-button active" type="button" data-button="1">Расчет веса</button>
-                        <button class="button-blue-tabs calculator__item-button" type="button" data-button="2">Расчет длины</button>
-                     </div>
-
-                     <div class="calculator__item-data active" data-tab="1">
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр L</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр B</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр A</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр t</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-button-calc">
-                           <!-- активная: убрать disabled, добавить класс active -->
-                           <button class="button-blue-tabs" type="button" disabled>расчитать</button>
-                        </div>
-                        <div class="calculator__item-result">
-                           <div class="calculator__item-result-name">Вес:</div>
-                           <div class="calculator__item-result-data"></div>
-                           <div class="calculator__item-result-measurement">кг</div>
-                        </div>
-                     </div>
-
-                     <div class="calculator__item-data" data-tab="2">
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр кг</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр B</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр A</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-input">
-                           <span class="calculator__item-input-name">параметр t</span>
-                           <input type="number" name="">
-                           <span>мм</span>
-                        </div>
-                        <div class="calculator__item-button-calc">
-                           <!-- активная: убрать disabled, добавить класс active -->
-                           <button class="button-blue-tabs" type="button" disabled>расчитать</button>
-                        </div>
-                        <div class="calculator__item-result">
-                           <div class="calculator__item-result-name">Длина:</div>
-                           <div class="calculator__item-result-data"></div>
-                           <div class="calculator__item-result-measurement">м</div>
-                        </div>
-                     </div>
-                  </div>
-               </form>
-
+         </article>
+         <article class="block-catalog__card">
+            <div>
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-4.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Фланцы</h3>
+                  <ol>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                  </ol>
+               </div>
             </div>
-
-         </div>
+         </article>
+         <article class="block-catalog__card">
+            <div>
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-6.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Трубы</h3>
+                  <ol>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                  </ol>
+               </div>
+            </div>
+         </article>
+         <article class="block-catalog__card">
+            <div>
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-6.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Листовой прокат</h3>
+                  <ol>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                  </ol>
+               </div>
+            </div>
+         </article>
+         <article class="block-catalog__card">
+            <div>
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-7.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Сортовой прокат</h3>
+                  <ol>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                  </ol>
+               </div>
+            </div>
+         </article>
+         <article class="block-catalog__card">
+            <div>
+               <div class="block-catalog__card-image">
+                  <img src="./img/jpg/img-8.jpg" alt="img">
+               </div>
+               <div class="block-catalog__card-content">
+                  <h3 class="block-catalog__card-title">Крепеж</h3>
+                  <ol>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                     <li><a href="@0">Раздел вашего меню</a></li>
+                     <li><a href="@0">Пункт меню</a></li>
+                  </ol>
+               </div>
+            </div>
+         </article>
       </div>
+      <a class="catalog-modal__link" href="">показать еще</a>
    </div>
 </div>
 
