@@ -885,13 +885,14 @@
       font-size: 14px;
       font-weight: 300;
       color: var(--color-gray-7);
+      text-transform: uppercase;
    }
 
    &__body {
       position: relative;
       margin-bottom: 15px;
 
-      input {
+      &>input {
          padding: 0 20px;
          height: 52px;
          width: 100%;
@@ -936,7 +937,7 @@
       right: -40px;
       transform: translateY(-50%);
 
-      @media (min-width:768px) {
+      @media (min-width:1200px) {
          right: -60px;
       }
 
@@ -964,14 +965,24 @@
    &__submit {
       margin-bottom: 30px;
       text-align: center;
+
+      button {
+         min-width: 100%;
+
+         @media (min-width:768px) {
+            min-width: 300px;
+         }
+      }
    }
 
-   input[type=password]~.data-input__hidden {
-      display: none;
-   }
+   &__send {
+      button {
+         min-width: 100%;
 
-   input[type=text]~.data-input__visible {
-      display: none;
+         @media (min-width:768px) {
+            min-width: 300px;
+         }
+      }
    }
 
    &__buttons {
@@ -989,9 +1000,110 @@
          height: 32px;
       }
    }
-}
+
+   &__explanation {
+      margin-bottom: 25px;
+      color: var(--color-gray-7);
+      font-weight: 700;
+      line-height: 150%;
+   }
+
+   &__file {
+      margin-bottom: 40px;
+      display: flex;
+      gap: 10px;
+
+      input[type="file"] {
+         display: none;
+      }
+   }
+
+   &__file-icon {
+
+      svg,
+      img {
+         width: 32px;
+      }
+   }
+
+   &__file-text {
+      p {
+         margin-bottom: 5px;
+         font-size: 18px;
+         font-weight: 700;
+      }
+
+      span {
+         font-size: 16px;
+         line-height: 120%;
+         font-style: italic;
+      }
+   }
+
+   &__identically {
+      margin-top: 10px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 5px;
+
+      @media (min-width:1200px) {
+         margin-right: -100px;
+         position: absolute;
+         top: 50%;
+         left: calc(100% + 5px);
+         transform: translateY(-50%);
+         justify-content: flex-start;
+      }
+
+      input {
+         display: none;
+
+         &:checked+.data-input__identically-check::after {
+            display: block;
+         }
+      }
+
+      @media (min-width:768px) {
+         right: -60px;
+      }
+   }
+
+   &__identically-check {
+      position: relative;
+      width: 17px;
+      min-width: 17px;
+      height: 17px;
+      border: 1px solid var(--color-periwinkle-crayola);
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         width: 100%;
+         height: 100%;
+         transform: translate(-50%, -50%);
+         background: url('../img/svg/arrow-12.svg') center / 10px 10px no-repeat;
+         display: none;
+      }
+   }
+
+   &__identically-text {
+      font-size: 14px;
+      color: var(--color-gray-7);
+   }
 
 
-input::-webkit-passman-key {
-   display: none;
+
+   input[type="password"]~.data-input__hidden {
+      display: none;
+   }
+
+   input[type="text"]~.data-input__visible {
+      display: none;
+   }
+
+   input::-webkit-passman-key {
+      display: none;
+   }
 }

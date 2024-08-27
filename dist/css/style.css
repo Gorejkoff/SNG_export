@@ -6644,6 +6644,7 @@ body {
   font-size: 14px;
   font-weight: 300;
   color: var(--color-gray-7);
+  text-transform: uppercase;
 }
 
 .data-input__body {
@@ -6651,7 +6652,7 @@ body {
   margin-bottom: 15px;
 }
 
-.data-input__body input {
+.data-input__body > input {
   padding: 0 20px;
   height: 52px;
   width: 100%;
@@ -6662,19 +6663,19 @@ body {
   pointer-events: none;
 }
 
-.data-input__body input:focus {
+.data-input__body > input:focus {
   pointer-events: all;
 }
 
-.data-input__body input:focus + .data-input__edit {
+.data-input__body > input:focus + .data-input__edit {
   display: none;
 }
 
-.data-input__body input:invalid {
+.data-input__body > input:invalid {
   pointer-events: all;
 }
 
-.data-input__body input:invalid + .data-input__edit {
+.data-input__body > input:invalid + .data-input__edit {
   display: none;
 }
 
@@ -6720,12 +6721,12 @@ body {
   text-align: center;
 }
 
-.data-input input[type=password] ~ .data-input__hidden {
-  display: none;
+.data-input__submit button {
+  min-width: 100%;
 }
 
-.data-input input[type=text] ~ .data-input__visible {
-  display: none;
+.data-input__send button {
+  min-width: 100%;
 }
 
 .data-input__buttons {
@@ -6752,7 +6753,97 @@ body {
   height: 32px;
 }
 
-input::-webkit-passman-key {
+.data-input__explanation {
+  margin-bottom: 25px;
+  color: var(--color-gray-7);
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.data-input__file {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.data-input__file input[type=file] {
+  display: none;
+}
+
+.data-input__file-icon svg,
+.data-input__file-icon img {
+  width: 32px;
+}
+
+.data-input__file-text p {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.data-input__file-text span {
+  font-size: 16px;
+  line-height: 120%;
+  font-style: italic;
+}
+
+.data-input__identically {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 5px;
+}
+
+.data-input__identically input {
+  display: none;
+}
+
+.data-input__identically input:checked + .data-input__identically-check::after {
+  display: block;
+}
+
+.data-input__identically-check {
+  position: relative;
+  width: 17px;
+  min-width: 17px;
+  height: 17px;
+  border: 1px solid var(--color-periwinkle-crayola);
+}
+
+.data-input__identically-check::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: url("../img/svg/arrow-12.svg") center/10px 10px no-repeat;
+  display: none;
+}
+
+.data-input__identically-text {
+  font-size: 14px;
+  color: var(--color-gray-7);
+}
+
+.data-input input[type=password] ~ .data-input__hidden {
+  display: none;
+}
+
+.data-input input[type=text] ~ .data-input__visible {
+  display: none;
+}
+
+.data-input input::-webkit-passman-key {
   display: none;
 }
 
@@ -7191,12 +7282,20 @@ input::-webkit-passman-key {
     font-size: 18px;
   }
 
-  .data-input__edit {
-    right: -60px;
-  }
-
   .data-input__edit img {
     width: 32px;
+  }
+
+  .data-input__submit button {
+    min-width: 300px;
+  }
+
+  .data-input__send button {
+    min-width: 300px;
+  }
+
+  .data-input__identically {
+    right: -60px;
   }
 }
 
@@ -7386,6 +7485,23 @@ input::-webkit-passman-key {
   .data-input__form {
     margin-right: 60px;
     max-width: 560px;
+  }
+
+  .data-input__edit {
+    right: -60px;
+  }
+
+  .data-input__identically {
+    margin-right: -100px;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 5px);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
