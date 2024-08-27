@@ -263,9 +263,13 @@
 
    &__text {
       margin-bottom: 25px;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
-      line-height: 110%;
+      line-height: 130%;
+
+      @media (min-width:768px) {
+         font-size: 18px;
+      }
    }
 
    &__search {
@@ -586,9 +590,165 @@
       &:nth-child(4n + 4) {
          border-right: 1px solid var(--color-light-telegraph);
       }
+   }
+
+   &__info-title {
+      margin-bottom: 25px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-blue-4);
+
+      @media (min-width:768px) {
+         font-size: 24px;
+      }
+   }
+
+   &__info {
+      margin-bottom: 30px;
+      box-shadow: 8px 8px 27px 1px rgba(19, 85, 102, 0.24);
+   }
+
+   &__info-block {
+      border: 1px solid var(--color-gray-4);
+      font-size: 16px;
+      color: var(--color-blue-4);
+
+      @media (min-width:768px) {
+         font-size: 18px;
+      }
+
+      &.active {
+         .account__info-button {
+            img {
+               transform: rotate3d(1, 0, 0, 180deg);
+            }
+         }
+      }
+   }
+
+   &__info-link,
+   &__info-button {
+      padding: 15px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      cursor: pointer;
+      line-height: 130%;
+
+      @media (min-width:768px) {
+         padding: 25px 20px;
+      }
+
+      svg,
+      img {
+         height: 16px;
+         transition: transform 0.3s;
+      }
+   }
+
+   &__info-content {
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s;
+   }
+
+   &__content-inner {
+      padding: 0px 10px 10px;
+      line-height: 130%;
+      font-size: 0.875em;
+
+      @media (min-width:768px) {
+         padding: 0px 20px 20px;
+      }
+   }
+
+   &__request {
+      padding-top: 15px;
+      margin-bottom: 50px;
+   }
+
+   &__request-date {
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+   }
+
+   &__request-button {
+
+      text-align: center;
+   }
+
+   &__request-table-title {
+      margin-bottom: 30px;
+      font-size: 20px;
+      text-align: center;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--color-blue-4);
+
+      @media (min-width:768px) {
+         font-size: 24px;
+      }
+
+      @media (min-width:992px) {
+         font-size: 36px;
+      }
+   }
+
+   &__request-table {
+      display: grid;
+      grid-template-columns: 0.5fr 1fr 40px;
+      box-shadow: 8px 8px 27px 1px rgba(19, 85, 102, 0.24);
 
    }
+
+   &__request-table-header {
+      padding: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-white);
+      text-transform: uppercase;
+      background-color: var(--color-blue-4);
+
+      @media (min-width:768px) {
+         font-size: 20px;
+      }
+   }
+
+   &__request-table-cell {
+      display: flex;
+      align-items: center;
+      color: var(--color-blue-4);
+      padding: 10px;
+      font-size: 14px;
+      min-height: 60px;
+      border-bottom: 1px solid var(--color-gray-4);
+
+      @media (min-width:768px) {
+         font-size: 18px;
+      }
+
+      &:nth-child(3n + 4) {
+         border-left: 1px solid var(--color-gray-4);
+      }
+
+      &:nth-child(3n + 6) {
+         border-right: 1px solid var(--color-gray-4);
+      }
+
+      button {
+         font-size: inherit;
+         color: inherit;
+      }
+   }
 }
+
+
 
 
 .datepicker {
@@ -622,7 +782,11 @@
    }
 
    &__designations-description {}
+
+
+
 }
+
 
 .completed {
    --color-left: var(--color-indian-green);
@@ -664,4 +828,46 @@
    --color-left: var(--color-indian-green);
    --color-right: var(--color-indian-green);
    --color-number: var(--color-white);
+}
+
+.date {
+   min-width: 250px;
+
+   &__title {
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--color-blue-4);
+   }
+
+   &__body {
+      position: relative;
+      height: 30px;
+      border: 1px solid var(--color-gray-3);
+
+      input {
+         width: 100%;
+         height: 100%;
+         padding-left: 10px;
+         padding-right: 10px;
+         color: var(--color-blue-4);
+      }
+
+      input[type="date"] {
+         padding-right: 0;
+
+         &::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            height: 25px;
+            width: 25px;
+            background-image: url('../img/svg/date.svg');
+            background-size: 22px 22px;
+            background-position: center;
+            border-left: 1px solid var(--color-gray-3);
+         }
+      }
+   }
+
+
 }

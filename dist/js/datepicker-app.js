@@ -177,14 +177,14 @@ function Datepicker(name) {
    })
 
    /* событие клавиш стрелок впрерёд, назад, листание месяцев  */
-   document.addEventListener('keydown', (event) => {
+   /* document.addEventListener('keydown', (event) => {
       if (event.code == 'ArrowRight') {
          this.buildCell(this.createMonth.getFullYear(), this.createMonth.getMonth() + 1);
       }
       if (event.code == 'ArrowLeft') {
          this.buildCell(this.createMonth.getFullYear(), this.createMonth.getMonth() - 1);
       }
-   })
+   }) */
 }
 
 function searchStatus(element, index, users) {
@@ -193,29 +193,5 @@ function searchStatus(element, index, users) {
 
 let datepicker = new Datepicker('.datepicker');
 /* === datepicker.rangeDate массив с предельными датами === */
-
-
-/*
-${thisCellDate == Date.parse(this.rangeDate[0]) && !this.rangeDate[1] ? this.cellMarked : ''}
-${thisCellDate == Date.parse(this.rangeDate[0]) && this.rangeDate[1] ? this.cellStart : ''}
-${thisCellDate == Date.parse(this.rangeDate[1]) ? this.cellEnd : ''}
-${thisCellDate > Date.parse(this.rangeDate[0]) && thisCellDate < Date.parse(this.rangeDate[1]) ? this.cellSelected : ''}
-*/
-
-
-//let result = DATA_ORDERS.find(search);
-/* function searchStatus(element, index, users) {
-   return new Date(element.date) == thisCellDate;
-} */
-
-
-
-
-
-
-/* let dateTest = '2024-5-20';
-console.log(new Date(dateTest)); */
-
-
 
 

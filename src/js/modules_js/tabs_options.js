@@ -153,4 +153,15 @@ if (document.querySelector('.basket__table')) {
       closeClickContent: false,
    }).init();
 }
-
+if (document.querySelector('.account__exchange')) {
+   new TabsOpen({
+      name: '.account__exchange',
+      tabBody: '.account__info-block',
+      tabButton: '.account__info-button',
+      tabContent: '.account__info-content',
+      tabContentInner: '.account__content-inner',
+      hover: false,
+      closeAllTabs: false,
+      closeClickContent: false,
+   }).init();
+}
