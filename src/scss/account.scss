@@ -746,6 +746,8 @@
          color: inherit;
       }
    }
+
+
 }
 
 
@@ -782,9 +784,6 @@
    }
 
    &__designations-description {}
-
-
-
 }
 
 
@@ -868,6 +867,131 @@
          }
       }
    }
+}
+
+.data-input {
+   &__form {
+      margin-right: 40px;
+      max-width: none;
+
+      @media (min-width:1200px) {
+         margin-right: 60px;
+         max-width: 560px;
+      }
+   }
+
+   &__title {
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--color-gray-7);
+   }
+
+   &__body {
+      position: relative;
+      margin-bottom: 15px;
+
+      input {
+         padding: 0 20px;
+         height: 52px;
+         width: 100%;
+         border: 1px solid var(--color-gray-7);
+         color: var(--color-gray-7);
+         font-weight: 700;
+         font-size: 18px;
+         pointer-events: none;
+
+         &:focus {
+            pointer-events: all;
+
+            &+.data-input__edit {
+               display: none;
+            }
+         }
+
+         &:invalid {
+            pointer-events: all;
+
+            &+.data-input__edit {
+               display: none;
+            }
+         }
+      }
+
+      input[type="date"] {
+         &::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            height: 30px;
+            width: 30px;
+            background-image: url('../img/svg/date.svg');
+            background-size: 30px 30px;
+            background-position: center;
+         }
+      }
+   }
+
+   &__edit {
+      position: absolute;
+      top: 50%;
+      right: -40px;
+      transform: translateY(-50%);
+
+      @media (min-width:768px) {
+         right: -60px;
+      }
+
+      img {
+         width: 25px;
+
+         @media (min-width:768px) {
+            width: 32px;
+         }
+      }
+   }
+
+   &__hidden,
+   &__visible {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+
+      img {
+         width: 30px;
+      }
+   }
+
+   &__submit {
+      margin-bottom: 30px;
+      text-align: center;
+   }
+
+   input[type=password]~.data-input__hidden {
+      display: none;
+   }
+
+   input[type=text]~.data-input__visible {
+      display: none;
+   }
+
+   &__buttons {
+      display: flex;
+      justify-content: space-around;
+      gap: 30px;
+      flex-wrap: wrap;
+
+      button {
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         color: var(--color-gray-7);
+         font-weight: 700;
+         height: 32px;
+      }
+   }
+}
 
 
+input::-webkit-passman-key {
+   display: none;
 }

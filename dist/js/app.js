@@ -61,6 +61,17 @@ document.addEventListener('click', (event) => {
       gradeBlock.querySelector('.product-card__grade-value').innerHTML = gradeCell.innerHTML;
       cellList.forEach((e) => { e.classList.toggle('active', e == gradeCell) })
    }
+   if (event.target.closest('.data-input__body button')) {
+      event.target.closest('.data-input__body').querySelector('input').focus();
+   }
+   if (event.target.closest('.data-input__visible')) {
+      let body = event.target.closest('.data-input__body');
+      body.querySelector('input').type = 'text';
+   }
+   if (event.target.closest('.data-input__hidden')) {
+      let body = event.target.closest('.data-input__body');
+      body.querySelector('input').type = 'password';
+   }
 })
 
 document.addEventListener('scroll', () => {
@@ -100,7 +111,6 @@ if (document.querySelector('.add-file__button input')) {
       element.closest('.add-file').querySelector('.add-file__text').innerHTML = element.files[0].name;
    }
 }
-
 
 // перемещение блоков при адаптиве по данным атрибута 
 // data-da=".class,3,768" 

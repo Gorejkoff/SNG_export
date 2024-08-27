@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/1_head.html',{"title":"Account Institution"})
+</head>
+
+
+<body>
+
+   <div class="wrapper">
+
+      @@include('html/2_header.html',{})
+
+      @@include('html/2.1_header-scroll.html',{})
+
+      <main class="main">
+
+         <div class="account">
+            <div class="account__container">
+               <div class="account__body">
+                  @@include('html/account/account_side.html',{})
+                  <div class="account__content">
+                     <h1 class="account__title" data-da=".account__container,0,1199.98">Моя организация</h1>
+                     @@include('html/account/account_institution.html',{})
+                  </div>
+                  @@include('html/account/accound_data.html',{})
+               </div>
+            </div>
+         </div>
+
+      </main>
+
+      @@include('html/4_footer.html',{})
+
+   </div>
+
+   @@include('html/catalog_modal.html',{})
+
+   @@include('html/header_menu.html',{})
+
+   @@include('html/search.html',{})
+
+   @@include('html/3_scripts.html',{})
+   <script defer src='./js/datepicker-app.js'></script>
+
+</body>
+
+</html>
