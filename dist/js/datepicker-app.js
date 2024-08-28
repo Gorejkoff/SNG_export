@@ -32,28 +32,7 @@ let month = [
    "Ноябрь",
    "Декабрь",
 ];
-const DATA_ORDERS = [
-   {
-      date: '2024-7-13',
-      status: 'shipped'
-   },
-   {
-      date: '2024-7-30',
-      status: 'shipped-payment'
-   },
-   {
-      date: '2024-8-10',
-      status: 'completed'
-   },
-   {
-      date: '2024-8-17',
-      status: 'ready-payment'
-   },
-   {
-      date: '2024-9-11',
-      status: 'finished'
-   }
-];
+let data_orders = [];
 
 function Datepicker(name) {
    this.datepickerBody = document.querySelector(name);
@@ -118,7 +97,7 @@ function Datepicker(name) {
       for (let i = this.createMonth.getMonth(), q = this.createMonth.getDate(); i == this.createMonth.getMonth(); this.createMonth.setDate(++q)) {
          let thisCellDate = Date.parse(new Date(this.createMonth.getFullYear(), this.createMonth.getMonth(), this.createMonth.getDate()));
          /* поиск совпадений меток статуса */
-         let result = DATA_ORDERS.find(searchStatus, thisCellDate);
+         let result = data_orders.find(searchStatus, thisCellDate);
          if (this.nowDate.toDateString() !== this.createMonth.toDateString()) {
             this.datepickerShell.insertAdjacentHTML('beforeend',
                `<div class="dp-cell ${result && result.status}"
@@ -139,7 +118,7 @@ function Datepicker(name) {
       while (this.createMonth.getDay() !== 1) {
          let thisCellDate = Date.parse(new Date(this.createMonth.getFullYear(), this.createMonth.getMonth(), this.createMonth.getDate()));
          /* поиск совпадений меток статуса */
-         let result = DATA_ORDERS.find(searchStatus, thisCellDate);
+         let result = data_orders.find(searchStatus, thisCellDate);
          this.datepickerShell.insertAdjacentHTML('beforeend',
             `<div class="dp-cell dp-cell-next ${result && result.status}" 
             data-date="${this.createMonth.getDate()}"
@@ -154,7 +133,7 @@ function Datepicker(name) {
          this.createMonth.setDate(this.createMonth.getDate() - 1);
          let thisCellDate = Date.parse(new Date(this.createMonth.getFullYear(), this.createMonth.getMonth(), this.createMonth.getDate()));
          /* поиск совпадений меток статуса */
-         let result = DATA_ORDERS.find(searchStatus, thisCellDate);
+         let result = data_orders.find(searchStatus, thisCellDate);
          this.datepickerShell.insertAdjacentHTML('afterbegin',
             `<div class="dp-cell dp-cell-prev ${result && result.status}" 
             data-date="${this.createMonth.getDate()}"
@@ -165,7 +144,7 @@ function Datepicker(name) {
       this.createMonth = new Date(this.thisYear, this.thisMonth, 1)
    }
    this.buildCell(this.nowDate.getFullYear(), this.nowDate.getMonth(), this.nowDate.getDate());
-
+   this.restart = () => this.buildCell(this.nowDate.getFullYear(), this.nowDate.getMonth(), this.nowDate.getDate());
    this.dbWrapper.addEventListener('click', (event) => {
       /* листание следующий месяц */
       if (event.target.closest('.dp-button-next')) {
@@ -176,6 +155,8 @@ function Datepicker(name) {
          this.buildCell(this.createMonth.getFullYear(), this.createMonth.getMonth() - 1);
       }
    })
+
+
 
    /* событие клавиш стрелок впрерёд, назад, листание месяцев  */
    /*   document.addEventListener('keydown', (event) => {
@@ -193,6 +174,34 @@ function searchStatus(element) {
 }
 
 let datepicker = new Datepicker('.datepicker');
-/* === datepicker.rangeDate массив с предельными датами === */
 
+
+/* имитация получения данных ))) для примера */
+setInterval(() => {
+   /* в массив записываем данные */
+   data_orders = [
+      {
+         date: '2024-7-13',
+         status: 'shipped'
+      },
+      {
+         date: '2024-7-30',
+         status: 'shipped-payment'
+      },
+      {
+         date: '2024-8-10',
+         status: 'completed'
+      },
+      {
+         date: '2024-8-17',
+         status: 'ready-payment'
+      },
+      {
+         date: '2024-9-11',
+         status: 'finished'
+      }
+   ];
+   /* перезапуск календаря */
+   datepicker.restart();
+}, 2000)
 
