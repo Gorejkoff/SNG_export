@@ -58,6 +58,10 @@ input::-ms-clear {
 	display: none;
 }
 
+input::-webkit-passman-key {
+	display: none;
+}
+
 button {
 	cursor: pointer;
 }

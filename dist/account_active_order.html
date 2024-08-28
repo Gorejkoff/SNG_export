@@ -5,7 +5,7 @@
    <title>"Account Active Order"</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <meta name="viewport" content="width=device-width initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css?_v=20240827222905">
+<link rel="stylesheet" href="css/style.css?_v=20240828223722">
 </head>
 
 
@@ -147,7 +147,7 @@
             <a class="header__pages-mail-phone" href="#0"><img src="./img/svg/mail-phone.svg" alt="img"></a>
             <a href="basket.html" data-quantity="4"><img src="./img/svg/shop.svg" alt="img"></a>
             <a href="favourites.html" data-quantity="24"><img src="./img/svg/heart.svg" alt="img"></a>
-            <a href="account.html"><img src="./img/svg/account.svg" alt="img"></a>
+            <button class="js-modal-open" type="button" data-modal_open="log-in"><img src="./img/svg/account.svg" alt="img"></button>
          </div>
          <div class="header__button-order" data-da=".header-menu__mobile,5,1100">
             <button class="button-blue" type="button">Быстрый заказ</button>
@@ -505,6 +505,124 @@
 </footer>
 
    </div>
+
+   <div id="log-in" class="modal js-modal-close js-modal-hidden">
+   <div class="modal__wrapper">
+      <div class="modal__shell">
+         <div class="modal__body js-modal-stop-close">
+
+            <button class="modal__close js-modal-close" type="button">
+               <img src="./img/svg/close-2.svg" alt="img">
+            </button>
+            <div class="modal__header">
+               <div class="modal__title">Личный кабинет</div>
+            </div>
+
+            <form action="#" method="post" name="" id="">
+               <div class="modal__input">
+                  <input type="number" required placeholder="ИНН*">
+               </div>
+               <div class="modal__input">
+                  <input type="password" required placeholder="пароль*">
+                  <button class="modal__input-visible" type="button">
+                     <img src="./img/svg/visible-2.svg" alt="img">
+                  </button>
+                  <button class="modal__input-hidden" type="button">
+                     <img src="./img/svg/hidden-2.svg" alt="img">
+                  </button>
+               </div>
+               <div class="modal__block-check">
+                  <label class="modal__check">
+                     <input class="modal__check-input" type="checkbox">
+                     <span class="modal__check-item"></span>
+                     <span class="modal__check-text">запомнить меня</span>
+                  </label>
+                  <button class="modal__link js-modal-open js-modal-close" data-modal_open="recover-password" type="button">забыли пароль?</button>
+               </div>
+               <div class="modal__block-buttons">
+                  <a href="account.html" class="button-blue">Войти</a>
+                  <button class="button-grey-2 js-modal-open js-modal-close" data-modal_open="registration" type="button">регистрация</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+   <div id="recover-password" class="modal js-modal-close js-modal-hidden">
+   <div class="modal__wrapper">
+      <div class="modal__shell">
+         <div class="modal__body js-modal-stop-close">
+
+            <button class="modal__close js-modal-close" type="button">
+               <img src="./img/svg/close-2.svg" alt="img">
+            </button>
+            <div class="modal__header">
+               <div class="modal__title">Востановление пароля</div>
+            </div>
+            <div class="modal__text">Если вы забыли пароль введите E-mail, указанный при регистрации. Ваш пароль будет выслан вам повторно</div>
+            <form action="#" method="post" name="" id="">
+               <div class="modal__input">
+                  <input type="number" required placeholder="Электронный адрес">
+               </div>
+               <div class="modal__block-buttons">
+                  <a href="account.html" class="button-blue">Востановить пароль</a>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+   <div id="registration" class="modal size-m js-modal-close js-modal-hidden">
+   <div class="modal__wrapper">
+      <div class="modal__shell">
+         <div class="modal__body js-modal-stop-close">
+
+            <button class="modal__close js-modal-close" type="button">
+               <img src="./img/svg/close-2.svg" alt="img">
+            </button>
+            <div class="modal__header">
+               <div class="modal__title">Регистрация</div>
+            </div>
+            <div class="modal__text">После регистрации в личном кабинете, у вас появится возможность; оформить заказы самостоятельно, просматривать историю заказов, получать доступ к вашим устьавным документам и бухгалтерским документам по вашим отгрузкам, скачивать документы в электронном виде, отслеживать статусы заказа. Через личный кабинет можно получить контакты менеджера, курьирующего ваш заказ </div>
+            <form action="#" method="post" name="" id="">
+               <div class="modal__input">
+                  <input type="number" required placeholder="ИНН организации*">
+               </div>
+               <div class="modal__input">
+                  <input type="number" required placeholder="Ваша фамилия*">
+               </div>
+               <div class="modal__input">
+                  <input type="number" required placeholder="Ваше имя*">
+               </div>
+               <div class="modal__input">
+                  <input type="number" required placeholder="Ваше отчество*">
+               </div>
+               <div class="modal__input">
+                  <input type="number" required placeholder="Электронный адрес*">
+               </div>
+               <div class="modal__input">
+                  <input type="number" required placeholder="Номер телефона*">
+               </div>
+               <div class="modal__input">
+                  <input type="number" required placeholder="пароль*">
+               </div>
+               <div class="modal__input-condition">длина пароля не менее 6 символов</div>
+               <div class="modal__input">
+                  <input type="number" required placeholder="подтверждение пароля*">
+               </div>
+               <div class="modal__agreement">
+                  Нажимая кнопку “Зарегистрироваться” вы подтверждаете свое <a href="#0">согласие на обработку персональных данных</a>
+               </div>
+               <div class="modal__block-buttons">
+                  <a href="account.html" class="button-blue">Востановить пароль</a>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
 
    <div id="catalog-modal" class="catalog-modal">
    <div class="catalog-modal__container">
@@ -1951,8 +2069,8 @@
    </div>
 </div>
 
-   <script defer src='./js/app.js?_v=20240827222905'></script>
-   <script defer src='./js/datepicker-app.js?_v=20240827222905'></script>
+   <script defer src='./js/app.js?_v=20240828223722'></script>
+   <script defer src='./js/datepicker-app.js?_v=20240828223722'></script>
 </body>
 
 </html>

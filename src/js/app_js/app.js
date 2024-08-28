@@ -72,6 +72,14 @@ document.addEventListener('click', (event) => {
       let body = event.target.closest('.data-input__body');
       body.querySelector('input').type = 'password';
    }
+   if (event.target.closest('.modal__input-visible')) {
+      let body = event.target.closest('.modal__input');
+      body.querySelector('input').type = 'text';
+   }
+   if (event.target.closest('.modal__input-hidden')) {
+      let body = event.target.closest('.modal__input');
+      body.querySelector('input').type = 'password';
+   }
 })
 
 document.addEventListener('scroll', () => {

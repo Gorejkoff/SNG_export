@@ -120,6 +120,9 @@
 
 .button-blue {
    padding: 10px 15px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    color: var(--color-white);
    min-height: 48px;
    text-transform: uppercase;
@@ -176,6 +179,15 @@
    width: 100%;
    min-height: 32px;
    box-shadow: 0px 16px 32px 0px rgba(0, 0, 2, 0.11);
+}
+
+.button-grey-2 {
+   padding: 10px 15px;
+   min-height: 48px;
+   text-transform: uppercase;
+   border: 1px solid var(--color-blue-3);
+   color: var(--color-blue-3);
+   background: linear-gradient(55deg, #d1d0d091, #d1d0d0);
 }
 
 .hover-gradient {
@@ -274,7 +286,6 @@
    input:checked+& svg {
       display: block;
    }
-
 }
 
 .check-text {
@@ -340,8 +351,6 @@
    }
 
 }
-
-
 
 .input-text {
    display: flex;

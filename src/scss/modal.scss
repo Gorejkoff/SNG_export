@@ -31,6 +31,7 @@
       position: relative;
       padding: 30px 25px 35px;
       max-width: 460px;
+      width: 100%;
       background-color: var(--color-white);
 
       .size-l & {
@@ -39,6 +40,10 @@
          @media (min-width:768px) {
             padding: 45px;
          }
+      }
+
+      .size-m & {
+         max-width: 700px;
       }
    }
 
@@ -73,12 +78,15 @@
    }
 
    &__title {
-      margin-bottom: 20px;
       font-size: 24px;
       color: var(--color-blue-4);
       font-weight: 700;
       line-height: 110%;
       text-align: center;
+
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
 
       .size-l & {
          text-align: start;
@@ -122,12 +130,34 @@
       }
    }
 
+   &__input-visible,
+   &__input-hidden {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(-50%, -50%);
+
+      img {
+         width: 30px;
+      }
+   }
+
+   input[type="password"]~.modal__input-hidden {
+      display: none;
+   }
+
+   input[type="text"]~.modal__input-visible {
+      display: none;
+   }
+
+
    &__button {
       display: flex;
       justify-content: center;
    }
 
    &__agreement {
+      margin-bottom: 20px;
       margin-top: 30px;
       font-size: 16px;
       color: var(--color-gray-6);
@@ -185,6 +215,80 @@
    }
 
    &__explanation {}
+
+   &__check {
+      display: flex;
+      align-items: center;
+
+      gap: 5px;
+   }
+
+   &__block-check {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+   }
+
+   &__check-input {
+      display: none;
+
+      &:checked+.modal__check-item {
+         &::after {
+            display: block;
+         }
+      }
+   }
+
+   &__check-item {
+      display: block;
+      position: relative;
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+      border: 1px solid var(--color-gray-7);
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: url('../img/svg/arrow-12.svg') center / 12px 12px no-repeat;
+         display: none;
+      }
+   }
+
+   &__check-text {
+      font-size: 14px;
+   }
+
+   &__block-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+
+      button {
+         font-weight: 700;
+      }
+   }
+
+   &__link {
+      color: var(--color-blue-4);
+   }
+
+   &__text {
+      margin-bottom: 20px;
+      font-size: 14px;
+      line-height: 190%;
+   }
+
+   &__input-condition {
+      margin-bottom: 5px;
+      font-size: 18px;
+      opacity: 0.26;
+   }
 }
 
 @supports (height: 100dvh) {

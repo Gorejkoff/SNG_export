@@ -34,26 +34,27 @@ let month = [
 ];
 const DATA_ORDERS = [
    {
-      date: '2024,7,13',
+      date: '2024-7-13',
       status: 'shipped'
    },
    {
-      date: '2024,7,30',
+      date: '2024-7-30',
       status: 'shipped-payment'
    },
    {
-      date: '2024,8,10',
+      date: '2024-8-10',
       status: 'completed'
    },
    {
-      date: '2024,8,17',
+      date: '2024-8-17',
       status: 'ready-payment'
    },
    {
-      date: '2024,9,11',
+      date: '2024-9-11',
       status: 'finished'
    }
 ];
+
 function Datepicker(name) {
    this.datepickerBody = document.querySelector(name);
    this.rangeDate = [];
@@ -177,17 +178,17 @@ function Datepicker(name) {
    })
 
    /* событие клавиш стрелок впрерёд, назад, листание месяцев  */
-   /* document.addEventListener('keydown', (event) => {
-      if (event.code == 'ArrowRight') {
-         this.buildCell(this.createMonth.getFullYear(), this.createMonth.getMonth() + 1);
-      }
-      if (event.code == 'ArrowLeft') {
-         this.buildCell(this.createMonth.getFullYear(), this.createMonth.getMonth() - 1);
-      }
-   }) */
+   /*   document.addEventListener('keydown', (event) => {
+        if (event.code == 'ArrowRight') {
+           this.buildCell(this.createMonth.getFullYear(), this.createMonth.getMonth() + 1);
+        }
+        if (event.code == 'ArrowLeft') {
+           this.buildCell(this.createMonth.getFullYear(), this.createMonth.getMonth() - 1);
+        }
+     }) */
 }
 
-function searchStatus(element, index, users) {
+function searchStatus(element) {
    return Date.parse(new Date(element.date)) == this;
 }
 

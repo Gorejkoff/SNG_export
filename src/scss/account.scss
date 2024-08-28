@@ -1093,17 +1093,11 @@
       color: var(--color-gray-7);
    }
 
-
-
    input[type="password"]~.data-input__hidden {
       display: none;
    }
 
    input[type="text"]~.data-input__visible {
-      display: none;
-   }
-
-   input::-webkit-passman-key {
       display: none;
    }
 }
