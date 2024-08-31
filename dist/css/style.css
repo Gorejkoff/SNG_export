@@ -3779,6 +3779,7 @@ body.body-overflow {
   padding: 0 20px;
   height: 100%;
   width: 100%;
+  font-weight: 700;
 }
 
 .modal__input-visible,
@@ -3813,6 +3814,12 @@ body.body-overflow {
           justify-content: center;
 }
 
+.modal__button button {
+  min-width: 280px;
+  min-height: 64px;
+  font-size: 24px;
+}
+
 .modal__agreement {
   margin-bottom: 20px;
   margin-top: 30px;
@@ -3820,6 +3827,7 @@ body.body-overflow {
   color: var(--color-gray-6);
   font-weight: 700;
   line-height: 200%;
+  text-align: center;
 }
 
 .modal__agreement a {
@@ -3956,6 +3964,119 @@ body.body-overflow {
   margin-bottom: 5px;
   font-size: 18px;
   opacity: 0.26;
+}
+
+.modal__recommend {
+  margin-bottom: 20px;
+}
+
+.modal__recommend .modal__header-text {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal__recommend-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 7px;
+}
+
+.modal__recommend-wrapper {
+  cursor: pointer;
+}
+
+.modal__recommend-wrapper input {
+  display: none;
+}
+
+.modal__recommend-wrapper input:checked + .modal__recommend-button {
+  background: var(--color-blue) -webkit-gradient(linear, left top, right top, from(transparent), color-stop(var(--color-blue-2)), to(transparent));
+  background: var(--color-blue) linear-gradient(90deg, transparent, var(--color-blue-2), transparent);
+  border-color: transparent;
+  color: var(--color-white);
+}
+
+.modal__recommend-button {
+  width: 115px;
+  height: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid var(--color-gray-5);
+  color: var(--color-gray-7);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.modal__photo {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.modal__photo input {
+  display: none;
+}
+
+.modal__photo-body {
+  padding: 25px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  border: 1px solid var(--color-black);
+}
+
+.modal__photo-icon img {
+  width: 35px;
+}
+
+.modal__photo-bold {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.modal__photo-regular {
+  font-size: 12px;
+}
+
+.modal__personal .modal__header-text {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal__attention {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.modal__attention-icon img {
+  width: 30px;
+}
+
+.modal__attention-text {
+  font-size: 14px;
+  line-height: 115%;
+}
+
+.modal__attention-text p {
+  padding-bottom: 15px;
 }
 
 @supports (height: 100dvh) {

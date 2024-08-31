@@ -5,7 +5,7 @@
    <title>"Account Order"</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <meta name="viewport" content="width=device-width initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css?_v=20240828225526">
+<link rel="stylesheet" href="css/style.css?_v=20240831114703">
 </head>
 
 
@@ -415,7 +415,7 @@
       </div>
    </div>
    <div class="account__order-table-action">
-      <button type="button">Оставить отзыв</button>
+      <button class="js-modal-open" data-modal_open="modal-recommend" type="button">Оставить отзыв</button>
       <button type="button">Отправить благодарственное письмо</button>
    </div>
 </div>
@@ -530,6 +530,91 @@
 </footer>
 
    </div>
+
+
+   <div id="modal-recommend" class="modal js-modal-close js-modal-hidden">
+   <div class="modal__wrapper">
+      <div class="modal__shell">
+         <div class="modal__body js-modal-stop-close">
+
+            <button class="modal__close js-modal-close" type="button">
+               <img src="./img/svg/close-2.svg" alt="img">
+            </button>
+            <div class="modal__header">
+               <div class="modal__title">Ваш отзыв о товаре</div>
+               <div class="modal__header-text">Уголок латунный 25x25 применый текст </div>
+            </div>
+
+            <form action="#" method="post" name="" id="">
+               <div class="modal__recommend">
+                  <div class="modal__header-text">Рекомендуете товар?</div>
+                  <div class="modal__recommend-block">
+                     <Label class="modal__recommend-wrapper">
+                        <input type="radio" name="recommend" value="" required>
+                        <span class="modal__recommend-button">да</span>
+                     </Label>
+                     <Label class="modal__recommend-wrapper">
+                        <input type="radio" name="recommend" value="" required>
+                        <span class="modal__recommend-button">нет</span>
+                     </Label>
+                  </div>
+               </div>
+               <div class="modal__input">
+                  <input type="text" placeholder="Мнение о товаре*" required>
+               </div>
+               <div class="modal__input">
+                  <input type="text" placeholder="Достоинства">
+               </div>
+               <div class="modal__input">
+                  <input type="text" placeholder="Недостатки">
+               </div>
+               <div class="modal__file-title">Добавить фото</div>
+               <label class="modal__photo">
+                  <input type="file" accept=" image/jpeg, image/jpg" multiple>
+                  <span class="modal__photo-body">
+                     <div class="modal__photo-icon">
+                        <img src="./img/svg/photo.svg" alt="img">
+                     </div>
+                     <div>
+                        <div class="modal__photo-bold">выберите фотографии</div>
+                        <div class="modal__photo-regular">или перетащите в эту область</div>
+                     </div>
+                  </span>
+               </label>
+               <div class="modal__personal">
+                  <div class="modal__header-text">Вы оставляете отзыв как</div>
+                  <div class="modal__input">
+                     <input type="text" placeholder="Имя или название организации*" required>
+                  </div>
+                  <div class="modal__input">
+                     <input type="text" placeholder="Электронный адрес*" required>
+                  </div>
+                  <div class="modal__input">
+                     <input type="text" placeholder="Ваш город*" required>
+                  </div>
+               </div>
+               <div class="modal__attention">
+                  <div class="modal__attention-icon">
+                     <img src="./img/svg/attention-2.svg" alt="img">
+                  </div>
+                  <div class="modal__attention-text">
+                     <p>Заполните если хотите получать ответ на ваш отзыв</p>
+                     <p>ваша почта не будет видна другим пользова-телям</p>
+                  </div>
+               </div>
+               <div class="modal__button">
+                  <button class="button-blue" type="submit">Отправить</button>
+               </div>
+
+            </form>
+
+            <div class="modal__agreement">
+               Нажимая кнопку “Отправить” вы подтверждаете свое <a href="#0">согласие на обработку персональных данных</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
 
    <div id="log-in" class="modal js-modal-close js-modal-hidden">
    <div class="modal__wrapper">
@@ -2094,8 +2179,8 @@
    </div>
 </div>
 
-   <script defer src='./js/app.js?_v=20240828225526'></script>
-   <script defer src='./js/datepicker-app.js?_v=20240828225526'></script>
+   <script defer src='./js/app.js?_v=20240831114703'></script>
+   <script defer src='./js/datepicker-app.js?_v=20240831114703'></script>
 </body>
 
 </html>
